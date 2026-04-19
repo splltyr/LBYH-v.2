@@ -21,6 +21,9 @@ public class SummonAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentSpeed = baseSpeed;
+        rb = GetComponent<Rigidbody2D>();
+    // Add this line to force rotation off via code
+    rb.freezeRotation = true;
         
         if(rb != null) rb.freezeRotation = true; // Prevent spinning
         

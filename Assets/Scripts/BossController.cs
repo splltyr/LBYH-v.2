@@ -33,6 +33,9 @@ public class BossController : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         healthScript = GetComponent<EnemyHealth>();
+        rb = GetComponent<Rigidbody2D>();
+    // Add this line to force rotation off via code
+    rb.freezeRotation = true;
         
         attackTimer = timeBetweenAttacks; 
     }
@@ -119,7 +122,7 @@ public class BossController : MonoBehaviour
         isExecutingMove = false;
     }
 
-   void ChasePlayer()
+  void ChasePlayer()
 {
     float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
