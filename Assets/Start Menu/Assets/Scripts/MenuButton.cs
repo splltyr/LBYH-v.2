@@ -53,7 +53,7 @@ public class MenuButton : MonoBehaviour
     {
         if (thisIndex == 0) // Start Button
         {
-            SceneManager.LoadScene("Prologue");
+            SceneManager.LoadScene("Prologue Damon 2");
         }
         else if (thisIndex == 2) // Exit Button
         {

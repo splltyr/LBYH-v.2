@@ -16,8 +16,8 @@ TagManager:
   - Ground
   - Player
   - Enemy
+  - UI PLAYER
   - UI
-  - 
   - 
   - 
   - 
@@ -72,3 +72,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []
