@@ -1,28 +1,32 @@
 using UnityEngine;
-using UnityEngine.UI; // THIS IS THE MISSING LINE!
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Health UI")]
-[SerializeField] private Slider playerHealthBar;
-[SerializeField] private float maxHealth = 100f;
-private float currentHealth;
+    [SerializeField] private Slider playerHealthBar;
+    [SerializeField] private float maxHealth = 100f;
+    private float currentHealth;
+
     [Header("Combat")]
-    [SerializeField] private Transform attackPoint;    // Drag an empty GameObject here (child of Player)
-    [SerializeField] private float attackRange = 1.2f;   // Size of the hit circle
-    [SerializeField] private LayerMask enemyLayers;     // Set this to the "Enemy" layer
-    [SerializeField] private float attackDamage = 25f;  // Base damage amount
+    [SerializeField] private Transform attackPoint; 
+    [SerializeField] private float attackRange = 1.2f; 
+    [SerializeField] private LayerMask enemyLayers; 
+    [SerializeField] private float attackDamage = 25f; 
 
     [Header("Movement Settings")]
-    [SerializeField] private float speed = 10f;             
-    [SerializeField] private float jumpingPower = 28f;      
-    private float defaultGravity = 4.5f;                    
+    [SerializeField] private float speed = 10f; 
+    [SerializeField] private float jumpingPower = 28f; 
+    private float defaultGravity = 4.5f; 
+
+    // Internal variable to track the "Active" speed used for cutscenes
+    private float moveSpeed; 
 
     [Header("Dodge Settings")]
-    [SerializeField] private float dodgeForce = 22f;        
+    [SerializeField] private float dodgeForce = 22f; 
     [SerializeField] private float dodgeDuration = 0.2f;
-    [SerializeField] private float dodgeCooldown = 1.0f;    
+    [SerializeField] private float dodgeCooldown = 1.0f; 
     private bool canDodge = true;
     private bool isDodging = false;
 
@@ -32,7 +36,6 @@ private float currentHealth;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Animator animator;
 
-    // Internal State
     private float horizontal;
     private bool isFacingRight = true;
     private int jumpCount = 0;
@@ -45,21 +48,37 @@ private float currentHealth;
     void Start()
     {
         rb.gravityScale = defaultGravity;
-        // Safety: Ensure these are reset on start
         canDodge = true;
         isDodging = false;
         isAttacking = false;
         currentHealth = maxHealth;
-if (playerHealthBar != null)
-{
-    playerHealthBar.maxValue = maxHealth;
-    playerHealthBar.value = maxHealth;
-}
+
+        // Initialize moveSpeed with the inspector speed value
+        moveSpeed = speed; 
+
+        if (playerHealthBar != null)
+        {
+            playerHealthBar.maxValue = maxHealth;
+            playerHealthBar.value = maxHealth;
+        }
+    }
+
+    // --- FUNCTION CALLED BY DIALOGUE MANAGER ---
+    public void SetSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+        
+        // If frozen, immediately kill horizontal velocity
+        if(newSpeed <= 0 && rb != null)
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            horizontal = 0;
+        }
     }
 
     void Update()
     {
-        // SAFETY RESET: Fixes the "can't dash at start" bug
+        // Safety reset for dodging
         if (CheckGrounded() && !isDodging && !animator.GetCurrentAnimatorStateInfo(0).IsName("Dodge"))
         {
             canDodge = true; 
@@ -67,43 +86,49 @@ if (playerHealthBar != null)
 
         if (isStunned) return;
 
-        // DASH ATTACK LOGIC
+        // Block logic if dodging is active
         if (isDodging)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                animator.SetTrigger("dashAttack"); 
-            }
+            if (Input.GetMouseButtonDown(0)) animator.SetTrigger("dashAttack"); 
             return; 
         }
 
-        horizontal = Input.GetAxisRaw("Horizontal");
-        bool grounded = CheckGrounded();
-
-        // DODGE INPUT (C Key)
-        if (Input.GetKeyDown(KeyCode.C) && canDodge)
+        // --- CUTSCENE CHECK: Only get input if speed is greater than 0 ---
+        if (moveSpeed > 0)
         {
-            StartCoroutine(PerformDodge());
-        }
+            horizontal = Input.GetAxisRaw("Horizontal");
 
-        // ATTACK INPUT
-        if (Input.GetMouseButtonDown(0) && !isAttacking) 
-        {
-            isAttacking = true;
-            animator.SetTrigger("Attack"); 
-        }
-
-        // JUMPING logic
-        if (grounded) jumpCount = 0;
-
-        if (Input.GetButtonDown("Jump") && !isAttacking) 
-        {
-            if (grounded || jumpCount < maxAirJumps)
+            // DODGE INPUT
+            if (Input.GetKeyDown(KeyCode.C) && canDodge)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
-                if (!grounded) jumpCount++; 
-                animator.SetTrigger("Jump");
+                StartCoroutine(PerformDodge());
             }
+
+            // ATTACK INPUT
+            if (Input.GetMouseButtonDown(0) && !isAttacking) 
+            {
+                isAttacking = true;
+                animator.SetTrigger("Attack"); 
+            }
+
+            // JUMPING
+            bool grounded = CheckGrounded();
+            if (grounded) jumpCount = 0;
+
+            if (Input.GetButtonDown("Jump") && !isAttacking) 
+            {
+                if (grounded || jumpCount < maxAirJumps)
+                {
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                    if (!grounded) jumpCount++; 
+                    animator.SetTrigger("Jump");
+                }
+            }
+        }
+        else
+        {
+            // Force zero horizontal if moveSpeed is 0
+            horizontal = 0;
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0)
@@ -122,24 +147,19 @@ if (playerHealthBar != null)
     {
         if (isStunned || isDodging) return;
 
-        // FALL MULTIPLIER
+        // Fall Multiplier
         if (rb.linearVelocity.y < 0)
-        {
             rb.gravityScale = defaultGravity * 1.5f;
-        }
         else
-        {
             rb.gravityScale = defaultGravity;
-        }
 
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        // Move based on the moveSpeed variable
+        rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
     }
 
-    // UPDATED COMBAT LOGIC: Now calculates knockback direction
     public void DealDamage(float damageAmount)
     {
         float finalDamage = damageAmount > 0 ? damageAmount : attackDamage;
-
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
@@ -147,7 +167,6 @@ if (playerHealthBar != null)
             EnemyHealth health = enemy.GetComponent<EnemyHealth>();
             if (health != null)
             {
-                // Calculate direction from player to enemy for knockback
                 Vector2 knockbackDir = (enemy.transform.position - transform.position).normalized;
                 health.TakeDamage(finalDamage, knockbackDir);
             }
@@ -159,7 +178,6 @@ if (playerHealthBar != null)
         canDodge = false;
         isDodging = true;
         animator.SetBool("isDodging", true);
-
         Physics2D.IgnoreLayerCollision(6, 7, true); 
 
         float dodgeDir = horizontal != 0 ? Mathf.Sign(horizontal) : (isFacingRight ? 1 : -1);
@@ -181,7 +199,6 @@ if (playerHealthBar != null)
     {
         StopAllCoroutines(); 
         ResetMovementState();
-        
         isStunned = true;
         rb.linearVelocity = force; 
         Invoke("EndStun", stunDuration);
@@ -198,10 +215,7 @@ if (playerHealthBar != null)
         Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 
-    private bool CheckGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
-    }
+    private bool CheckGrounded() => Physics2D.OverlapCircle(groundCheck.position, 0.5f, groundLayer);
 
     private void Flip()
     {
@@ -214,14 +228,12 @@ if (playerHealthBar != null)
         }
     }
     
-    // Call this at the end of attack animations
     public void EndAttack()
     {
         isAttacking = false;
         isDodging = false; 
     }
 
-    // Visual Gizmo to see attack range in Scene View
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null) return;
@@ -230,17 +242,14 @@ if (playerHealthBar != null)
     }
 
     public void TakeDamage(float damage)
-{
-    currentHealth -= damage;
-    if (playerHealthBar != null) playerHealthBar.value = currentHealth;
-
-    // Trigger hit animation if you have one
-    animator.SetTrigger("Hit"); 
-
-    if (currentHealth <= 0)
     {
-        // Handle Player Death (Restart scene or show Game Over)
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        currentHealth -= damage;
+        if (playerHealthBar != null) playerHealthBar.value = currentHealth;
+        animator.SetTrigger("Hit"); 
+
+        if (currentHealth <= 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        }
     }
-}
 }

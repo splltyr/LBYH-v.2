@@ -773,8 +773,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   FollowSpeed: 5
   yOffset: 3
-  lockYAxis: 1
-  lockedYValue: 0
   target: {fileID: 1927493738}
 --- !u!81 &257619079
 AudioListener:
@@ -1095,11 +1093,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334862594}
   m_CullTransparentMesh: 1
---- !u!4 &505725836 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5599377589163743410, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
-  m_PrefabInstance: {fileID: 166552270}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519866827
 GameObject:
   m_ObjectHideFlags: 0
@@ -17622,9 +17615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8170832b4d0d3a4bb0f80e787a607bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamonPrologue
-  camScript: {fileID: 257619078}
-  damonTransform: {fileID: 1251870603}
-  playerTransform: {fileID: 505725836}
   player: {fileID: 1927493738}
   playerObject: {fileID: 1927493737}
   baseSpeed: 5
@@ -17636,13 +17626,15 @@ MonoBehaviour:
   whiteFlashImage: {fileID: 1026494227}
   dialogueUI: {fileID: 2144115752}
   dialogueText: {fileID: 1694220867}
-  runPrompt: {fileID: 0}
   nextSceneName: Tutorial 1
+  typingSpeed: 0.08
+  waitAfterTala: 3.5
+  ghostDelay: 0.07
+  ghostColor: {r: 1, g: 0, b: 1, a: 0.4}
+  ghostXOffset: 13
   scarySource: {fileID: 1251870606}
   hitSource: {fileID: 1251870605}
   bloodRain: {fileID: 1139973302}
-  introDialogueUI: {fileID: 0}
-  introTextObj: {fileID: 0}
 --- !u!82 &1251870605
 AudioSource:
   m_ObjectHideFlags: 0
