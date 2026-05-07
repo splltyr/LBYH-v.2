@@ -125,12 +125,12 @@ TextureImporter:
       name: _AttackNoMovement_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 28
         y: 0
-        width: 39
-        height: 37
+        width: 37
+        height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: _AttackNoMovement_1
       rect:
         serializedVersion: 2
-        x: 159
+        x: 160
         y: 0
-        width: 66
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 64
+        height: 42
+      alignment: 9
+      pivot: {x: 0.19765568, y: 0.48553172}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: _AttackNoMovement_2
       rect:
         serializedVersion: 2
-        x: 281
+        x: 282
         y: 0
-        width: 65
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 63
+        height: 35
+      alignment: 9
+      pivot: {x: 0.13431707, y: 0.5561354}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: _AttackNoMovement_3
       rect:
         serializedVersion: 2
-        x: 401
+        x: 402
         y: 0
-        width: 59
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 57
+        height: 34
+      alignment: 9
+      pivot: {x: 0.20921192, y: 0.5983083}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 369adfe419820564b9d2e9fdc83b877d
     internalID: 0
     vertices: []
     indices: 
@@ -221,7 +221,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       _AttackNoMovement_0: 8304861591815558886
       _AttackNoMovement_1: 4266374257060350693

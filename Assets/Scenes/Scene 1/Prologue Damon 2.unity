@@ -294,13 +294,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.93962264
       objectReference: {fileID: 0}
+    - target: {fileID: 3184230588447089230, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 5599377589163743410, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.15455
+      value: -4.98
       objectReference: {fileID: 0}
     - target: {fileID: 5599377589163743410, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.36871
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 5599377589163743410, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
       propertyPath: m_LocalPosition.z
@@ -332,6 +336,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599377589163743410, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723588197555198145, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
+      propertyPath: canDash
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5723588197555198145, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
+      propertyPath: canAttack
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5723588197555198145, guid: 01ba1937ca049c3468f00598d5fe1844, type: 3}
@@ -511,7 +523,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[REDACTED]: Well, well, well. Poor soul running away from me.'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 508151a5466884dcf8fc8f3a7c068708, type: 2}
   m_sharedMaterial: {fileID: -6053551520711717126, guid: 508151a5466884dcf8fc8f3a7c068708, type: 2}
@@ -774,6 +786,11 @@ MonoBehaviour:
   FollowSpeed: 5
   yOffset: 3
   target: {fileID: 1927493738}
+  useBoundaries: 1
+  minX: -22.15
+  maxX: 36.15
+  minY: 0
+  maxY: 100
 --- !u!81 &257619079
 AudioListener:
   m_ObjectHideFlags: 0
@@ -842,7 +859,7 @@ Transform:
   m_GameObject: {fileID: 257619075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 4.5, y: 3.46, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1013,7 +1030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "???: YVES! The loop! You can try again! It\u2019s not finished! "
+  m_text: '???: Yves..? Yves! Can you hear me? You can still try again!  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 508151a5466884dcf8fc8f3a7c068708, type: 2}
   m_sharedMaterial: {fileID: -6053551520711717126, guid: 508151a5466884dcf8fc8f3a7c068708, type: 2}
@@ -17486,7 +17503,7 @@ Transform:
   m_GameObject: {fileID: 1187057523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.98136747, y: -0.31340352, z: -10}
+  m_LocalPosition: {x: -7.115917, y: -0.49211353, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17596,8 +17613,8 @@ Transform:
   m_GameObject: {fileID: 1251870600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.14, y: -3.53, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 71.89, y: -4.26, z: 0}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 826779959}
@@ -18004,8 +18021,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "[REDACTED]: You still think this is YOUR school, Damon? It\u2019s all
-    just a simulation of failure, and you're just a bug in the code."
+  m_text: "[REDACTED]: You still think this is YOUR school, Yves? It\u2019s all just
+    a simulation of failure, and you're just a bug in the code."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 508151a5466884dcf8fc8f3a7c068708, type: 2}
   m_sharedMaterial: {fileID: -6053551520711717126, guid: 508151a5466884dcf8fc8f3a7c068708, type: 2}

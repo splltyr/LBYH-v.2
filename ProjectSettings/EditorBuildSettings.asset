@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Menu 1.unity
     guid: c5d207e6474914b4988639513fbe8128
   - enabled: 1
+    path: Assets/Scenes/Scene 3/Scene 3 Grass/Tutorial.unity
+    guid: 4d51d8b0f625b9c488e31f8272f71ab9
+  - enabled: 1
     path: Assets/Scenes/Scene 2 Clinic/Tutorial 1.unity
     guid: ba8d0c11161e9724d8916da6f8117a84
   - enabled: 1
@@ -27,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene 1/Prologue Damon 2.unity
     guid: e805d6a09401cfa48969160d4925b3a5
   - enabled: 1
-    path: Assets/Scenes/Scene 2/Tutorial 1aaa.unity
+    path: Assets/Scenes/Scene 3/Scene 3.unity
     guid: 555f9848cc48e7b49ae50d8e50139633
+  - enabled: 1
+    path: Assets/2nd draft.unity
+    guid: d40b7c93d6901e848b41291f8055e845
   m_configObjects: {}

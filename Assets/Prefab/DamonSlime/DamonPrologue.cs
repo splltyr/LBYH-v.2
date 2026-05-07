@@ -147,7 +147,7 @@ public class DamonPrologue : MonoBehaviour
             if (img != null) img.enabled = false;
             dialogueText.color = Color.yellow; 
             dialogueUI.SetActive(true); 
-            yield return StartCoroutine(ManualType("???: YVES! The loop! You can try again! It’s not finished!"));
+            yield return StartCoroutine(ManualType("???: Yves..? Yves! Can you hear me? You can still try again!"));
             yield return new WaitForSeconds(waitAfterTala);
         }
         if (whiteFlashImage != null) {

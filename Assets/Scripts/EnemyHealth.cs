@@ -15,10 +15,9 @@ public class EnemyHealth : MonoBehaviour
     [Header("UI")]
     [SerializeField] private Slider healthBar;
     [SerializeField] private GameObject healthBarCanvas;
-    [SerializeField] private Image fillImage;
 
     [Header("Death Effects")]
-    [SerializeField] private string deathTrigger = "die";
+    [SerializeField] private string deathTrigger = "isDead"; // HARD-CODED TO YOUR TRIGGER
     [SerializeField] private SpriteRenderer spriteRenderer; 
     private Color originalColor;
     private bool isDead = false;
@@ -31,9 +30,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        
         if (spriteRenderer != null) originalColor = spriteRenderer.color;
-
         if (healthBar != null)
         {
             healthBar.maxValue = maxHealth;
@@ -44,31 +41,18 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(float damage, Vector2 knockbackDirection)
     {
         if (isDead) return;
-
         currentHealth -= damage;
-        UpdateHealthBar(); // Fixed name mismatch (Capital U)
-
-        // Trigger Visual Effects
+        UpdateHealthBar(); 
         StartCoroutine(HitFlash());
-        if (knockbackDirection != Vector2.zero)
-        {
-            StartCoroutine(ApplyKnockback(knockbackDirection));
-        }
-
-        // Trigger specific AI Hit animations
-        SkeletonEnemy skel = GetComponent<SkeletonEnemy>();
-        if (skel != null) skel.OnHit();
+        
+        if (knockbackDirection != Vector2.zero) StartCoroutine(ApplyKnockback(knockbackDirection));
 
         if (currentHealth <= 0) Die();
     }
 
-    // Function added to fix the CS0103 error
     public void UpdateHealthBar()
     {
-        if (healthBar != null)
-        {
-            healthBar.value = currentHealth;
-        }
+        if (healthBar != null) healthBar.value = currentHealth;
     }
 
     private IEnumerator HitFlash()
@@ -83,7 +67,6 @@ public class EnemyHealth : MonoBehaviour
     {
         if (rb != null)
         {
-            // Unity 6 uses linearVelocity instead of velocity
             rb.linearVelocity = direction.normalized * knockbackForce;
             yield return new WaitForSeconds(knockbackDuration);
             if (!isDead) rb.linearVelocity = Vector2.zero;
@@ -97,13 +80,19 @@ public class EnemyHealth : MonoBehaviour
 
         if (anim != null) anim.SetTrigger(deathTrigger);
         
+        // --- MISSION PROGRESSION ---
+        Scene3Manager manager = FindAnyObjectByType<Scene3Manager>();
+        if (manager != null)
+        {
+            // Check if this is the boss or a skeleton
+            if (GetComponent<CorruptedCooker>() != null) {
+                manager.EnemyDefeated("CorruptedCooker");
+            } else {
+                manager.EnemyDefeated("Skeleton");
+            }
+        }
+
         StartCoroutine(DeathEffect());
-
-        // Check for Boss specific scripts
-        BossController boss = GetComponent<BossController>();
-        if (boss != null) boss.DisableBoss();
-
-        // Disable physics/UI
         GetComponent<Collider2D>().enabled = false;
         if (rb != null) rb.simulated = false;
         if (healthBarCanvas != null) healthBarCanvas.SetActive(false);
@@ -114,21 +103,13 @@ public class EnemyHealth : MonoBehaviour
     private IEnumerator DeathEffect()
     {
         if (spriteRenderer == null) yield break;
-
         float elapsed = 0f;
         float duration = 1.5f;
-
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            // Flicker effect
             spriteRenderer.color = (elapsed % 0.2f > 0.1f) ? Color.white : new Color(1, 1, 1, 0);
             yield return null;
         }
-    }
-
-    public float GetCurrentHealthPercentage()
-    {
-        return currentHealth / maxHealth;
     }
 }

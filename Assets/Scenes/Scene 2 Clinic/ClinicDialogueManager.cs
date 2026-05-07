@@ -19,9 +19,16 @@ public class ClinicDialogueManager : MonoBehaviour
 
     [Header("Nurse Cutscene")]
     public Animator nurseAnim;      
-    public Transform targetPoint;   
+    public Transform NurseStopPoint; 
+    public Transform ExitPoint;      
     public float walkSpeed = 5f;    
-    private float nurseScale = 1f; 
+
+    [Header("Exit Guidance")]
+    public GameObject exitArrow; 
+
+    [Header("Tala Settings")]
+    public GameObject talaPrefab; 
+    private GameObject spawnedTala;
 
     [Header("Player Control")]
     public PlayerMovement playerScript; 
@@ -34,22 +41,36 @@ public class ClinicDialogueManager : MonoBehaviour
     private bool isWakingUp = true; 
 
     private string[] dialogueLines = {
-        "[Ha? Nasaan ako?]", 
         "Yves: TALA!",
-        "???: Easy there, you’ve been out for almost a few hours.",
-        "???: What the hell were you doing out there? Are you trying to get killed?",
+        "???: Easy there, you’ve been out for almost a few hours. What were you doing out there? Are you trying to get killed?",
         "Yves: What… Where am I?",
         "???: Clinic. Isn’t it quite obvious? Did you hit your head or something?",
-        "Loren: I’m Loren, the head Nurse here at STI.",
-        "Nurse Loren: You were all bloody. Did you… encounter him?",
+        "???: Hey kid, are you aware of what’s going o- … You know what, nevermind. I’m Loren, the head Nurse here at STI.",
+        "Nurse Loren: The outskirts of the school. Good thing I was out for supplies, you know? You were all bloody and everything. What happened? Did you… encounter him?",
         "Yves: Him…",
-        "Nurse Loren: I found these tools abandoned... pick something that’ll help you.",
-        "[Earthquake rumbles violently!]", 
-        "Nurse Loren: Quick! pick your weapon, Yves!",
-        "Yves: Wait how did you know my name-",
-        "[The ceiling crashes down, separating you both.]", 
-        "Nurse Loren: You know when to stop… find your answer…",
-        "Yves: I… need to keep moving to get some answer…"
+        "Yves: Agh.. My head.. I.. need to go.",
+        "Nurse Loren: Oh thank Tala, it’s not like I can ask you to stay but, I think I can help you. Here, have this. (Bandage-1)",
+        "Yves: What do you mean? And who’s Tala?",
+        "Nurse Loren: I was out for supplies earlier today, remember? I found these tools abandoned. And I thought you knew who Tala is?",
+        "Yves: Thank you but I.. I don’t remember.. But It feels like.. She’s here.",
+        "Nurse Loren: Tala doesn’t exist kid, but a few believed that She’s.. some kind of God or something.",
+        "Nurse Loren: But for me, I think she’s just a guide who wants to help people in need. Enough of this. Go ahead and pick.",
+        "Yves: That’s.. Quite a story. Why are you helping me?",
+        "Nurse Loren: Well, you.. remind me of someone.",
+        "[EARTHQUAKE_START]", 
+        "Nurse Loren: QUICK! Pick your weapon, Yves!",
+        "Yves: Wait, how did you know my na-",
+        "[CEILING_CRASH]", 
+        "Yves: Are you okay?!",
+        "Nurse Loren: I’m alright, just go! It’s dangerous!",
+        "Yves: I can’t just leave you there!",
+        "Nurse Loren: Don’t worry about me, as long as you keep moving on, you’ll find the exit! Good luck, kid!",
+        "[NURSE_EXIT_RIGHT]",
+        "Yves: She’s right.. I have to keep moving.",
+        "Yves: Good thing there’s proper electricity here, it’s so dark..",
+        "???: Hehe, you’re funny, Yves.",
+        "Yves: AAHH! A G-GHOST!",
+        "[TALA_CHASE_START]"
     };
 
     void Start()
@@ -57,11 +78,10 @@ public class ClinicDialogueManager : MonoBehaviour
         if (dialogueBox != null) dialogueBox.SetActive(false);
         if (pressSpacePrompt != null) pressSpacePrompt.SetActive(false);
         if (screenFade != null) screenFade.alpha = 0;
-
-        if (nurseAnim != null) nurseAnim.gameObject.SetActive(true);
-        
-        // Freeze Yves
         if (playerScript != null) playerScript.SetSpeed(0f);
+        
+        // Ensure arrow is hidden at the start
+        if (exitArrow != null) exitArrow.SetActive(false); 
 
         StartCoroutine(PlaySequence());
     }
@@ -70,7 +90,7 @@ public class ClinicDialogueManager : MonoBehaviour
     {
         if (!isWakingUp && clinicSpotlight != null)
         {
-            if (Random.value > 0.96f) clinicSpotlight.intensity = Random.Range(0.3f, 1.1f);
+            if (Random.value > 0.96f) clinicSpotlight.intensity = Random.Range(0.6f, 1.2f);
         }
     }
 
@@ -78,115 +98,99 @@ public class ClinicDialogueManager : MonoBehaviour
     {
         if (clinicSpotlight != null) StartCoroutine(SpotlightWakeUp());
 
-        // Tala's fixed Z-axis walk
-        if (nurseAnim != null && targetPoint != null)
+        if (nurseAnim != null && NurseStopPoint != null)
         {
-            nurseAnim.transform.position = new Vector3(nurseAnim.transform.position.x, nurseAnim.transform.position.y, 0);
-            Vector3 targetPos = new Vector3(targetPoint.position.x, targetPoint.position.y, 0);
-            nurseAnim.SetBool("isWalking", true);
-
-            while (Vector2.Distance(nurseAnim.transform.position, targetPos) > 0.1f)
-            {
-                float direction = targetPos.x > nurseAnim.transform.position.x ? nurseScale : -nurseScale;
-                nurseAnim.transform.localScale = new Vector3(direction, nurseScale, 1);
-                Vector3 nextPos = Vector3.MoveTowards(nurseAnim.transform.position, targetPos, walkSpeed * Time.deltaTime);
-                nurseAnim.transform.position = new Vector3(nextPos.x, nextPos.y, 0);
-                yield return null;
-            }
-            nurseAnim.SetBool("isWalking", false);
-            nurseAnim.transform.position = targetPos;
+            yield return StartCoroutine(MoveNurse(NurseStopPoint.position)); 
         }
 
         while (index < dialogueLines.Length)
         {
             string currentLine = dialogueLines[index];
 
-            // IMPROVED: Detect trigger lines by content rather than index
-            if (currentLine.Contains("Earthquake"))
-            {
-                yield return StartCoroutine(TriggerEarthquake(true));
-                index++;
-                continue;
+            // Logic Triggers (Non-dialogue)
+            if (currentLine == "[EARTHQUAKE_START]") {
+                StartCoroutine(TriggerEarthquake(false));
+                index++; continue;
             }
-            
-            if (currentLine.Contains("ceiling crashes"))
-            {
-                yield return StartCoroutine(TriggerEarthquake(false));
-                index++;
-                continue;
+            if (currentLine == "[CEILING_CRASH]") {
+                StartCoroutine(TriggerEarthquake(true));
+                index++; continue;
+            }
+            if (currentLine == "[NURSE_EXIT_RIGHT]") {
+                yield return StartCoroutine(MoveNurse(ExitPoint.position, true)); 
+                
+                // ACTIVATE ARROW HERE
+                if (exitArrow != null) exitArrow.SetActive(true); 
+                
+                index++; continue;
+            }
+            if (currentLine == "[TALA_CHASE_START]") {
+                yield return StartCoroutine(TalaAppearance()); 
+                break;
             }
 
-            if (currentLine.StartsWith("["))
-            {
-                index++;
-                continue;
-            }
-
+            // Show Dialogue
             if (dialogueBox != null) dialogueBox.SetActive(true);
             yield return StartCoroutine(TypeLine(currentLine));
             
             if (pressSpacePrompt != null) pressSpacePrompt.SetActive(true);
-            
-            // Wait for Space Bar input
-            while (!Input.GetKeyDown(KeyCode.Space))
-            {
-                yield return null;
-            }
-
+            while (!Input.GetKeyDown(KeyCode.Space)) yield return null;
             if (pressSpacePrompt != null) pressSpacePrompt.SetActive(false);
             index++;
         }
+    }
 
-        if (dialogueBox != null) dialogueBox.SetActive(false);
-        if (playerScript != null) playerScript.SetSpeed(normalSpeed);
+    IEnumerator MoveNurse(Vector3 destination, bool isExit = false)
+    {
+        nurseAnim.SetBool("isWalking", true);
+        float direction = destination.x > nurseAnim.transform.position.x ? 1 : -1;
+        nurseAnim.transform.localScale = new Vector3(direction, 1, 1);
+
+        while (Vector2.Distance(nurseAnim.transform.position, destination) > 0.15f)
+        {
+            nurseAnim.transform.position = Vector3.MoveTowards(nurseAnim.transform.position, destination, walkSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        nurseAnim.SetBool("isWalking", false);
+        nurseAnim.transform.position = destination;
+
+        if (isExit) nurseAnim.gameObject.SetActive(false); 
     }
 
     IEnumerator TypeLine(string line)
     {
         dialogueText.text = "";
-        foreach (char c in line)
-        {
+        foreach (char c in line) {
             dialogueText.text += c;
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.03f);
         }
     }
 
     IEnumerator SpotlightWakeUp()
     {
-        isWakingUp = true; 
-        clinicSpotlight.intensity = 40f; 
+        isWakingUp = true;
         float currentIntensity = 40f;
-        while (currentIntensity > 1.0f)
-        {
-            currentIntensity = Mathf.Lerp(currentIntensity, 1.0f, Time.deltaTime * 1.2f);
+        while (currentIntensity > 1.2f) {
+            currentIntensity = Mathf.Lerp(currentIntensity, 1.2f, Time.deltaTime * 1.5f);
             clinicSpotlight.intensity = currentIntensity;
             yield return null;
         }
-        isWakingUp = false; 
+        isWakingUp = false;
     }
 
     IEnumerator TriggerEarthquake(bool playParticles)
     {
-        // DEBUG: Check if audio is missing
-        if (earthquakeSound != null) 
-        {
-            earthquakeSound.Play();
-        }
-        else 
-        {
-            Debug.LogWarning("Earthquake AudioSource is missing in the Inspector!");
-        }
-
+        if (earthquakeSound != null) earthquakeSound.Play();
         if (playParticles && ceilingDebris != null) ceilingDebris.Play();
 
         Vector3 originalPos = Camera.main.transform.localPosition;
         float elapsed = 0.0f;
-        float duration = 2.0f; // Increased for better effect
+        float duration = playParticles ? 2.5f : 1.5f;
 
-        while (elapsed < duration)
-        {
-            float x = Random.Range(-0.3f, 0.3f);
-            float y = Random.Range(-0.3f, 0.3f);
+        while (elapsed < duration) {
+            float x = Random.Range(-0.2f, 0.2f);
+            float y = Random.Range(-0.2f, 0.2f);
             Camera.main.transform.localPosition = new Vector3(x, y, originalPos.z);
             elapsed += Time.deltaTime;
             yield return null;
@@ -194,18 +198,34 @@ public class ClinicDialogueManager : MonoBehaviour
         Camera.main.transform.localPosition = originalPos;
     }
 
-    public void StartFinalExit() { StartCoroutine(FinalFadeOut()); }
+    IEnumerator TalaAppearance()
+    {
+        if (talaPrefab != null && spawnedTala == null)
+        {
+            Vector3 spawnOffset = new Vector3(-1.5f, 1.5f, 0);
+            spawnedTala = Instantiate(talaPrefab, playerScript.transform.position + spawnOffset, Quaternion.identity);
+            
+            TalaFollow follow = spawnedTala.GetComponent<TalaFollow>();
+            if (follow != null) follow.playerTransform = playerScript.transform;
+        }
+
+        if (playerScript != null) playerScript.SetSpeed(normalSpeed * 1.8f); 
+        
+        yield return new WaitForSeconds(2.0f);
+        yield return StartCoroutine(FinalFadeOut());
+    }
 
     IEnumerator FinalFadeOut()
     {
         if (screenFade == null) yield break;
         float t = 0;
-        while (t < 1)
-        {
+        while (t < 1) {
             t += Time.deltaTime;
             screenFade.alpha = t;
             yield return null;
         }
         SceneManager.LoadScene("Map2_GroundFloor");
     }
+
+    public void StartFinalExit() { StartCoroutine(FinalFadeOut()); }
 }
