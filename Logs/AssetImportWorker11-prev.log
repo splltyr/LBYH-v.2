@@ -1,0 +1,831 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.4/staging' branch; Version is '6000.4.3f1 (39d1a88d4dd1) revision 3789224'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 16310 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-go3_mwym8nMUOLI6PrGyN" at "2026-05-10T19:17:05.8330621Z"
+System  architecture: x64
+Process architecture: x64
+Date: 2026-05-10T19:17:05Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker11
+-projectPath
+C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+-logFile
+Logs/AssetImportWorker11.log
+-srvPort
+60929
+-licensingIpc
+LicenseClient-go3_mwym8nMUOLI6PrGyN
+-force-d3d12
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [14332]  Target information:
+
+Player connection [14332]  * "[IP] 192.168.254.117 [Port] 0 [Flags] 2 [Guid] 2384993122 [EditorId] 2384993122 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2216JCP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [14332] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14332] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+Default GameObject BitMask: UI already registered
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 4.15 ms, found 4 plugins.
+Initialize engine version: 6000.4.3f1 (39d1a88d4dd1)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:          NVIDIA
+    VRAM:            12115 MB
+    App VRAM Budget: 11347 MB
+    Driver:          32.0.15.8157
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-go3_mwym8nMUOLI6PrGyN"
+[Licensing::IpcConnector] LicenseClient-go3_mwym8nMUOLI6PrGyN channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron-6000.4.3" at "2026-05-10T19:17:06.9115582Z"
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002116 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.421 seconds
+Domain Reload Profiling: 884ms
+	BeginReloadAssembly (126ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (206ms)
+		LoadAssemblies (123ms)
+		AnalyzeDomain (198ms)
+			TypeCache.Refresh (196ms)
+				TypeCache.ScanAssembly (183ms)
+	FinalizeReload (422ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			BeforeProcessingInitializeOnLoad (92ms)
+			ProcessInitializeOnLoadAttributes (111ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              f0f9fa2cd0814300b1dccfd41e4abf89
+  Correlation Id:          3613cc089650d0c67ed74e0c5fa6061d
+  External correlation Id: 9150793234361069975
+  Machine Id:              8s6LdPVFeVL+JPPIymwroRPXaRk=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-tyron-6000.4.3" (connect: 0.00s, validation: 0.00s, handshake: 1.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron-6000.4.3-notifications" at "2026-05-10T19:17:07.983344Z"
+[Licensing::Module] Licensing Background thread has ended after 2.15s
+[Licensing::Module] Licensing is initialized (took 0.03s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968330311373-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
+Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
+Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
+Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
+Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
+Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
+Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
+Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.30 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 2.86 ms, found 4 plugins.
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.089 seconds
+Domain Reload Profiling: 1973ms
+	BeginReloadAssembly (219ms)
+		DisableScriptedObjects (7ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (85ms)
+	LoadAllAssembliesAndSetupDomain (527ms)
+		LoadAssemblies (393ms)
+		AnalyzeDomain (239ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (153ms)
+			BuildScriptInfoCaches (59ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1089ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (160ms)
+			ProcessInitializeOnLoadAttributes (529ms)
+			ProcessInitializeOnLoadMethodAttributes (182ms)
+			AfterProcessingInitializeOnLoad (12ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Default GameObject BitMask: UI already registered
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 3.20 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 5625 unused Assets / (5.2 MB). Loaded Objects now: 6483.
+Memory consumption went from 170.0 MB to 164.9 MB.
+Total: 11.827800 ms (FindLiveObjects: 0.828100 ms CreateObjectMapping: 1.187400 ms MarkObjects: 6.818000 ms  DeleteObjects: 2.992200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 11107.387491 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/Transition/PNGs/Lightning Trap - Level 2 - Transition.png
+  importAddress: Guid(ab35cae0d6dbe704b8569ddc7f2449eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/Transition/PNGs/Lightning Trap - Level 2 - Transition.png using Guid(ab35cae0d6dbe704b8569ddc7f2449eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3316a34e725d9a492c378790cdc07ed8') in 0.2155501 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0eca2924612305e292524f88b5278d91 DependenciesID=0d8def2ecc1c310c6064ab9e760e1dad StaticDependenciesID=3a71ccf3789e3c2cf33a89a62b64743d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Prefab/Traps/Fire Breather Trap/Transition/Aseprite/Fire Breather Trap - Level 2 - Transition.aseprite
+  importAddress: Guid(550382769c1582349b0921a9b0e453d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Breather Trap/Transition/Aseprite/Fire Breather Trap - Level 2 - Transition.aseprite using Guid(550382769c1582349b0921a9b0e453d0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2fde5a55a11e8623ed81515bb97bf63a') in 0.0132346 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fa22f6db7da4aa2e6b9a5de25130ebcf DependenciesID=df9fbda642561d6451ce8c84e7d2567a StaticDependenciesID=f38c88e344fa10d7d27e9e1448612828 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/No Background/Saw Trap Preview - No Background.gif
+  importAddress: Guid(2254c1ac8d2182e46b1868df387ab7f8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/No Background/Saw Trap Preview - No Background.gif using Guid(2254c1ac8d2182e46b1868df387ab7f8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '571016c87dd3ec2781f4bde9c8cd4be2') in 0.018216 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bba8548951af6c2cede5aea5fa97df75 DependenciesID=1318c9c6bcfae2e830b99abdd86d6b06 StaticDependenciesID=f318fb54513924bea7819730df571e3e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/Aseprite/Ceiling Trap - Level 2.aseprite
+  importAddress: Guid(eab367059a33fa44f8279af790ffd032) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/Aseprite/Ceiling Trap - Level 2.aseprite using Guid(eab367059a33fa44f8279af790ffd032) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7640d7a99519723b96c6b6778f17c6b1') in 0.0103891 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5e764837cedd7922f653deb47b0fcd26 DependenciesID=f80ec80037fdfbe4f7c703d0f399d721 StaticDependenciesID=fb96379dabe5e1e363b073b81f8e4d03 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefab/Traps/Fire Trap/Transition/PNGs/Fire Trap - Level 2 - Transition.png
+  importAddress: Guid(347acad57e33d564ca5cba365af8fb49) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Trap/Transition/PNGs/Fire Trap - Level 2 - Transition.png using Guid(347acad57e33d564ca5cba365af8fb49) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f18d9d7ea1dcd65e17bec23137589e67') in 0.0283204 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dbe2a9b6c79b10bb5b3f7c01d53e76e4 DependenciesID=9b7128138db76068a4f767acf478c659 StaticDependenciesID=051de7760368fb29da1551e5610c7f0b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefab/Traps/Toxic Trap/Transitions/PNGs/Toxic Trap - Level 1 - Transition.png
+  importAddress: Guid(f98460a040e20864b8db6282f5fcca80) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Toxic Trap/Transitions/PNGs/Toxic Trap - Level 1 - Transition.png using Guid(f98460a040e20864b8db6282f5fcca80) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '46195166e5f6e00541c4a00364574501') in 0.0451396 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=456c328f68f8bb4748390abcbd684ca1 DependenciesID=dafc27d681263caddc1dc99948c40d5f StaticDependenciesID=58876f66ad192d9ae29f6d065f305de4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 39
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/Transitions/PNGs/Ceiling Trap - Level 1 - Transition.png
+  importAddress: Guid(50dfdef173098ba479b75ef5ffacff49) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/Transitions/PNGs/Ceiling Trap - Level 1 - Transition.png using Guid(50dfdef173098ba479b75ef5ffacff49) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ba9b259f001b0915cdaf07e0c0f66437') in 0.0444594 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6dac481179501a329c8152f4247932df DependenciesID=e6c1ee9aec7f1172d80fd2c33a691e37 StaticDependenciesID=506fb87f3154a6c5946a0713e9c1e2d6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefab/Traps/Saw Trap/PNGs/Saw Trap - Level 3.png
+  importAddress: Guid(dc01872a68beb6d4fa45e1f4edbd0a06) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Saw Trap/PNGs/Saw Trap - Level 3.png using Guid(dc01872a68beb6d4fa45e1f4edbd0a06) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '47e441fe001c60da0268d359ab36e5eb') in 0.0402988 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8952abc2810bfc93bd2b654138d5eead DependenciesID=ab870a3eb52505925be325b1fef23694 StaticDependenciesID=ba087d96bed26874016a30e579aff61c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefab/Traps/Fire Trap/Transition/Aseprite/Fire Trap - Level 2 - Transition.aseprite
+  importAddress: Guid(2712d3333542bbe4ba209a414674206d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Trap/Transition/Aseprite/Fire Trap - Level 2 - Transition.aseprite using Guid(2712d3333542bbe4ba209a414674206d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b62e587acf453998c594dc13210b7c74') in 0.0110697 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b62f8aa90179b8deed6c8a96b9ef4afc DependenciesID=3dae999b0056b8c084d42c72dea86506 StaticDependenciesID=390b1c08e86c34a1677ca1f4e3ff3f98 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Prefab/Traps/_Previews/Aseprite
+  importAddress: Guid(0d4de3dcbde0de84f8c8a238af0a1a65) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/Aseprite using Guid(0d4de3dcbde0de84f8c8a238af0a1a65) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b083d0990bfc8a3ddc076b706fae0019') in 0.0123981 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0d685f245f343b90dc72f8d3f6b5e4c3 DependenciesID=efdae97b232d407b6ceeabda47742765 StaticDependenciesID=7bea867492d656d6cc62ff6f3d1adbe5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Prefab/Traps/Fire Trap/PNGs/Fire Trap - Level 1.png
+  importAddress: Guid(63009984757ad704fb629c8677c28979) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Trap/PNGs/Fire Trap - Level 1.png using Guid(63009984757ad704fb629c8677c28979) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ad4810770867c851a309d3f2d4181f40') in 0.0246777 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b939a895136aa40e1dc8a66d593417b0 DependenciesID=abf47e9f3f2f1ab30f9ee53e44f4aaa9 StaticDependenciesID=a2cdf1f254fc104f8e89fc39202824d3 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap
+  importAddress: Guid(f0b644197fb09e74c85ef2711a77a3ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Arrow Trap using Guid(f0b644197fb09e74c85ef2711a77a3ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7bc0f4f4e1d63037a6aeb64aa62a17ff') in 0.0135493 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bf0e5db64864b30c89d382c3ca41b17c DependenciesID=51510fcd00064a7e962858a531e45736 StaticDependenciesID=60a11f5eab16eb91e5d5500a3cf1ea18 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefab/Traps/Fire Breather Trap/Transition
+  importAddress: Guid(e042e8c89abdcf846a2efc99f8a9e8c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Breather Trap/Transition using Guid(e042e8c89abdcf846a2efc99f8a9e8c5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1ddb3ca8411d45b2939ebe7cf93b2f4c') in 0.013236 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=481e6527b12ac15a4cc7c94756671e10 DependenciesID=843aefbaacfe6a3f455709fc1bd8ebe1 StaticDependenciesID=8a40ee0a0076fb05f0752ff90add34e3 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Prefab/Traps/Fire Trap/PNGs
+  importAddress: Guid(4c5c89d9ae57a0e4abbcf71f2489e4fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Trap/PNGs using Guid(4c5c89d9ae57a0e4abbcf71f2489e4fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0043bd12693bbb6344aea0002e21915a') in 0.0122853 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f159acb4e183e99373f6510bd6c38cc2 DependenciesID=38c032ee23a06f2ca2f8c08f1afbd6d1 StaticDependenciesID=54da22e84a34ecc03fed214a9b084661 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefab/Traps/Magic trap/Transition/PNGs/Magic trap - Level 1 - Transition.png
+  importAddress: Guid(54f51d2b0b1029c4e9a7e8c1276be990) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Magic trap/Transition/PNGs/Magic trap - Level 1 - Transition.png using Guid(54f51d2b0b1029c4e9a7e8c1276be990) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '91b0d8670be3519b02462d92be9d6656') in 0.0296287 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50476b7a7fae182c9dee0dd8f775604b DependenciesID=6724d63178f7f4ece4e32d016cc6de4a StaticDependenciesID=cf94d763b55e752edb607772e5fc2db1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Fire Trap/Transition/Aseprite/Fire Trap - Level 1 - Transition.aseprite
+  importAddress: Guid(1087bbd9bbceee9458f7db0fe488bbfd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Trap/Transition/Aseprite/Fire Trap - Level 1 - Transition.aseprite using Guid(1087bbd9bbceee9458f7db0fe488bbfd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '161fe06f7d533bc323dfaab0685ac9bd') in 0.0120303 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=83986c52ea3a440e1edff0124938dcc1 DependenciesID=314287bb0b48f5afe2479c04c1ca20bc StaticDependenciesID=075c5b8a321450ccd159208fb3fc8498 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Fire Breather Trap/PNGs/Fire Breather Trap - Level 1.png
+  importAddress: Guid(840a6d8718d618549b872a4f8f3ca75c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Breather Trap/PNGs/Fire Breather Trap - Level 1.png using Guid(840a6d8718d618549b872a4f8f3ca75c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ac81158fed68b63baa97dfd45271cb68') in 0.0420871 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7fa47c335e721769cfb703fbd996a042 DependenciesID=5bc767d56694b002b6d9bdf88a305c7d StaticDependenciesID=c9dafdb7c60114728bc5477f0e357e65 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/Transition/PNGs
+  importAddress: Guid(6bfcd30896e9e374b8411bc44263e69a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/Transition/PNGs using Guid(6bfcd30896e9e374b8411bc44263e69a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8ba5fd810c9fa1eaf3a96343af3bbac4') in 0.0128368 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2964bba5a1423bb9d989b4c7c13e098b DependenciesID=ee409a04664ffdf5c26774e891fde184 StaticDependenciesID=f6007bfb83e0db4617f4a9b7b1405ea7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Prefab/Traps/Punch Trap/Transition/Aseprite
+  importAddress: Guid(b74ebd29ed7122a41bec55f870376a3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Punch Trap/Transition/Aseprite using Guid(b74ebd29ed7122a41bec55f870376a3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'aca231d0d79275ada10ba6d00f8ef418') in 0.0109556 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4331f4a0e6a6b051a5ca9a84cad627a DependenciesID=c5014cdf41725ea6b0245ccdc8f83803 StaticDependenciesID=f5bab4007f0346ceeee200679b2f5a68 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap
+  importAddress: Guid(9bb8e87f64de3264bae4200cc22282ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap using Guid(9bb8e87f64de3264bae4200cc22282ab) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '15921949d0e28343197f8479b742d6ab') in 0.0117298 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be88fd84bab654ab0d645348333f3d5f DependenciesID=3f3dac2fd1e41741264a43f6ba5579fd StaticDependenciesID=3f5b6e8d6b6f9b9df3255ae19c42e445 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefab/Traps/Magic trap/Transition/PNGs/Magic trap - Level 3 - Transition.png
+  importAddress: Guid(ae1dcad829091fc4c817750e5ef95105) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Magic trap/Transition/PNGs/Magic trap - Level 3 - Transition.png using Guid(ae1dcad829091fc4c817750e5ef95105) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '66ffd49ee8cb734f3b39c6b89b3ce648') in 0.050169 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f172df03d78f586ccd99a94228cef3e7 DependenciesID=66edd8d09eff9edb9956586735701c4c StaticDependenciesID=a046917a842534cf714e6f37ae91b8e1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 38
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/PNGs
+  importAddress: Guid(264fa714c0bb71e4e970492b046d91c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/PNGs using Guid(264fa714c0bb71e4e970492b046d91c6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9c24e6ca936112cd773045a8416f7b0a') in 0.011795 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=229fea285ad82c202c0552fb18fea754 DependenciesID=e7edbe924e5d37b783b1435943169a20 StaticDependenciesID=f652488ab6c4a5a81666552aa100e5fa 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/Aseprite
+  importAddress: Guid(c86b4d9cd5299e64cb507ded5fc3d506) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/Aseprite using Guid(c86b4d9cd5299e64cb507ded5fc3d506) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6ee0c8afd54753f775f8aac05fc71a50') in 0.0120362 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8244c97bcba7a02fed5f41a451b75c63 DependenciesID=2a9efca6da82947338dca7d9b15fd895 StaticDependenciesID=7a42c74cef90ef6a62d1368ad83a8e3a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/PNGs/Lightning Trap - Level 2.png
+  importAddress: Guid(227332c2382232d419d4a2cfddd1be8b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/PNGs/Lightning Trap - Level 2.png using Guid(227332c2382232d419d4a2cfddd1be8b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '90fbbf73eb4f87fdc12a5ca74f921456') in 0.0351366 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de434cd8ef0e04cbb472a4a2e59684bb DependenciesID=d6041a69c508f5364cb0482f17cf45c8 StaticDependenciesID=86f9242d9576c3d97d39edcc9b24b847 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefab/Traps/Toxic Trap/PNGs/Toxic Trap - Level 3.png
+  importAddress: Guid(8a358f67792e0b4448d670da3457a727) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Toxic Trap/PNGs/Toxic Trap - Level 3.png using Guid(8a358f67792e0b4448d670da3457a727) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '47c69264eb27164821ee096b93717575') in 0.0401098 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b637c8ff20f53acd9a816b855f2d500a DependenciesID=3355b2f5454981fb97a08547978bff64 StaticDependenciesID=160bb5a3cf5fad9d97f63784474c4fc0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Prefab/Traps/Punch Trap/Transition/PNGs/Punch Trap - Level 1 - Transition.png
+  importAddress: Guid(71ff0a065c0a98e478e7f14ff05c3a32) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Punch Trap/Transition/PNGs/Punch Trap - Level 1 - Transition.png using Guid(71ff0a065c0a98e478e7f14ff05c3a32) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f7d4f547f468e2d6aed843259c56d79d') in 0.0453905 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=00975ab3f556bf78b66699627173524b DependenciesID=131d0342a86840988419bb8de92ec391 StaticDependenciesID=3450c6cc38045db2729e8f22c2c734fa 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/Transition/Aseprite
+  importAddress: Guid(2ad1ac155c67e5e47a32ec7add5b526e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/Transition/Aseprite using Guid(2ad1ac155c67e5e47a32ec7add5b526e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '51bd869bc32d72b8fbbce12ca05e922c') in 0.0118695 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7d85abd93db7b1db45eddc184666faa DependenciesID=ad972dd9e10b532b21e605950bcb05bd StaticDependenciesID=802ab42150510887961edb068486bf68 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/PNGs/Ceiling Trap - Level 2.png
+  importAddress: Guid(b1ad3d7e9a1a2e643bf781f36d459bc7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/PNGs/Ceiling Trap - Level 2.png using Guid(b1ad3d7e9a1a2e643bf781f36d459bc7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '43ecdcab78f05372424b139d94f5d849') in 0.0366122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8a6af217fe5b1901276fc14fe612ca37 DependenciesID=b412bb6490f13e62b1e9b54ebb85a6e2 StaticDependenciesID=17f91e73a3ea192084422299de1b9376 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap/PNGs/Arrow Trap - Level 1.png
+  importAddress: Guid(b16303d9da058d64b9e3d7741717b710) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Arrow Trap/PNGs/Arrow Trap - Level 1.png using Guid(b16303d9da058d64b9e3d7741717b710) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e5b12d69bc9ed9c7bc45eb6b60d7307c') in 0.0344445 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=244341b1f2ed5e2d9b8ca8e054353133 DependenciesID=76d3636e77298c4ba7dbbf372c05589a StaticDependenciesID=4e60d1c05a6020b10fa168f9eb820a8b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Prefab/Traps/Punch Trap/Transition/Aseprite/Punch Trap - Level 1 - Transition.aseprite
+  importAddress: Guid(5d8127bb640bafc4ebb55ae7fd3f55fe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Punch Trap/Transition/Aseprite/Punch Trap - Level 1 - Transition.aseprite using Guid(5d8127bb640bafc4ebb55ae7fd3f55fe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1d9f6d8bcb84dac235a60f10066f3ff3') in 0.0116599 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5271139bb4034d092d3d4352688a4aa8 DependenciesID=1be76df2d2350ee466812c5667d930d2 StaticDependenciesID=5eddb57d34328ed4a7137adfbb7de303 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/Colour background/Fire breather Trap Preview.gif
+  importAddress: Guid(192b8978a82f9ab4ea0ea51be0d69f88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/Colour background/Fire breather Trap Preview.gif using Guid(192b8978a82f9ab4ea0ea51be0d69f88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e7fbab75a48eed67a284f75bd9465a77') in 0.0190592 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3aa9f2b6be8d5b3b72356712922a8b76 DependenciesID=978accd9e9962f6433206581785e68d0 StaticDependenciesID=47dc45e61580452f490cf5a3656db340 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefab/Traps/Punch Trap/Transition/PNGs/Punch Trap - Level 3 - Transition.png
+  importAddress: Guid(63ebbeae7820e084c8d6db81719b3d40) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Punch Trap/Transition/PNGs/Punch Trap - Level 3 - Transition.png using Guid(63ebbeae7820e084c8d6db81719b3d40) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f4d47904a2dbfb94e9c6d01871af3850') in 0.0329552 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=58c64b5856098a4210f054caa5462194 DependenciesID=6957a2c570f3e7e6b1527dded1fd8e40 StaticDependenciesID=5f7d71515211e342ae83e6e7e1852a8f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 17
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/Transitions/PNGs/Ceiling Trap - Level 2 - Transition.png
+  importAddress: Guid(91d6895fedb04bd4998e40cfbdc6c250) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/Transitions/PNGs/Ceiling Trap - Level 2 - Transition.png using Guid(91d6895fedb04bd4998e40cfbdc6c250) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7a1a6496dcdb76dba7a406ea1eba3f87') in 0.0490836 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a59f1c9ce41ce32f84f130a8b7f96ac0 DependenciesID=d9994e54d33e6b2ea966b1134038e4e1 StaticDependenciesID=2723018bc86de80bbb6dc6bd7d515aea 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Prefab/Traps/_Previews/Aseprite/Arrow Trap Preview.aseprite
+  importAddress: Guid(10a44037dad645c42ba9c25ad97574fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/Aseprite/Arrow Trap Preview.aseprite using Guid(10a44037dad645c42ba9c25ad97574fa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c9d58ca13ef0de1cfbdc7fccd79ce17e') in 0.0105901 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9abfb33ad1c7efa797a31e19baa64a34 DependenciesID=875bdaa537650cff0e85f6581cb68ff8 StaticDependenciesID=bdcab89dac46a5e34313c1243b249a6c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap/Aseprite/Arrow Trap - Level 1.aseprite
+  importAddress: Guid(3ce351632763d964d98743ef13750692) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Arrow Trap/Aseprite/Arrow Trap - Level 1.aseprite using Guid(3ce351632763d964d98743ef13750692) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '12308d239abaa002a83e43ac63c3b368') in 0.0116314 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de0d10b27d0a01f03e65045ee080c578 DependenciesID=952db21f291c934d8bfd5b843906df5b StaticDependenciesID=37f07fb6f549bfe0b6def4e6a033a9d7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap/Aseprite/Arrow Trap - Level 3.aseprite
+  importAddress: Guid(29fe915bd20559d40a18503ad1096542) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Arrow Trap/Aseprite/Arrow Trap - Level 3.aseprite using Guid(29fe915bd20559d40a18503ad1096542) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0f3bf9a7d51cedc5da672be5d96d6196') in 0.0110007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ab4b4b5ecd5c054cc73cd3853789a7d7 DependenciesID=3ece1ba20f2d63128ed2a5032e52b734 StaticDependenciesID=767732595a46eb37af3370174be6a4a6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/No Background/Puch Trap Preview - No Background.gif
+  importAddress: Guid(5c39368c193090146987370ed25aba59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/No Background/Puch Trap Preview - No Background.gif using Guid(5c39368c193090146987370ed25aba59) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '03d9ecc28063496876ee379daf8edfe8') in 0.0202196 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80ddbafb36e20a7d38a2baf1394f01ff DependenciesID=3b2e5465dbe207e2a4cef6f40c3e5769 StaticDependenciesID=a35811612a62d3af3950ad3199f462a9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefab/Traps/Fire Trap/Aseprite
+  importAddress: Guid(1dac69ed7b3265940a5048ae22fe36c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Trap/Aseprite using Guid(1dac69ed7b3265940a5048ae22fe36c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2091792ca42e10d580a4e2f37a63c4fa') in 0.0122214 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=95587ac710765d776c27763ec4d2b8de DependenciesID=9a60241408714240f1e2b20fb81907b8 StaticDependenciesID=7402f92d4a62e2a1e1331396a2b6f2d1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Magic trap/PNGs
+  importAddress: Guid(08e2e5d1d2b2cd14f8c7637e001c725c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Magic trap/PNGs using Guid(08e2e5d1d2b2cd14f8c7637e001c725c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3fd8a8825de47d5de0471648a554aaef') in 0.0128246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=39524c3d477dfafba33bc25cc919960d DependenciesID=1f319ea52991976b4f37102b49041920 StaticDependenciesID=6c44f7c9d0628e41518d0d47926ad690 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/Aseprite
+  importAddress: Guid(d0acbbb55e019db418815dbe2e0e04ae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/Aseprite using Guid(d0acbbb55e019db418815dbe2e0e04ae) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b03131d0bbd2aadd5b50997d5e87b398') in 0.0133845 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=324d68b454fc458116f4753e826ec9a3 DependenciesID=a016bef50a06169abbb8b49a0727a3b1 StaticDependenciesID=6115de34fe6056d3202cdaec71cb0019 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefab/Traps/Sandworm Trap/PNGs/Sandworm trap - Level 2.png
+  importAddress: Guid(ff8c0f375436c20438a2ac4d60a6d597) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Sandworm Trap/PNGs/Sandworm trap - Level 2.png using Guid(ff8c0f375436c20438a2ac4d60a6d597) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a8a375f1c5f6b5182af092b6da59b2a7') in 0.0346289 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1266c7fe240173d90ae03660c56d86a4 DependenciesID=27da7edd556f9a8cacb24ca3711f49d2 StaticDependenciesID=77df52e725839eecb9cdad209eb6b9ae 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/Transitions
+  importAddress: Guid(fda9fd4872ab3d2469b0cdbd84620a7f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/Transitions using Guid(fda9fd4872ab3d2469b0cdbd84620a7f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7ad3b07256027953689f6463f7485c65') in 0.012457 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8267dd67f22fd838fa56fc635078a098 DependenciesID=e42756a6aca69ad624aec013ab109b0f StaticDependenciesID=b6a246b04be8a88fa8ae8de241a08f66 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/Colour background/Magic Trap Preview.gif
+  importAddress: Guid(bf40cad1f891e7b41acc2fd6b71288ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/Colour background/Magic Trap Preview.gif using Guid(bf40cad1f891e7b41acc2fd6b71288ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c07e514b8ae0a2ee46b42fca987b5151') in 0.0188515 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7bdba592150fa0c312423869f2d1cb0c DependenciesID=21301f7bb56dc037d47a182482d23ab5 StaticDependenciesID=e711c62477ff4f35b1ea7578d41f7b0e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap/Transitions/PNGs/Arrow Trap - Level 2 - Transition.png
+  importAddress: Guid(c107bc17f7c8a674a902d60512e1aa3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Arrow Trap/Transitions/PNGs/Arrow Trap - Level 2 - Transition.png using Guid(c107bc17f7c8a674a902d60512e1aa3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4f4940ab6963cff9dd0c987d668e0b40') in 0.0347131 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=727a7dbf2ecb1ac3616cf0bcdab17360 DependenciesID=6aa2d7e7d2b9ad0f225bf45fb5e05564 StaticDependenciesID=faa15623fa59f7722f062b8901b46b58 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/Colour background/Worm Trap Preview.gif
+  importAddress: Guid(d1106059dd934b940adbd3a88d1c4489) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/Colour background/Worm Trap Preview.gif using Guid(d1106059dd934b940adbd3a88d1c4489) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e962937ebfe2fad8507ae28bafce61c2') in 0.0172432 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a5c959bbe6f80636cb866b0c39994ddd DependenciesID=5f10e275387e63f8b534fe1bb4b320bb StaticDependenciesID=8f336667ab19a5f3cee97e41582cd8a4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Prefab/Traps/Saw Trap/Aseprite/Saw Trap - Level 1.aseprite
+  importAddress: Guid(5b2bb23a9f4dbbf45a454fa74c72a49c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Saw Trap/Aseprite/Saw Trap - Level 1.aseprite using Guid(5b2bb23a9f4dbbf45a454fa74c72a49c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '414a867614c563eb063566e255700939') in 0.0122122 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e74350a8abca6cce27e7b4aa00faba6d DependenciesID=953539e1769315d9003eafb17a4a7a8b StaticDependenciesID=49e2a62141999c590ddb2b40ec844314 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap/Transitions/Aseprite/Arrow Trap - Level 3 - Transition.aseprite
+  importAddress: Guid(84e995aa9cea75f4991a7ebd478a4a3d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Arrow Trap/Transitions/Aseprite/Arrow Trap - Level 3 - Transition.aseprite using Guid(84e995aa9cea75f4991a7ebd478a4a3d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e79e62c65b6c77a4bef28d67a44f9c37') in 0.011204 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=53e1a629cc6bb641620c973f11df44f7 DependenciesID=b94199df6bce0fbfb58fde0f727704bd StaticDependenciesID=8eeec0dc0be1a8f1a093759069bf50ed 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefab/Traps/Fire Breather Trap/PNGs/Fire Breather Trap - Level 2.png
+  importAddress: Guid(7524ddbb68df7b945b7e0440dac3d408) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Breather Trap/PNGs/Fire Breather Trap - Level 2.png using Guid(7524ddbb68df7b945b7e0440dac3d408) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4c8e607d2d391386e932ffb4200bad01') in 0.081414 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d6507bec64c83d925d1e206fd5ad5119 DependenciesID=5b7b9f9bd9dff2210ae40e17dd57ee17 StaticDependenciesID=eb6d4c69cb8e8949776e691f0d2b49f1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 72
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefab/Traps/Punch Trap/Aseprite/Punch Trap - Level 3.aseprite
+  importAddress: Guid(f51a95670e0f5134bb1bf6f6d84e4491) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Punch Trap/Aseprite/Punch Trap - Level 3.aseprite using Guid(f51a95670e0f5134bb1bf6f6d84e4491) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'df709dba60fbe0ba559ba52282b5bf3a') in 0.0130069 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=69124a3633472ce845f01d9bdc1a2cba DependenciesID=c1d95ebd479cf751991188044910d395 StaticDependenciesID=8f5d71611cb911b867008b8e1cd97b5e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/No Background/Worm Trap Preview - No Background.gif
+  importAddress: Guid(7a58b07195aebe945ba7dadc718b38eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/No Background/Worm Trap Preview - No Background.gif using Guid(7a58b07195aebe945ba7dadc718b38eb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '449e857761fb7ef6afe20187c9d7b86b') in 0.017239 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b50b873d38abed403075dce1e897cff7 DependenciesID=3f24f553f8dd8ee383b0cf33565e2b09 StaticDependenciesID=bb46e02a1a8111bdac85a8000d812f01 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefab/Traps/Magic trap/Transition/Aseprite/Magic trap - Level 1 - Transition.aseprite
+  importAddress: Guid(82808b7599ec62f469ab9e966a90c6ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Magic trap/Transition/Aseprite/Magic trap - Level 1 - Transition.aseprite using Guid(82808b7599ec62f469ab9e966a90c6ec) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b75b559178b86444b572cb5facbcf611') in 0.0101368 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=72886a3a2c335af0989484b3df4d375a DependenciesID=0dd6a92025c8cc30f46b8f431782f867 StaticDependenciesID=251572ab1824ee48c8e6e798c907134e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/No Background/Ceiling Trap Preview - No Background.gif
+  importAddress: Guid(3ed3619e741d8814691bfec0a3048629) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/No Background/Ceiling Trap Preview - No Background.gif using Guid(3ed3619e741d8814691bfec0a3048629) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e2b5e44126d9a31f35738bc4415282e7') in 0.0176048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91ad73f3226e3063c836503edbd540a6 DependenciesID=03ff5c0ab0784d1318bc11124d8928bc StaticDependenciesID=e467de4baa319b412a3731a94adef476 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefab/Traps/Magic trap/Transition/Aseprite/Magic trap - Level 3 - Transition.aseprite
+  importAddress: Guid(c19f5ceaccd27e648b4948fb2e10f0ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Magic trap/Transition/Aseprite/Magic trap - Level 3 - Transition.aseprite using Guid(c19f5ceaccd27e648b4948fb2e10f0ed) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7c77a81d732950fb32ff1c7f39ad4379') in 0.0125943 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=21e9c195d22deb650c64abc1920e1ec5 DependenciesID=c92745c6827f8235f9c0b4bcbdc599fe StaticDependenciesID=1b57ad669cfc3a844e0a9c944ded0182 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefab/Traps/Sandworm Trap/Transitions
+  importAddress: Guid(f7f68c4351fc6a24f905bca0b5fd5eaa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Sandworm Trap/Transitions using Guid(f7f68c4351fc6a24f905bca0b5fd5eaa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f3d8b65b45c435c7b2ea9caf80606bab') in 0.0113289 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04111b492eb543ddccf8bb9d63ee8b5d DependenciesID=67edb7f1809165402b009360b4ea2cff StaticDependenciesID=0d31dc3fc8a336c02a9da3254c588b61 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefab/Traps/Saw Trap/Transitions/Aseprite/Saw Trap - Level 1 - Transition.aseprite
+  importAddress: Guid(ed04d30ab9c0c0246875d844ca19071d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Saw Trap/Transitions/Aseprite/Saw Trap - Level 1 - Transition.aseprite using Guid(ed04d30ab9c0c0246875d844ca19071d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'aacb0f4c3cf3a21ef17ebf8355fe08b8') in 0.0119175 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bbc8cf2e63a03bb6d20a60b2597bcb8e DependenciesID=ef6d25beb5df1e8de7d48e184b1352dd StaticDependenciesID=0e969857eec9f31ac376d424c7e61840 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Prefab/Traps/Fire Breather Trap/Transition/Aseprite/Fire Breather Trap - Level 3 - Transition.aseprite
+  importAddress: Guid(444c075568fefe346a491416074c0e19) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Fire Breather Trap/Transition/Aseprite/Fire Breather Trap - Level 3 - Transition.aseprite using Guid(444c075568fefe346a491416074c0e19) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9421354d454fceabd1649809e55ae737') in 0.0103201 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5f5082c808e5258dbb14005aaa8b82be DependenciesID=860e2aad774da2d7964419e07bda145e StaticDependenciesID=11a29f382747137a29e1ff281a7c762e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Prefab/Traps/Sandworm Trap/Transitions/Aseprite
+  importAddress: Guid(01b613a2a9f10394fa4a0a5e2825af6e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Sandworm Trap/Transitions/Aseprite using Guid(01b613a2a9f10394fa4a0a5e2825af6e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '08dfd173488054f2fe9ccb92bc1f7427') in 0.0109868 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=633ddc17b2fd012f972bbe742ca35b0d DependenciesID=47c5c2b5c48077b29fc6950f1ee220c4 StaticDependenciesID=d06dd3dcd3f6c4940108716ed0e7dc1d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Prefab/Traps/Magic trap/PNGs/Magic trap - Level 2.png
+  importAddress: Guid(8f2a257a8dde8514e86bb832ca31b6b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Magic trap/PNGs/Magic trap - Level 2.png using Guid(8f2a257a8dde8514e86bb832ca31b6b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3e461172abda9d1e3591765518bad006') in 0.0606153 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54455d7f9f9f17c28163b6a0568ac920 DependenciesID=7ee6b88c8b4cdac2ff407302e7779483 StaticDependenciesID=2a88515bcf6126153490b883ae1a02c8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 49
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefab/Traps/Sandworm Trap
+  importAddress: Guid(091fcdfeb8ddb6f4b935459ccca3ae87) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Sandworm Trap using Guid(091fcdfeb8ddb6f4b935459ccca3ae87) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c75a58563ad0f9aec4a412ec6d2d4b9e') in 0.0154234 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a857eb6176b76b72d278d207f40d2404 DependenciesID=2c0ed1f6329e234d33c354cb334dc19f StaticDependenciesID=ef8b55ad0e87c63c7ffa6b817914c00b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Prefab/Traps/Toxic Trap/Transitions/PNGs/Toxic Trap - Level 2 - Transition.png
+  importAddress: Guid(037bf4ae01d49f841b4c846422ad4666) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Toxic Trap/Transitions/PNGs/Toxic Trap - Level 2 - Transition.png using Guid(037bf4ae01d49f841b4c846422ad4666) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c4b3285b9108b9915fdd34bdbd8e6e16') in 0.0495455 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8cbb77dd7f94dc40de7d4fc8075e31d DependenciesID=2a5a020908dcfe9896fc8e7df27da9ae StaticDependenciesID=2dffce55c5387d5e1c322dc619584cba 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 39
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/PNGs/Ceiling Trap - Level 3.png
+  importAddress: Guid(62f7cb678c1849c4a8372c3bf5f1ab0a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/PNGs/Ceiling Trap - Level 3.png using Guid(62f7cb678c1849c4a8372c3bf5f1ab0a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd207401b0d20e85cd3e680146fcaf103') in 0.0388198 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28ece4a0883feb43a596cf0fbf68b40c DependenciesID=e53cba2bcb9e24827a341ccf6af86abf StaticDependenciesID=89fa8ae26398905845006ae418c7456c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 23
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Prefab/Traps/_Previews/Aseprite/Puch Trap Preview.aseprite
+  importAddress: Guid(8eec4e9da602e8d48ad4cdf03a814b97) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/Aseprite/Puch Trap Preview.aseprite using Guid(8eec4e9da602e8d48ad4cdf03a814b97) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '938eaf9eebc0d4b51445210b9c7cb051') in 0.0110396 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d005d9966f4c9e92f86cb68c76963773 DependenciesID=7c3482b5be496defb2d29d23e586aae5 StaticDependenciesID=d177b618939fc9a580870228132ff046 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Prefab/Traps/Punch Trap/Aseprite
+  importAddress: Guid(d1da13e8f671d744ba4b9ffd24d2d280) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Punch Trap/Aseprite using Guid(d1da13e8f671d744ba4b9ffd24d2d280) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dcc6e259f914283f053315841ea944eb') in 0.0107407 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7626bab0fd85ce9799262043ab2e0e89 DependenciesID=177eb67062c937fbc9c70b3cc17a5203 StaticDependenciesID=31cff4c9dd2615e2dd2248c8f08537b8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/PNGs/Lightning Trap - Level 3.png
+  importAddress: Guid(a6cc4984916b0994c961b404048239b9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Lightning Trap/PNGs/Lightning Trap - Level 3.png using Guid(a6cc4984916b0994c961b404048239b9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'eec9bf99dc6e525c6ec48d68a49db43b') in 0.0394015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=80ca35a5b8493be7bedb31a35ce7a68d DependenciesID=bec7cb87a42d65385fb592be8c828bda StaticDependenciesID=a9809f40b3d3c06e9f659fc8bc011021 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 31
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefab/Traps/Ceiling Trap/Aseprite/Ceiling Trap - Level 1.aseprite
+  importAddress: Guid(c11033fe223650e4d92ebe8372fbf5a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Ceiling Trap/Aseprite/Ceiling Trap - Level 1.aseprite using Guid(c11033fe223650e4d92ebe8372fbf5a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '246fd2fd35b1b09318dcb2a60e0132e0') in 0.0116374 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e969cd241def8aa1cdba6264ed52da78 DependenciesID=976b0bc93ee6faf0fb07a5e561316cab StaticDependenciesID=55920497cbb8e1ff76a290583763d493 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Prefab/Traps/_Previews/Aseprite/Worm Trap Preview.aseprite
+  importAddress: Guid(b3f52d19c24b9bc40b5f10f43fb4fd62) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/Aseprite/Worm Trap Preview.aseprite using Guid(b3f52d19c24b9bc40b5f10f43fb4fd62) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ac23b80ed42f3407e05f3d1c8038087c') in 0.0118808 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=51fd3b767d206f9999d496c2da7e1b39 DependenciesID=67279f04e44459232c612ceb714d7d97 StaticDependenciesID=329438c0b89e73baa3e1cbbc78f6f294 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Prefab/Traps/Saw Trap/Transitions/Aseprite/Saw Trap - Level 3 - Transition.aseprite
+  importAddress: Guid(2a1b31b879f83924783188408099ca55) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/Saw Trap/Transitions/Aseprite/Saw Trap - Level 3 - Transition.aseprite using Guid(2a1b31b879f83924783188408099ca55) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a148432ffe14f63667ec48a9311e0efb') in 0.0107596 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ebe4dd35d871bee6cd486f88a89ff438 DependenciesID=28e23d864bd14a03416d5a03e553767a StaticDependenciesID=5480023ff90dfcb7a71ea0f61b59c090 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Prefab/Traps/_Previews/Aseprite/Fire Trap Preview.aseprite
+  importAddress: Guid(ddb2aa6c5f1ea56418619389f0059a0a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefab/Traps/_Previews/Aseprite/Fire Trap Preview.aseprite using Guid(ddb2aa6c5f1ea56418619389f0059a0a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b840dc9a6f16ee16d007f9aba327b5a8') in 0.0095859 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a789793d19f63c6032c4ee446728bc14 DependenciesID=c7df391f5adf2995904f154f1eb28478 StaticDependenciesID=5042ed931fec26d85c234b4909cfdd2b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.160653 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/No Background/Arrow Trap Preview - No background.gif
+  importAddress: Guid(c501b5e5fb5bb724aba15d4ea714767d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/No Background/Arrow Trap Preview - No background.gif using Guid(c501b5e5fb5bb724aba15d4ea714767d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6a1c2a908b0e5ff9a56e87a80c473e85') in 0.0800198 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=696a2e88f574462c98cc5db3a3898a57 DependenciesID=273d6ce106b66f0d6d91aa1c3e101ddf StaticDependenciesID=090f4b916873823acf2d94ed1359b8ae 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Prefab/Traps/_Previews/GIFs/No Background/Toxic Trap Preview - No Background.gif
+  importAddress: Guid(1f4e899eca9ff1c4182ea4da8fb1aa59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Traps/_Previews/GIFs/No Background/Toxic Trap Preview - No Background.gif using Guid(1f4e899eca9ff1c4182ea4da8fb1aa59) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '9bef55693edb4cdc8dca110453cecee7') in 0.0257007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=08fed4bf40e8163e384a3b6e9118fadc DependenciesID=608d6e3493ec9a94d5cff99b3a350994 StaticDependenciesID=d8b0df92907a6b4cb5e5c67b6805fb94 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.626330 seconds.
+  path: Assets/Prefab/Traps/Arrow Trap/PNGs/Arrow.png
+  importAddress: Guid(71fd4480621d63b438bf10ae9119e769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Traps/Arrow Trap/PNGs/Arrow.png using Guid(71fd4480621d63b438bf10ae9119e769) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'dbc439c26048c3cf3514719be824069b') in 0.0199585 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b98ba6dd3f578d42c0f2bd3b3ca6b0f DependenciesID=bb1dc3944beb100ef6d7cbd2d339f68f StaticDependenciesID=f9f05891be211778c419d5ab57e9a37c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.223922 seconds.
+  path: Assets/Prefab/Traps/Lightning Trap/PNGs/Lightning Trap - Level 1.png
+  importAddress: Guid(4f6a78837556f084aa6eb44fd29ae81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Traps/Lightning Trap/PNGs/Lightning Trap - Level 1.png using Guid(4f6a78837556f084aa6eb44fd29ae81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '8fd437e6476e9464b733f50b607759df') in 0.0544218 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50bb8db8674853051be84a393c068543 DependenciesID=9b82978df70aaf3d45307255fe2f150f StaticDependenciesID=50bedf83467217cbec63bc9073322136 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
