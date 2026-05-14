@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a0036e9d52e940a32da0670ae7071, type: 3}
+  m_Name: Scene8Ambush
+  m_EditorClassIdentifier: 
+  lines:
+  - name: Narrative
+    text: "[Enemies appear: File Flingers throwing sharp folder-like projectiles.]"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "YVES! BEHIND YOU!"
+    voiceClip: {fileID: 0}
+  - name: Narrative
+    text: "[Yves is startled by Tala out of nowhere then he dodges the attack to counter attack.]"
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "Woah, That was a close one. Thanks, Tala."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "*sighs* What are you without me?"
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "Yeah yeah."
+    voiceClip: {fileID: 0}

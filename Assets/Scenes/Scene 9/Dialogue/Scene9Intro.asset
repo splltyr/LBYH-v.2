@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a0036e9d52e940a32da0670ae7071, type: 3}
+  m_Name: Scene9Intro
+  m_EditorClassIdentifier: 
+  lines:
+  - name: Tala
+    text: "I’M TIRED!"
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "Just one more floor.. "
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "By the way, these floating books are awesome. "
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "Not professional."
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "This library is too big. How am I gonna find the final source code to stop the corruption?"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "Don’t worry, I’ll be here when you don’t understand things. I am sure you can do it, have some faith."
+    voiceClip: {fileID: 0}

@@ -116,7 +116,7 @@ public class CorruptedCooker : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
-        isTyping = true;
+        // isTyping = true;
         textDisplay.text = "";
         
         if (sentence.Contains("RATIONS") || sentence.Contains("WHO DARES")) nameDisplay.text = "Corrupted Cooker";
@@ -128,7 +128,7 @@ public class CorruptedCooker : MonoBehaviour
             textDisplay.text += letter;
             yield return new WaitForSeconds(typeSpeed);
         }
-        isTyping = false;
+        // isTyping = false;
     }
 
     IEnumerator SpawnSkeletonsPhase()

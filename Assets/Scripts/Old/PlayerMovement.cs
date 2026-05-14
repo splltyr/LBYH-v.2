@@ -165,10 +165,16 @@ public class PlayerMovement : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyHealth health = enemy.GetComponent<EnemyHealth>();
+            BossHealth bossHealth = enemy.GetComponent<BossHealth>();
+
             if (health != null)
             {
                 Vector2 knockbackDir = (enemy.transform.position - transform.position).normalized;
                 health.TakeDamage(finalDamage, knockbackDir);
+            }
+            else if (bossHealth != null)
+            {
+                bossHealth.TakeDamage((int)finalDamage);
             }
         }
     }
@@ -244,6 +250,7 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        Debug.Log($"<color=red>PLAYER HIT (Movement Script)! Damage: {damage}, Current Health: {currentHealth}</color>");
         if (playerHealthBar != null) playerHealthBar.value = currentHealth;
         animator.SetTrigger("Hit"); 
 

@@ -29,7 +29,9 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>() ?? GetComponentInChildren<SpriteRenderer>();
         if (spriteRenderer != null) originalColor = spriteRenderer.color;
         if (healthBar != null)
         {

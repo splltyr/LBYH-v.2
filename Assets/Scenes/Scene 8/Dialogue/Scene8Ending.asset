@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a0036e9d52e940a32da0670ae7071, type: 3}
+  m_Name: Scene8Ending
+  m_EditorClassIdentifier: 
+  lines:
+  - name: Yves
+    text: "Don’t worry, Tala. I.. I have a feeling that we can still bring back Damon."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "That’s.. Impossible, Yves. The only thing that you can do is defeat him. He's gone."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "In order to defeat him, you have to get the final source code from the Library. Then, you’ll inject it into the quantum computer on the Penthouse."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "And hopefully– go back to our original timeline."
+    voiceClip: {fileID: 0}

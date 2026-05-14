@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a0036e9d52e940a32da0670ae7071, type: 3}
+  m_Name: Scene8Flashback
+  m_EditorClassIdentifier: 
+  lines:
+  - name: Tala
+    text: "It all started at the Expo…"
+    voiceClip: {fileID: 0}
+  - name: Narrative
+    text: "[Flashback: 10 years ago at STI Expo. Damon and Tala are students.]"
+    voiceClip: {fileID: 0}
+  - name: Damon
+    text: "Tala! Where are the writers and artists? They need to finish the script to continue the game we’re developing."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "The writers and artists are working on it. Don’t be obsessive on the game, Damon... You need some rest."
+    voiceClip: {fileID: 0}
+  - name: Narrative
+    text: "[One day at the laboratory...]"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "You really won’t listen, all these food I gave you are untouched! Damon, eat this and rest before something happens!"
+    voiceClip: {fileID: 0}
+  - name: Damon
+    text: "Tala, I’m almost done just give me about an hour-"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "AN HOUR!? DAMON, YOU HAVEN’T EATEN ANYTHING THE WHOLE DAY! STOP WORKING AND EAT!"
+    voiceClip: {fileID: 0}
+  - name: Narrative
+    text: "[The malware happens. The computer starts glitching slightly red.]"
+    voiceClip: {fileID: 0}
+  - name: Damon
+    text: "Wait.. WAIT! AGHH NO. STUPID WIFI, I WAS ALMOST THERE TO REMOVE THE VIRUS!"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "Damon, have you seen the script? Huh..? What’s this?"
+    voiceClip: {fileID: 0}
+  - name: Narrative
+    text: "[The computer glitches red. They pass out.]"
+    voiceClip: {fileID: 0}
+  - name: Damon (Corrupted)
+    text: "AAGGHHH! THIS IS YOUR FAULT!"
+    voiceClip: {fileID: 0}
+  - name: Narrative
+    text: "[Damon strangles Tala's neck.]"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "D-Damon.. P-please.. I-I can’t.. B-breathe.."
+    voiceClip: {fileID: 0}
+  - name: Damon
+    text: "Tala..? Wait, wait no. I-I can still fix this.. Tala, wake up please.."
+    voiceClip: {fileID: 0}

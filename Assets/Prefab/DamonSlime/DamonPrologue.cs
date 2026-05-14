@@ -117,7 +117,7 @@ public class DamonPrologue : MonoBehaviour
     {
         isDone = true;
         if (playerObject != null) {
-            MonoBehaviour[] allScripts = playerObject.GetComponentsInChildren<MonoBehaviour>();
+            Behaviour[] allScripts = playerObject.GetComponentsInChildren<Behaviour>();
             foreach (var s in allScripts) {
                 if (s != null && s.gameObject != this.gameObject && !(s is Animator)) s.enabled = false;
             }

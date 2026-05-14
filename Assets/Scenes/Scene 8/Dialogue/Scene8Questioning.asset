@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2a0036e9d52e940a32da0670ae7071, type: 3}
+  m_Name: Scene8Questioning
+  m_EditorClassIdentifier: 
+  lines:
+  - name: Yves
+    text: "..."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "Uh.. Are you gonna say something?"
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "Uhhh… I have been holding this since we met in the clinic."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "Stop edging me and say it already!"
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "Okay first question, how did you find me and how did I end up at the clinic with Nurse Loren?"
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "You’ll know the other details later but I was the one who rescued you and brought you somewhere Nurse Loren can see you."
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "I don’t understand.."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "You will, soon."
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "It just doesn’t make sense.."
+    voiceClip: {fileID: 0}
+  - name: Tala
+    text: "Quit your babbling, do you have any other questions?"
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "Give me a second."
+    voiceClip: {fileID: 0}
+  - name: Yves
+    text: "I’m pretty sure that you were once a person.. How did you end up like.. That? A glowy bubble."
+    voiceClip: {fileID: 0}

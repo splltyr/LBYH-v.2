@@ -11,7 +11,7 @@ public class KnightHero : MonoBehaviour
 
     [Header("Combat Settings")]
     public Transform attackPoint;      
-    public float attackRange = 0.8f;   
+    public float attackRange = 1.25f;   
     public float attackDamage = 25f;   
     public LayerMask enemyLayers;     
 
@@ -37,11 +37,56 @@ public class KnightHero : MonoBehaviour
     private float moveInput;
     private string currentAnimState; 
 
+    void Awake() {
+        // Ensure only one AudioListener exists in the scene
+        AudioListener[] listeners = Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
+        if (listeners.Length > 1)
+        {
+            bool keptOne = false;
+            foreach (var listener in listeners)
+            {
+                if (listener.gameObject.CompareTag("MainCamera") && !keptOne)
+                {
+                    listener.enabled = true;
+                    keptOne = true;
+                }
+                else
+                {
+                    listener.enabled = false;
+                }
+            }
+            if (!keptOne && listeners.Length > 0) listeners[0].enabled = true;
+        }
+
+        if (attackPoint == null) {
+            Transform found = transform.Find("AttackPoint");
+            if (found != null)
+                attackPoint = found;
+            else {
+                var go = new GameObject("AttackPoint");
+                go.transform.SetParent(transform, false);
+                go.transform.localPosition = new Vector3(0.85f, 0.35f, 0f);
+                attackPoint = go.transform;
+            }
+        }
+        if (enemyLayers.value == 0) {
+            int enemy = LayerMask.NameToLayer("Enemy");
+            if (enemy >= 0)
+                enemyLayers = 1 << enemy;
+        }
+    }
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rb.gravityScale = 3f; 
-        if (gameObject.tag != "Player") gameObject.tag = "Player"; 
+        if (gameObject.tag != "Player") gameObject.tag = "Player";
+
+        if (talaTransform != null) {
+            var follow = talaTransform.GetComponent<TalaFollow>();
+            if (follow != null && follow.playerTransform == null)
+                follow.playerTransform = transform;
+        }
     }
 
     void Update() {
@@ -71,7 +116,8 @@ public class KnightHero : MonoBehaviour
         }
 
         // --- TALA TRAIL LOGIC ---
-        if (talaTransform != null) {
+        // If Tala uses TalaFollow, that script owns her position — do not double-move here.
+        if (talaTransform != null && talaTransform.GetComponent<TalaFollow>() == null) {
             Vector3 flippedOffset = talaOffset;
             flippedOffset.x *= transform.localScale.x;
             Vector3 targetPos = transform.position + flippedOffset;
@@ -90,12 +136,19 @@ public class KnightHero : MonoBehaviour
         ChangeAnimationState("KnightAttack");
         yield return new WaitForSeconds(0.1f); 
 
+        if (attackPoint == null) yield break;
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies) {
-            EnemyHealth health = enemy.GetComponent<EnemyHealth>();
+            EnemyHealth health = enemy.GetComponent<EnemyHealth>() ?? enemy.GetComponentInParent<EnemyHealth>();
+            BossHealth bossHealth = enemy.GetComponent<BossHealth>() ?? enemy.GetComponentInParent<BossHealth>();
+
             if (health != null) {
                 Vector2 knockbackDir = (enemy.transform.position - transform.position).normalized;
                 health.TakeDamage(attackDamage, knockbackDir);
+            }
+            else if (bossHealth != null) {
+                bossHealth.TakeDamage((int)attackDamage);
             }
         }
         yield return new WaitForSeconds(0.2f); 
@@ -127,6 +180,13 @@ public class KnightHero : MonoBehaviour
         yield return new WaitForSeconds(dashDuration);
         rb.gravityScale = originalGravity;
         isDashing = false;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        Debug.Log($"<color=red>KNIGHT HIT! Damage: {damage}</color>");
+        ChangeAnimationState("KnightHit"); // If you have a hit animation
+        // Add health subtraction here if you add a health variable later
     }
 
     void OnDrawGizmosSelected() {
