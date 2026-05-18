@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.3f1 (39d1a88d4dd1) revision 3789224'; Using compiler version '194234433'; Build Type 'Release'
-OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 16310 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron" at "2026-05-18T00:53:08.9571123Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32629 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dieha" at "2026-05-18T18:24:43.5188447Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-05-18T00:53:08Z
+Date: 2026-05-18T18:24:43Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
@@ -15,24 +15,24 @@ C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
 -name
 AssetImportWorker7
 -projectPath
-C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2
 -logFile
 Logs/AssetImportWorker7.log
 -srvPort
-51358
+49696
 -licensingIpc
-LicenseClient-tyron
+LicenseClient-dieha
 -force-d3d12
 -job-worker-count
-7
+5
 -background-job-worker-count
 8
 -gc-helper-count
 1
 -name
 AssetImport
-Successfully changed project path to: C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
-C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+Successfully changed project path to: C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2
+C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
@@ -68,13 +68,13 @@ C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [48344]  Target information:
+Player connection [20488]  Target information:
 
-Player connection [48344]  * "[IP] 192.168.254.104 [Port] 0 [Flags] 2 [Guid] 2471971977 [EditorId] 2471971977 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2216JCP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [20488]  * "[IP] 192.168.1.23 [Port] 0 [Flags] 2 [Guid] 2899574439 [EditorId] 2899574439 [Version] 1048832 [Id] WindowsEditor(7,Eznovir) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [48344] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [48344] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 7
+Player connection [20488] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [20488] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -86,69 +86,62 @@ Default GameObject BitMask: UI already registered
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 4.40 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 5.82 ms, found 4 plugins.
 Initialize engine version: 6000.4.3f1 (39d1a88d4dd1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal/Assets
+[Subsystems] Discovering subsystems at path C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2/Assets
 Forcing GfxDevice: Direct3D 12
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 d3d12: failed to query info queue interface (0x80004002).
 Direct3D:
     Version:         Direct3D 12 [level 12.2]
-    Renderer:        NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Renderer:        NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f14)
     Vendor:          NVIDIA
-    VRAM:            12115 MB
-    App VRAM Budget: 11347 MB
-    Driver:          32.0.15.8157
+    VRAM:            8006 MB
+    App VRAM Budget: 7238 MB
+    Driver:          32.0.15.9621
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-tyron"
-[Licensing::IpcConnector] LicenseClient-tyron channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron-6000.4.3" at "2026-05-18T00:53:10.3017143Z"
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56660
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002385 seconds.
+Registered in 0.003069 seconds.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-dieha"
+[Licensing::IpcConnector] LicenseClient-dieha channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dieha-6000.4.3" at "2026-05-18T18:24:45.0725143Z"
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.426 seconds
-Domain Reload Profiling: 936ms
-	BeginReloadAssembly (144ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (79ms)
-	LoadAllAssembliesAndSetupDomain (227ms)
-		LoadAssemblies (139ms)
-		AnalyzeDomain (218ms)
-			TypeCache.Refresh (217ms)
-				TypeCache.ScanAssembly (200ms)
-	FinalizeReload (428ms)
+- Finished resetting the current domain, in  0.517 seconds
+Domain Reload Profiling: 1206ms
+	BeginReloadAssembly (152ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (354ms)
+		LoadAssemblies (146ms)
+		AnalyzeDomain (343ms)
+			TypeCache.Refresh (341ms)
+				TypeCache.ScanAssembly (319ms)
+	FinalizeReload (518ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (52ms)
-			BeforeProcessingInitializeOnLoad (96ms)
-			ProcessInitializeOnLoadAttributes (117ms)
-			ProcessInitializeOnLoadMethodAttributes (91ms)
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              864c4f9669b64e608740406fb9e0b3a4
-  Correlation Id:          0d3503ca2c4c27021434ace4f4f1e41b
-  External correlation Id: 4979716108127170074
-  Machine Id:              8s6LdPVFeVL+JPPIymwroRPXaRk=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-tyron-6000.4.3" (connect: 0.01s, validation: 0.00s, handshake: 1.14s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron-6000.4.3-notifications" at "2026-05-18T00:53:11.439298Z"
-[Licensing::Module] Licensing Background thread has ended after 2.48s
+			InitializePlatformSupportModulesInManaged (60ms)
+			BeforeProcessingInitializeOnLoad (123ms)
+			ProcessInitializeOnLoadAttributes (132ms)
+			ProcessInitializeOnLoadMethodAttributes (97ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
@@ -156,6 +149,17 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              25148b51316a4a76948b96aaacb7f461
+  Correlation Id:          9e76ce96fa26c6fc0bf3f98fd7e8c813
+  External correlation Id: 786738678667606992
+  Machine Id:              O19g9Wk7vKxKpoGXjBvlHQeKaQE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-dieha-6000.4.3" (connect: 0.00s, validation: 0.00s, handshake: 1.26s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dieha-6000.4.3-notifications" at "2026-05-18T18:24:46.3295653Z"
+[Licensing::Module] Licensing Background thread has ended after 2.81s
+[Licensing::Module] Licensing is initialized (took 0.30s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 18968330311373-UnityPersXXXX
@@ -205,6 +209,7 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 Refreshing native plugins compatible for Editor in 2.46 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -215,1379 +220,176 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.24 ms, found 4 plugins.
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.974 seconds
-Domain Reload Profiling: 1863ms
-	BeginReloadAssembly (199ms)
-		DisableScriptedObjects (6ms)
-		CreateAndSetChildDomain (30ms)
-	RebuildCommonClasses (40ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (72ms)
-	LoadAllAssembliesAndSetupDomain (567ms)
-		LoadAssemblies (427ms)
-		AnalyzeDomain (252ms)
-			TypeCache.Refresh (176ms)
-				TypeCache.ScanAssembly (162ms)
-			BuildScriptInfoCaches (63ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (975ms)
+- Finished resetting the current domain, in  1.026 seconds
+Domain Reload Profiling: 2303ms
+	BeginReloadAssembly (513ms)
+		DisableScriptedObjects (8ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (44ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (622ms)
+		LoadAssemblies (436ms)
+		AnalyzeDomain (289ms)
+			TypeCache.Refresh (202ms)
+				TypeCache.ScanAssembly (183ms)
+			BuildScriptInfoCaches (72ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1026ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (148ms)
-			ProcessInitializeOnLoadAttributes (475ms)
-			ProcessInitializeOnLoadMethodAttributes (137ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
+			BeforeProcessingInitializeOnLoad (184ms)
+			ProcessInitializeOnLoadAttributes (449ms)
+			ProcessInitializeOnLoadMethodAttributes (190ms)
+			AfterProcessingInitializeOnLoad (8ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
 Default GameObject BitMask: UI already registered
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 2.39 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.83 ms, found 4 plugins.
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6111 unused Assets / (6.1 MB). Loaded Objects now: 6989.
-Memory consumption went from 184.0 MB to 177.9 MB.
-Total: 9.557300 ms (FindLiveObjects: 0.805700 ms CreateObjectMapping: 0.858100 ms MarkObjects: 5.348400 ms  DeleteObjects: 2.543200 ms)
+Unloading 6111 unused Assets / (6.0 MB). Loaded Objects now: 6966.
+Memory consumption went from 163.9 MB to 157.9 MB.
+Total: 10.384700 ms (FindLiveObjects: 0.707300 ms CreateObjectMapping: 1.312200 ms MarkObjects: 5.691800 ms  DeleteObjects: 2.671200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 75807.796205 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 7 Tala (Aerith)/5 Tala.mp3
-  importAddress: Guid(06e89ae8059481a4783e8b5049e07755) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 7 Tala (Aerith)/5 Tala.mp3 using Guid(06e89ae8059481a4783e8b5049e07755) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6e2d4d8dd57c69d76b92bf6794c01581') in 0.0782343 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7b6f271dbee649f94017acf067f12e3 DependenciesID=1385b53a9ac3a20a20283bc81bdb903f StaticDependenciesID=a807aee17ad9fd95f20bd96caad697f9 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 15875.177020 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/3 CC.mp3
+  importAddress: Guid(3582b7fbe2ca49d4fbb99ee00c85880d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/3 CC.mp3 using Guid(3582b7fbe2ca49d4fbb99ee00c85880d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'de13a2adeda40d169ba66c43f7c1f3eb') in 0.1462926 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=21170c61240b3c5a31a92a979e92a9c6 DependenciesID=b3c0189cdce010c43a59b1ddea4fd48a StaticDependenciesID=2bf96acc59db5b1ab5a16befa9d7152e 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 1 TALA (Aerith)/1 Tala.mp3
-  importAddress: Guid(77c2b179501230d4c8a379db2bdb8ab5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 1 TALA (Aerith)/1 Tala.mp3 using Guid(77c2b179501230d4c8a379db2bdb8ab5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e6dd15dbae8101e3fd38b4157cc9c321') in 0.0141491 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cab6859c075f19d447a2a47afb3e6296 DependenciesID=1bb1e323f4364bdcc48848c34e8407da StaticDependenciesID=810bcb85d4b99c6a2c769f9050969015 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000030 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/4 CC.mp3
+  importAddress: Guid(fd98d5fcd05ae9f499c31290392447d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/4 CC.mp3 using Guid(fd98d5fcd05ae9f499c31290392447d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c4001cd04ea520d8d5f43c1a5da134b8') in 0.0178465 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=178b9e4caf7d6f88cd6b3d63c1ed60e1 DependenciesID=8bbfc8b4ece41758b9b6e2c1f351ef65 StaticDependenciesID=38555ca5a291f04a9b6831beb4c63158 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 9 Yves/4 Yves.mp3
-  importAddress: Guid(cf63d354862c1ad409f899434045761a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 9 Yves/4 Yves.mp3 using Guid(cf63d354862c1ad409f899434045761a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e5917de72fcbf9e03f0e9da9bf7ec3d6') in 0.0153243 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d0e4cbfe509b394cbe8632b0d7f6d6f7 DependenciesID=52f35f3046818b41c81e5e6841ab444b StaticDependenciesID=fc176788b0c6b2d98a328ea84873243a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 67.914958 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/2 Reya.mp3
+  importAddress: Guid(bb1db7adc34674744905334f8fe93c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/2 Reya.mp3 using Guid(bb1db7adc34674744905334f8fe93c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'b7ae0d7762be943f4e290ce35950b1cf') in 0.0225435 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5aa3cbe6240f5087c6801b94c1e8476b DependenciesID=761f5366d85a25140beba4791a341049 StaticDependenciesID=0c1beeb2b7cd203c6e6ad7ee4fc26bd6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/6 Tala.mp3
-  importAddress: Guid(9e53f57495c40db48b9a2e0485cdc96a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/6 Tala.mp3 using Guid(9e53f57495c40db48b9a2e0485cdc96a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3f412c52ed62d330187e47b569030919') in 0.014178 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9b774580d3f44debd14ab80393a1ae22 DependenciesID=3767360cb3216e4288c3556eed04fa0b StaticDependenciesID=281b0fe29402191ba3d155ff5243ab36 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000019 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/6 Reya.mp3
+  importAddress: Guid(d1a623c9e1be28e4b9d7f6e3d783ea1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/6 Reya.mp3 using Guid(d1a623c9e1be28e4b9d7f6e3d783ea1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'ca2c478a80895d73fb696e02c7d43102') in 0.0192041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8b943c38dca955e9896b1b597d0a6901 DependenciesID=7495f9dcb2a95f76e4962fc942dce8c0 StaticDependenciesID=e2da64a28be948905fce2aa8abf1c204 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 5 Tala (Aerith)/12 Aerith.mp3
-  importAddress: Guid(677e9a6887367a143a4f9864541ff0e5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 5 Tala (Aerith)/12 Aerith.mp3 using Guid(677e9a6887367a143a4f9864541ff0e5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a50c10ace2a7bf2a20db5fccc618387f') in 0.0131376 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d8d2aea4b9477e4e5b9dbb87359baabd DependenciesID=ca5cfdb3e1d1b7a3154178e0f870b13a StaticDependenciesID=2ffbd00f4ffe3a1678fa897d98e85e98 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000035 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/7 Reya.mp3
+  importAddress: Guid(f4c46570a23196a4284cac4268a40307) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/7 Reya.mp3 using Guid(f4c46570a23196a4284cac4268a40307) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd4cabf65681613125bc2f2fbea577a35') in 0.0214711 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2b1f883d308e7f8efaf4a465ab005e52 DependenciesID=4ebdcc6983f7a0c7c52e40e410bf56a6 StaticDependenciesID=c7a78a6770df10d81a520969d74da112 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/17 Yves.mp3
-  importAddress: Guid(05ffc2faa4db48d45a973a646fe017e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/17 Yves.mp3 using Guid(05ffc2faa4db48d45a973a646fe017e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '36bca647e27f29a537990d5fbf997618') in 0.010867 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=11c3f716fd13dc958347aab64c59d6bb DependenciesID=65e5ce9d97eb9a6c1071bbdca3763b63 StaticDependenciesID=82c8da4661cabf9499c53536ee7a1fe0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 9 Tala (Aerith)/4 Tala.mp3
-  importAddress: Guid(9447dcda5c9729d4bbe2edc60f333725) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 9 Tala (Aerith)/4 Tala.mp3 using Guid(9447dcda5c9729d4bbe2edc60f333725) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '96deb95aae42295655161dd661829c47') in 0.0151893 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed3efab49ec36f27af2edd0ded4264ff DependenciesID=1797880f85b1a7021f61fd8782e92301 StaticDependenciesID=698cf86506d17e7ba20d8c491a12222b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/18 Tala.mp3
-  importAddress: Guid(50c022e9c468f824ea5b2e59c9cb5883) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/18 Tala.mp3 using Guid(50c022e9c468f824ea5b2e59c9cb5883) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cc1d64879e4e90414ff17b5298dd5081') in 0.0139205 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f944e007aa7b99f7355932280f340f24 DependenciesID=f39b460943d76e783742bf33471d0b62 StaticDependenciesID=6168530e1b55c83987e6c56e2c7e51da 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 5 Yves/8 Yves.mp3
-  importAddress: Guid(5c0d631ab644755408018bdd2f318cd7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 5 Yves/8 Yves.mp3 using Guid(5c0d631ab644755408018bdd2f318cd7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '09fe06620f50cbecc3fee612d0531e89') in 0.0151569 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7dd1697ef04499a18d785c2448335fef DependenciesID=36aa8527f1b73f851fd5791dcc87644e StaticDependenciesID=f66fe3dd1d172703fe67eaf458f0aefa 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/16 Yves.mp3
-  importAddress: Guid(2bb0726805ed35144a62e5aba2eea073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/16 Yves.mp3 using Guid(2bb0726805ed35144a62e5aba2eea073) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5d1fac9c80f516479335fffe88085dd4') in 0.0108527 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7632de54f8a3740522184e4de4076410 DependenciesID=5be86888996cbbec4b1e65e126173c55 StaticDependenciesID=02cb2acbc40001108333ff4b2ed87183 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/10 Tala.mp3
-  importAddress: Guid(b93b3c59667a0954f98e3b256af02b8b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/10 Tala.mp3 using Guid(b93b3c59667a0954f98e3b256af02b8b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '09887e96de40c7f2ea241742d6ce504b') in 0.0133362 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a5c053dfe64bd1652fe3a329b568b251 DependenciesID=444702104f75751628969ab81629325e StaticDependenciesID=1e1586164cea8e51ba335d38835dbbf0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 2 Yves/11 Yvse.mp3
-  importAddress: Guid(a2565818dd338284bb8ded03c76616c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 2 Yves/11 Yvse.mp3 using Guid(a2565818dd338284bb8ded03c76616c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '420a17d0792b37caa4ca43d79cdc1076') in 0.0145074 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e7b0f19f34a3cc54379775227bc47fd9 DependenciesID=b186626e5d28680da123d73163bcce23 StaticDependenciesID=7ae5e0d00d7c592deac8961e057cf64a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 7 Yves/9 Yves.mp3
-  importAddress: Guid(018c44196445bfa4ba31f463ac021e1d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 7 Yves/9 Yves.mp3 using Guid(018c44196445bfa4ba31f463ac021e1d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9fbc1ef044f4a40a5dd84652978d3983') in 0.0146843 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0e5c8bd54a0902a1740ffdd7c01b562e DependenciesID=79421a04329d59b0d4ce44f409db7d4d StaticDependenciesID=c79dd9e6ac4123c15f000bf5292fe07c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 2 TALA (Aerith)/4 Tala.mp3
-  importAddress: Guid(a96ab7ebb962b6d49ae94fb87e6e19e9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 2 TALA (Aerith)/4 Tala.mp3 using Guid(a96ab7ebb962b6d49ae94fb87e6e19e9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5ff35af65e443414805388ec566e48b9') in 0.0142969 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aed728bc058440f515416385c13b99ce DependenciesID=21e3dcaaf4c8a61d38a6cbb9e868a12f StaticDependenciesID=f530f43234991125e7dc0ac0dbae2e55 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 6  Yves/8 Yves.mp3
-  importAddress: Guid(82884f7cd168b084a94be74156113586) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 6  Yves/8 Yves.mp3 using Guid(82884f7cd168b084a94be74156113586) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f5a7ff86d168743eb84fd7c5345a6557') in 0.0158578 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=03b68b93ae47ef675cf96506ed8d8f36 DependenciesID=605bf8eb1a1aa36f3c45f6188ada8fbd StaticDependenciesID=524f7ffefefd2ed25f2a7de65de1bf1f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/10 Reya.mp3
-  importAddress: Guid(08479dbb85edb8f4289f0d089b5024cc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/10 Reya.mp3 using Guid(08479dbb85edb8f4289f0d089b5024cc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd7f463a603ff4472e7d9b58b5c00bdc6') in 0.0140108 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=efe8baaf55ca102290a897a3e91882cd DependenciesID=9a3be4deeb8877c8b7fe034aee4cc165 StaticDependenciesID=79c186db266b7aa45ad9822d0d2d581a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/3 CC.mp3
-  importAddress: Guid(3582b7fbe2ca49d4fbb99ee00c85880d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/3 CC.mp3 using Guid(3582b7fbe2ca49d4fbb99ee00c85880d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '330fc5e8609e5d12cbf562dfbb1871cc') in 0.0144064 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c72056ceadc7453ddda4234d25894739 DependenciesID=b7c38032814b7cace0823e516359c8a8 StaticDependenciesID=77a681b626dbb650c86389b3a70cb36d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Sir Dave (Cyrile)/Scene 6/1 Dave.mp3
-  importAddress: Guid(7ad8761b855d20b42b498c1058e9cc5a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Sir Dave (Cyrile)/Scene 6/1 Dave.mp3 using Guid(7ad8761b855d20b42b498c1058e9cc5a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f8b1fe9a46de20326406ad0e9d49a58b') in 0.0134463 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=050215a872967b8036ce3327b17804e2 DependenciesID=8a4011280eadfad53b6c2c523690f989 StaticDependenciesID=5f34ca0e2313a012c06837ad797e45e7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 4 Yves/11 Yves.mp3
-  importAddress: Guid(01b2247be005dcf4a9f47d38c2044079) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 4 Yves/11 Yves.mp3 using Guid(01b2247be005dcf4a9f47d38c2044079) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b5d88e8f7029a59021e480f8a596aca3') in 0.0152671 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=060400620d7dbd10b45df1a7dd98de5b DependenciesID=33001641c79415f28e0404203dd397ea StaticDependenciesID=889285b78c3756689f10ab278fccaf85 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes C Janitor/Scene 6/6 Janitor.mp3
-  importAddress: Guid(8aac8ae74217c64408d8da7b09a0f02b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes C Janitor/Scene 6/6 Janitor.mp3 using Guid(8aac8ae74217c64408d8da7b09a0f02b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7e8bd48f737fe3c073ca99da3c5a8e45') in 0.013261 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=12efb5d54187633c3ca973aba6631f38 DependenciesID=5745db29dc416927ae90473614b160e0 StaticDependenciesID=ab03ba3b4b5f98fe8b50d30dc4643c9e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 8 Yves/12 Yves.mp3
-  importAddress: Guid(697cdaeb3077ea34396eaf2b1f80e828) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 8 Yves/12 Yves.mp3 using Guid(697cdaeb3077ea34396eaf2b1f80e828) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '96755ca3cf75ed6f7a47d361f91b30a1') in 0.0150636 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2fab2f977297a6189fefc220b2448f72 DependenciesID=12162b8afd4823963c8115f857673fe1 StaticDependenciesID=2c4e63be0728a5ef1272c2bfe5cb5545 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/5 Tala.mp3
-  importAddress: Guid(aeab14cd19cfc7446b185d28e51be79f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/5 Tala.mp3 using Guid(aeab14cd19cfc7446b185d28e51be79f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2cc372e776db4693fcc57cbef9a02bd4') in 0.0143228 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d52397b4c7e1b2a38475fb7da73ef70 DependenciesID=9670e9e1f0b6715ee0649b9f5d3443ce StaticDependenciesID=01e617122bc40e0652a4386dc8d54fb3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 8 Yves/9 Yves.mp3
-  importAddress: Guid(196221dd1db432842b8f9084c3a6c56f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 8 Yves/9 Yves.mp3 using Guid(196221dd1db432842b8f9084c3a6c56f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '42483d48617a291b90831146d19c5859') in 0.0141821 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d7fe71a5a5a7dc01cb0d96ab5f3d1eed DependenciesID=6dcc92341c27f25cff5acf970cdb6bd8 StaticDependenciesID=27c3c51a72fe735e3d41bdf1a5e47575 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 7 Tala (Aerith)/8 Tala.mp3
-  importAddress: Guid(30a9df9cd0eb08e44a48a6afdfa20a31) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 7 Tala (Aerith)/8 Tala.mp3 using Guid(30a9df9cd0eb08e44a48a6afdfa20a31) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '49726c69a1a33a1089af9592c66f2620') in 0.0145559 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dcf4522ca44a286e6afefd01a4402994 DependenciesID=7a0a89d5c2b22a9fa73ee8b58d9d7260 StaticDependenciesID=98edf0930ffd3a17d5b5b8d6b73f3686 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes C Janitor/Scene 6/1 Janitor.mp3
-  importAddress: Guid(40441eccfa8aacf40bb459d0a5460fe6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes C Janitor/Scene 6/1 Janitor.mp3 using Guid(40441eccfa8aacf40bb459d0a5460fe6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '054198922d3d5ccdc716008de6cddbbf') in 0.0129796 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d1394ffb9d231a9c9100de7943eded29 DependenciesID=c771772a49dd3029f2bd6d570f8241a3 StaticDependenciesID=c3ab8864786505f0b68f58d43a89ff5b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/CC DIES.mp3
-  importAddress: Guid(84583e3d9e15bc240b87c625d61906c4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes CC ( Eron)/Scene 3/CC DIES.mp3 using Guid(84583e3d9e15bc240b87c625d61906c4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9a65015ba855540416ca141c4cb2df10') in 0.0135898 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8c05dbc09949cc18112f04773b7f806a DependenciesID=e284dfdc9344c869bda4c0e840cbd7ad StaticDependenciesID=4c1952d2b4d021c9dcc5b86052e4b257 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/5 Yves.mp3
-  importAddress: Guid(88189a8dd63c9f347810f8d0ecb72acc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/5 Yves.mp3 using Guid(88189a8dd63c9f347810f8d0ecb72acc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e9f1046397a1fd21c12289dc42918b53') in 0.01159 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a9b6efbc90826f3c2503147037684df DependenciesID=d129720481803d7f41fc473e0cd99d38 StaticDependenciesID=a02c3219d2ebfd670ca7a57e64d96c7b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Glitch (Eron)/Scene 7/2 Glitch.mp3
-  importAddress: Guid(178abf9c97375394ea1158114fb73d2e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Glitch (Eron)/Scene 7/2 Glitch.mp3 using Guid(178abf9c97375394ea1158114fb73d2e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7c61160cf0c85d99152013c1ec5749ea') in 0.0135863 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=227eda307511ae00e9b474e956570405 DependenciesID=f3c034fc71ca2761eeb96eeecec9e5d4 StaticDependenciesID=597eb6d151ebdd7f84516e322127c222 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 2 Yves/7 Yves.mp3
-  importAddress: Guid(be6648a363fc01444b4a6ca923e61514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 2 Yves/7 Yves.mp3 using Guid(be6648a363fc01444b4a6ca923e61514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '669a0994afdb4d2228cd5546efb6e18d') in 0.0134161 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a0bab2742d6a7b09a881f87da01f5046 DependenciesID=305cf997abd2f45de4cfa579b64e211f StaticDependenciesID=4e66c982405c748d0ddb85895ac0d831 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 9 Yves/8 Yves.mp3
-  importAddress: Guid(d052a1482482f0943ae8938873ecb218) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 9 Yves/8 Yves.mp3 using Guid(d052a1482482f0943ae8938873ecb218) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '010ae70461d79ad1f8973d1781ebbb94') in 0.0147034 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=20433426a312f0fe8ee6175f442c290c DependenciesID=adb04d9d3baf3b34170ae5bb4244a62e StaticDependenciesID=2844530f55c7b2c594a72a1798cc6677 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 6  Yves/14 Yves.mp3
-  importAddress: Guid(c708b42eb13c5814486bf1414ae77673) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 6  Yves/14 Yves.mp3 using Guid(c708b42eb13c5814486bf1414ae77673) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '749529977da45565959ee8e8f2362f0c') in 0.0144946 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d18aa897b4c95792f50828e8498511aa DependenciesID=0c6e2af589b482e4de96e1e8468b5a44 StaticDependenciesID=fbe99b0b3421abd363e9247ecd967158 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/5 Tala.mp3
-  importAddress: Guid(75f03afd36ca85d4788d980cf5ecb408) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/5 Tala.mp3 using Guid(75f03afd36ca85d4788d980cf5ecb408) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '64b529b65f4cd01d73f5d070a43ae75a') in 0.0139652 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6f5a4e61d4542f77d3a8557eba25778a DependenciesID=9b2aa5478441cc30384115495ffc9af5 StaticDependenciesID=262b5551fd46ba1f032b05f94400054f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 7 Tala (Aerith)/2 Tala.mp3
-  importAddress: Guid(0989f48ee89d6084d85fe6975ddcf190) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 7 Tala (Aerith)/2 Tala.mp3 using Guid(0989f48ee89d6084d85fe6975ddcf190) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3b88d25903fae5d747ae8cc64c36449c') in 0.0142039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=176bffa1902f8b65ce1f0b2f757d7edb DependenciesID=39aeeb8eee7068f974231dda4f99c6c7 StaticDependenciesID=9bf060d4e2892b5a24bb23c1bba6c74b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 4/3 Reya.mp3
-  importAddress: Guid(867936dec09ce064ea0f1b20a635222c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 4/3 Reya.mp3 using Guid(867936dec09ce064ea0f1b20a635222c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '70f4f1c2914e839523c7ec4ca8ae231b') in 0.0142928 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ac5cfb82965dd8886169729c154495b DependenciesID=9a024331fa8125853a9d6b634ab38ee3 StaticDependenciesID=3edae84ce225e213d1785295dde7d224 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 2 TALA (Aerith)/13 Tala.mp3
-  importAddress: Guid(de690fed11f979f4fb56699d79836fee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 2 TALA (Aerith)/13 Tala.mp3 using Guid(de690fed11f979f4fb56699d79836fee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e69f8910e8e0f3049ce2ea9397ab6348') in 0.0140246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2f6a7066af0edfca47c17f9641f8f969 DependenciesID=862cf943d66bc2d7a9081c97c2dda94d StaticDependenciesID=56b98d0c067b378e8be2528432f8dcdf 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 10 Tala (Aerith)/16 Tala.mp3
-  importAddress: Guid(33c1c4fd076e3e94aa6f8b3e9a0f05e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 10 Tala (Aerith)/16 Tala.mp3 using Guid(33c1c4fd076e3e94aa6f8b3e9a0f05e3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '82cf109673380fbd3a2923bf9c127c7c') in 0.0159541 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b2afb12b673128c39645fe176239466 DependenciesID=5b00092ecb21c57a736f3c9159b2553a StaticDependenciesID=efc90818ca342f76aa49f766969c0057 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/10 Tala.mp3
-  importAddress: Guid(7ce5f0fd92b93f24c9a4bd7a9d4a2bff) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/10 Tala.mp3 using Guid(7ce5f0fd92b93f24c9a4bd7a9d4a2bff) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7b023dce51b54d7fe35cd1234ec68e1c') in 0.0136652 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d208658917a6579ea72d272b67cb4a2d DependenciesID=950c1a6dcc62b460c668616d6b2ce719 StaticDependenciesID=547c93ee59488c26623dfa0ca2dcc964 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/6 Yves.mp3
-  importAddress: Guid(899476f593041404aa0f61eeeb80a702) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/6 Yves.mp3 using Guid(899476f593041404aa0f61eeeb80a702) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8027ef0c5d39dde818c2b74f1a22df9a') in 0.008276 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=442a7730635b225033434e1b844cf0cb DependenciesID=3ec477b2fdf2c91222bca4658401e188 StaticDependenciesID=d543124cd64c099a5d0ccbb64f405b6d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 10 Tala (Aerith)/3 Tala.mp3
-  importAddress: Guid(6db9a28faf842474d9d945cb880297c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 10 Tala (Aerith)/3 Tala.mp3 using Guid(6db9a28faf842474d9d945cb880297c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2a2840fa468edb22fe2602b27b57ba3f') in 0.0143493 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=89150845507bacc95a9fb70ee9f46a88 DependenciesID=1872f55c8b21b3337430c74688f24553 StaticDependenciesID=80e1681d5542fc0e803b983d73df5369 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/14 Tala.mp3
-  importAddress: Guid(eadc1e9fca9a13942871e001a11c61fb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/14 Tala.mp3 using Guid(eadc1e9fca9a13942871e001a11c61fb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c36d386382c481686d2d1e062b655be7') in 0.0129544 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=065b843d992ee285e330e2e0dc2d46d4 DependenciesID=0a1a8d1dc381e727ce1f609bbde2543a StaticDependenciesID=4c558bd5e97e7c0dae8515afc36872e3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/9 Tala.mp3
-  importAddress: Guid(6f05bd9dd602d2e4daa8c6f4d7a19c28) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 3 TALA (Aerith)/9 Tala.mp3 using Guid(6f05bd9dd602d2e4daa8c6f4d7a19c28) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '60c9b00ccf65861cc18857cc1647d457') in 0.0143155 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0d3edc86676d86443dc6a319120e3021 DependenciesID=a34c9c222e8f28da51f4cc00e52d28f0 StaticDependenciesID=35d8d94f4e894fc51249f3e93a1ecec8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000017 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/8 Reya.mp3
+  importAddress: Guid(af0020d9132347d4d9eb931ca37a77d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/8 Reya.mp3 using Guid(af0020d9132347d4d9eb931ca37a77d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '46ee069196e3a29af092d1b2bc96b493') in 0.019597 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4167b3159bf4860183ba87c5dd062291 DependenciesID=1a8bad6d0e225c0935c7037b5d9d6bad StaticDependenciesID=95f2e7fc29a37cb6df7b889a3eef11f5 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 2 Yves/6 Yves.mp3
-  importAddress: Guid(e705a70493fe3cc4c879d278d28a2f9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 2 Yves/6 Yves.mp3 using Guid(e705a70493fe3cc4c879d278d28a2f9d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '23ebc5e0e01baaec02dd386131ca8ffe') in 0.0140452 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1736fc97d40b20ecc732b77efe7fbc21 DependenciesID=a5d200662416baa7fc8778492ab95cd5 StaticDependenciesID=62f7b8d73fd0f1290f440810e411149b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/POST CREDITS/1 Yves.mp3
-  importAddress: Guid(7703ac640ff8c4546a1324ca604db78d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/POST CREDITS/1 Yves.mp3 using Guid(7703ac640ff8c4546a1324ca604db78d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '570eb5e2d740eda77364638096a00b05') in 0.0141259 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2495358906d334bb7565ccd3859660ef DependenciesID=d8652f3db6e7942e9a020efe1cdb073a StaticDependenciesID=ccff119e3fb2f86aca906badd5f3f40a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/15 Rome.mp3
-  importAddress: Guid(9acf11f4f874c094881c6b44c72ffba7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/15 Rome.mp3 using Guid(9acf11f4f874c094881c6b44c72ffba7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4f71725c7e2cfb54d402d7b41aef14b0') in 0.0133981 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7ae6d14026dd6f6d1ceda1b198d4f7f5 DependenciesID=c0c47630a8d9cca907b7bf90f6b915d8 StaticDependenciesID=3edcae5e1f4eaf0c989a0f6b292f5a87 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/3 Yvse.mp3
-  importAddress: Guid(bc731c405a212cb4a86f9c22732e9134) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 3 Yves/3 Yvse.mp3 using Guid(bc731c405a212cb4a86f9c22732e9134) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3549a367f05af33ad01687037a02be77') in 0.0085416 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=850edf28cc2d68fe2f7acf082d704ffb DependenciesID=52711ca4db369aecf690c0ea3c3e15fa StaticDependenciesID=34c81bf42339a4d3419f773656e7ad99 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Glitch (Eron)/Scene 7/1 Glitch.mp3
-  importAddress: Guid(9423b24b97a9feb408718d091d222a47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Glitch (Eron)/Scene 7/1 Glitch.mp3 using Guid(9423b24b97a9feb408718d091d222a47) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0b961e4407b5a44683c95661a0bfc1a0') in 0.0165615 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6f41c85e2b33d1fb4318bcb2311b0710 DependenciesID=9bf88c2300fc6ac841f50132c9456f24 StaticDependenciesID=64abdf5aa6b9e372a81954ad3c5fae5b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 6 Tala (Aerith)/12 Tala.mp3
-  importAddress: Guid(b7c8c9616a8723d4bb109cd6c9571c07) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 6 Tala (Aerith)/12 Tala.mp3 using Guid(b7c8c9616a8723d4bb109cd6c9571c07) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '41ece76b539cf8130b3cf5d2b284a6f7') in 0.0143748 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fb188b32f36a167f9f5ce375d48329aa DependenciesID=a377d6becde0395d69e278f841a1568d StaticDependenciesID=c774380d382bf72e905a0e624788c47e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 9 Yves/6 Yves.mp3
-  importAddress: Guid(b9d049d2d7a827c4699e34710fe021b4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 9 Yves/6 Yves.mp3 using Guid(b9d049d2d7a827c4699e34710fe021b4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cfd9eeebea0c2e242fd70625032e1363') in 0.0141198 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de6b6c39fa84ef88484b50693c2aee85 DependenciesID=109f2d57061ffdad8917d0fac5a129a6 StaticDependenciesID=46bb6b686653315b5bbe8e993a54bcb1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 4 Tala (Aerith)/2 Tala.mp3
-  importAddress: Guid(dfb52ee52baddfe44aa3fa36cb40adaa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 4 Tala (Aerith)/2 Tala.mp3 using Guid(dfb52ee52baddfe44aa3fa36cb40adaa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '752de38ad289131488f661f747444891') in 0.0131139 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=36d65c76e2d8c151252ba058b484214e DependenciesID=506fa27fdc8c019dc54cc1793805f303 StaticDependenciesID=789d2f6262669048e641a40c71258260 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/17 Rome.mp3
-  importAddress: Guid(adfd61fa5675d33459acecc7378a152a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/17 Rome.mp3 using Guid(adfd61fa5675d33459acecc7378a152a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9f2b2a791aefffc986447f52ee143b78') in 0.0134697 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8e501fb54af6540586e1129422f029e6 DependenciesID=cfcca1c458b0059db87840af27c05fae StaticDependenciesID=0d7b88b732f1f495522e61bbbe56453c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 6  Yves/9 Yves.mp3
-  importAddress: Guid(0fb020a15a7c7a047b5851bbbe5c6252) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Andrei (Yves)/Scene 6  Yves/9 Yves.mp3 using Guid(0fb020a15a7c7a047b5851bbbe5c6252) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9fe3d3874bf98c3e4e6044d5e28a1cbf') in 0.0155183 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1172b82d1dbf34cc53c8c8c8ad5bbebc DependenciesID=7a81f1c631c8ee628c6f20b1b36055ca StaticDependenciesID=855a7cd95d064d7d327ad69c4aa1011e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/5 Reya.mp3
+  importAddress: Guid(5a2fa79268db7954392bc27d31e2c606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/5 Reya.mp3 using Guid(5a2fa79268db7954392bc27d31e2c606) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '51595d9f4eeba5c9cf7d0fbfd4a870bf') in 0.0413609 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0aaca6d6793117254962762a75a3a9a5 DependenciesID=a571d4c7d19860e4c4b14639c9bb558a StaticDependenciesID=e2799e9d7a77e13c22d6d841a6af85bb 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000021 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/19 Tala.mp3
-  importAddress: Guid(390e87f6f1cfb384b86052546eb72007) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 8 Tala (Aerith)/19 Tala.mp3 using Guid(390e87f6f1cfb384b86052546eb72007) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5d1bc2d1ed75d5b6b276e480edf6da87') in 0.0135755 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=809d268025dd69cc4edc4ee604a742d4 DependenciesID=3287ffc7d3746525d8536f8e96f4d5bd StaticDependenciesID=f1999ada596fd0f7fe9fe165fe429853 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/9 Reya.mp3
+  importAddress: Guid(f17deef6046adad41b44615d15515bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/9 Reya.mp3 using Guid(f17deef6046adad41b44615d15515bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '079ed5ab30335dcda883676c47368af9') in 0.0186302 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=07d2f77412cae450227074c406290f8b DependenciesID=f646c6e7fca9865799346d6e36149242 StaticDependenciesID=403a657acb3967f04e912f286f22b955 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Sir Dave (Cyrile)/Scene 6/7 Dave.mp3
-  importAddress: Guid(9430a270e09204a44a3cf9cfbcc1d35c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Sir Dave (Cyrile)/Scene 6/7 Dave.mp3 using Guid(9430a270e09204a44a3cf9cfbcc1d35c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3122e5bb2a9a4786aa0e017baa4cafd8') in 0.0194762 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f3c7ca5423c63f08e1a9f7897a1f0686 DependenciesID=43a44a5d1c637f2bdb0410d28ea7b08e StaticDependenciesID=0abd7cd40c4d5cab14e210aa2cca5ad6 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 185.377531 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/2 Rome.mp3
+  importAddress: Guid(96fbb50e0bc4a7346b45500daf1e48a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/2 Rome.mp3 using Guid(96fbb50e0bc4a7346b45500daf1e48a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'af7fb386adc5b8c80f621d518334842a') in 0.0253417 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d822d4aa159a214101cfd593270cae4f DependenciesID=6cd3c5326395b663a38fa2ba18d9e7d5 StaticDependenciesID=11a9a3134cf2b6d312fce13d1195862f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 2 TALA (Aerith)/8 tala.mp3
-  importAddress: Guid(1395201c537e66c4882181a35b47d8b6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Aerith (Tala)/Scene 2 TALA (Aerith)/8 tala.mp3 using Guid(1395201c537e66c4882181a35b47d8b6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '31ee1fa2c0acf1cb3a38991cd7663047') in 0.0138384 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=533e6b4e1ff2f70a83a28d387a67f6ec DependenciesID=706713090290d3d94c88af427910b036 StaticDependenciesID=3a9c263c52c7604f1f2e5587a3787e5d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000029 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/8 Rome.mp3
+  importAddress: Guid(d546d7633920d1649b948a1329e4c16d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/8 Rome.mp3 using Guid(d546d7633920d1649b948a1329e4c16d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'ac42e648b2030456764e44143a8a414f') in 0.0266922 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3f1159475387ac3811a9e1fb6df4f9ee DependenciesID=e56bf4db17f4e2020bcf9f7576449e02 StaticDependenciesID=537ba64e01edccb74773c652bba8c534 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/4 Rome.mp3
-  importAddress: Guid(8fe76365dbdfc774c80b72ba15f07eb8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/BUG VIDEOS/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/4 Rome.mp3 using Guid(8fe76365dbdfc774c80b72ba15f07eb8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '913be9532cae2d7e80530c9ce2d3ec98') in 0.0146652 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dcd00b4c92d6a57f5002a8f50feaf8a1 DependenciesID=5dff3ab7265109e462b99aa37e96751e StaticDependenciesID=8fd0ec2d18ce4a3477146e803981d6c5 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000025 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/10 Rome.mp3
+  importAddress: Guid(117f02cce7974684b9e34d2f6d83a47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/10 Rome.mp3 using Guid(117f02cce7974684b9e34d2f6d83a47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '18868f325d22128094c8325dc21cb2a5') in 0.0193104 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8fe688453bf9cfda08e18e23af63fc16 DependenciesID=0c4328f4acefccd61cb5b140cbe446b6 StaticDependenciesID=d199150ac95881a5572c1d2c33aee93a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 3.04 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.798 seconds
-Domain Reload Profiling: 1498ms
-	BeginReloadAssembly (197ms)
-		DisableScriptedObjects (14ms)
-		CreateAndSetChildDomain (48ms)
-	RebuildCommonClasses (30ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (398ms)
-		LoadAssemblies (320ms)
-		AnalyzeDomain (155ms)
-			TypeCache.Refresh (7ms)
-			BuildScriptInfoCaches (137ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (799ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (415ms)
-			ProcessInitializeOnLoadMethodAttributes (82ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 2.71 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (6.0 MB). Loaded Objects now: 6995.
-Memory consumption went from 184.4 MB to 178.4 MB.
-Total: 10.730800 ms (FindLiveObjects: 0.728900 ms CreateObjectMapping: 1.041400 ms MarkObjects: 6.048800 ms  DeleteObjects: 2.910500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
-  Time since last request: 173.859037 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_attack_02.png
-  importAddress: Guid(97c6ebd3ca4f107448b3b2d9b16e5d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_attack_02.png using Guid(97c6ebd3ca4f107448b3b2d9b16e5d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'e342c13bf2291ef7f755418aa1b0fd31') in 0.0701511 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e2f48d278111861dce8078be322ab430 DependenciesID=d778e423b52d87c0c3b2c59c9dd92735 StaticDependenciesID=188ce9b908faad94c896375beaa2f403 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000031 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/11 Rome.mp3
+  importAddress: Guid(297fd600550bc9a46a10ca61a345a300) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/11 Rome.mp3 using Guid(297fd600550bc9a46a10ca61a345a300) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '691e89a14878b4a124fb305c75d004cf') in 0.02542 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=25c6823365c2a239f3224cfdf72510c5 DependenciesID=118b4734b68f96f0fc305f9e6d569506 StaticDependenciesID=383377435d03fb253b1ab4079775f1e6 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/14 Rome.mp3
+  importAddress: Guid(f30f4c0b6773407488c330d6df06767d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/14 Rome.mp3 using Guid(f30f4c0b6773407488c330d6df06767d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a16094adc6ff1d9d32dc4fd4d5f0c2fe') in 0.0265276 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e75db03f8f9e3288fcc3ab137c130474 DependenciesID=baeeb38e7a5a9f71a8a7aab1303abbfd StaticDependenciesID=f04fd1eced5e5c29c846aa6c916277ea 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_block_03.png
-  importAddress: Guid(f19194380b336484099aab78a0470803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_block_03.png using Guid(f19194380b336484099aab78a0470803) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f4fa922d8678b0f9820399f8e264cf7d') in 0.0277246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7503e73552006b257abd1ae58f886fd3 DependenciesID=f7c55449a3f996c80cd6cd2b83d3e9ee StaticDependenciesID=59a49526d6eb8042f6f64a86edbc4c86 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/13 Rome.mp3
+  importAddress: Guid(28175727c7fd92e4f8a0292ac5dde9aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/13 Rome.mp3 using Guid(28175727c7fd92e4f8a0292ac5dde9aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '78894814db5ec34993630ac400b06576') in 0.0211938 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4895fd584f1d0289274adfc72a1bb3a9 DependenciesID=e5446d544883e626cce056a09ad4bec3 StaticDependenciesID=e6b58481d5e296d234f48f683f2441d1 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_block_02.png
-  importAddress: Guid(276de7332cc176343be57d605b70bdb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_block_02.png using Guid(276de7332cc176343be57d605b70bdb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '7ca98d193f30ead7f6a93a6a7a1c524f') in 0.0224981 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=81714f7173b738b4c7cede2e117a2ec5 DependenciesID=3572ec904842b04268628fc743b461d9 StaticDependenciesID=c9629e6ebb6b401595eae356c4c542f5 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000036 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/16 Rome.mp3
+  importAddress: Guid(a9e4cf08cfc1e3340b765a1d78fb16ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/16 Rome.mp3 using Guid(a9e4cf08cfc1e3340b765a1d78fb16ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '22c5cd2c8651b3148f5bfaac5ab1ba19') in 0.023655 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=50941988aa0f835f659d37e56063917b DependenciesID=3a9e120c3bc7b492cca24e81b36ed4de StaticDependenciesID=d24a37cf2d6270d78862956d47d5fd2d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_cast_03.png
-  importAddress: Guid(bae9f6e834f890746bd2c9c7544c4b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_cast_03.png using Guid(bae9f6e834f890746bd2c9c7544c4b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '0ea90556d2f52ea91357a2bfb3e2c9fa') in 0.0251335 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e601923fcfe7e850554b17d81440980 DependenciesID=df6dd3dfe7962224b4cf1addaa816bc3 StaticDependenciesID=9bef414c5bc8ec6c669b26cbe852b4e4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000020 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/4 Rome.mp3
+  importAddress: Guid(8fe76365dbdfc774c80b72ba15f07eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/4 Rome.mp3 using Guid(8fe76365dbdfc774c80b72ba15f07eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '9305958710035f8fb8e21837869be6a6') in 0.0209715 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1ff9df52947b928cf3183fe99c03928c DependenciesID=673d9cfcdca9d5aa69690cd9c11c8058 StaticDependenciesID=8a9c9891ed01a67484e1bbeafe71f3d0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_cast_01.png
-  importAddress: Guid(b97711f6951c24245aed6bfb9608d230) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_cast_01.png using Guid(b97711f6951c24245aed6bfb9608d230) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '4bd3fad1d26473ddf3acdedf0553d5de') in 0.01733 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=73900e8ff9bf804ff45a111b174ddcbf DependenciesID=46d3c14851173e551823c1e022febc28 StaticDependenciesID=a6da30bab56e38e59ad3dd7cb2ac9524 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000027 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/7 Rome.mp3
+  importAddress: Guid(be965eee4d7ffbe4db11724ca689c840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Jace (Rome)/Scene 4/7 Rome.mp3 using Guid(be965eee4d7ffbe4db11724ca689c840) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '61091223e17ad2d2027a1435690f3c37') in 0.0163254 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5d76fc5f2800c44b89ad4a68e5771b89 DependenciesID=7ebda1cb8c870cfd38c4b80fa3c51984 StaticDependenciesID=1474967be634fa9f8f03c102113487fe 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_cast_04.png
-  importAddress: Guid(75fdd5fab73368241af6833a5b8a660f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_cast_04.png using Guid(75fdd5fab73368241af6833a5b8a660f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6f73e34a5753d2f2ab7d0a154f1e7e70') in 0.0169099 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2e349118ecf1b2fef0f63f6f9520c1f DependenciesID=1cfedf82041444833456859b18ff77ab StaticDependenciesID=95a506fbd247584bde170462576c0de5 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_block_04.png
-  importAddress: Guid(18ffd7c532c870c4d8ac5bfa7f53be4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_block_04.png using Guid(18ffd7c532c870c4d8ac5bfa7f53be4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '7fe2ef9be4e59f6cec9eaa436a0a839d') in 0.0078969 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28ad19c4c6781fbadd255147f71023ad DependenciesID=6661e2ef0f047ac2ff113ec9e8320f49 StaticDependenciesID=a10dd54b98aa610711ee5a871e1a95f5 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_attack_05.png
-  importAddress: Guid(2d634060b61eb214a949fcd4b88122d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/TheBoss/Visuals/Knight Files/Knight PNG/Knight_attack_05.png using Guid(2d634060b61eb214a949fcd4b88122d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a6cb7295cca60f2f86847e1f72905cdb') in 0.0167637 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3e5d565e87695056863eb3590c56fd35 DependenciesID=d1db37d44b5c2d3681eca46696ada843 StaticDependenciesID=8444289193d06135c62f478f811fa21b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.997173 seconds.
-  path: Assets/Prefab/Skeleton/Skeleton_Container Variant 1.prefab
-  importAddress: Guid(7052d34edf838e749aad3f393254d638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Skeleton/Skeleton_Container Variant 1.prefab using Guid(7052d34edf838e749aad3f393254d638) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a17e03986f6db17cbd240c1af7f62f0d') in 0.3699687 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2391bd4f165c3930e78cff6a975154e6 DependenciesID=c68ff17a521663d049dbf26f403fcf46 StaticDependenciesID=9d5a5e34047cfa3cc362b66711392f06 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 159
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.14 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.757 seconds
-Domain Reload Profiling: 1484ms
-	BeginReloadAssembly (228ms)
-		DisableScriptedObjects (23ms)
-		CreateAndSetChildDomain (66ms)
-	RebuildCommonClasses (29ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (400ms)
-		LoadAssemblies (319ms)
-		AnalyzeDomain (161ms)
-			TypeCache.Refresh (7ms)
-			BuildScriptInfoCaches (141ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (758ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (138ms)
-			ProcessInitializeOnLoadAttributes (381ms)
-			ProcessInitializeOnLoadMethodAttributes (76ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 2.66 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6113 unused Assets / (5.9 MB). Loaded Objects now: 7030.
-Memory consumption went from 186.1 MB to 180.1 MB.
-Total: 8.987500 ms (FindLiveObjects: 0.613300 ms CreateObjectMapping: 0.488700 ms MarkObjects: 5.314900 ms  DeleteObjects: 2.569400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.793 seconds
-Domain Reload Profiling: 1493ms
-	BeginReloadAssembly (182ms)
-		DisableScriptedObjects (11ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (415ms)
-		LoadAssemblies (326ms)
-		AnalyzeDomain (164ms)
-			TypeCache.Refresh (7ms)
-			BuildScriptInfoCaches (145ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (794ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (139ms)
-			ProcessInitializeOnLoadAttributes (399ms)
-			ProcessInitializeOnLoadMethodAttributes (82ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 2.19 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (5.6 MB). Loaded Objects now: 7033.
-Memory consumption went from 190.1 MB to 184.5 MB.
-Total: 9.067400 ms (FindLiveObjects: 0.696900 ms CreateObjectMapping: 0.746700 ms MarkObjects: 5.446200 ms  DeleteObjects: 2.176600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.08 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.757 seconds
-Domain Reload Profiling: 1439ms
-	BeginReloadAssembly (183ms)
-		DisableScriptedObjects (11ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (30ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (400ms)
-		LoadAssemblies (316ms)
-		AnalyzeDomain (158ms)
-			TypeCache.Refresh (6ms)
-			BuildScriptInfoCaches (141ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (758ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (377ms)
-			ProcessInitializeOnLoadMethodAttributes (83ms)
-			AfterProcessingInitializeOnLoad (11ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 2.71 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (5.8 MB). Loaded Objects now: 7036.
-Memory consumption went from 194.4 MB to 188.6 MB.
-Total: 9.264400 ms (FindLiveObjects: 0.646500 ms CreateObjectMapping: 0.619400 ms MarkObjects: 5.859400 ms  DeleteObjects: 2.138300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.791 seconds
-Domain Reload Profiling: 1529ms
-	BeginReloadAssembly (190ms)
-		DisableScriptedObjects (15ms)
-		CreateAndSetChildDomain (42ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (438ms)
-		LoadAssemblies (333ms)
-		AnalyzeDomain (179ms)
-			TypeCache.Refresh (6ms)
-			BuildScriptInfoCaches (158ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (792ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (140ms)
-			ProcessInitializeOnLoadAttributes (396ms)
-			ProcessInitializeOnLoadMethodAttributes (83ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 2.57 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (5.8 MB). Loaded Objects now: 7039.
-Memory consumption went from 198.6 MB to 192.8 MB.
-Total: 9.849100 ms (FindLiveObjects: 0.653800 ms CreateObjectMapping: 1.095600 ms MarkObjects: 5.447900 ms  DeleteObjects: 2.650600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.19 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.786 seconds
-Domain Reload Profiling: 1481ms
-	BeginReloadAssembly (186ms)
-		DisableScriptedObjects (11ms)
-		CreateAndSetChildDomain (43ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (57ms)
-	LoadAllAssembliesAndSetupDomain (407ms)
-		LoadAssemblies (326ms)
-		AnalyzeDomain (157ms)
-			TypeCache.Refresh (6ms)
-			BuildScriptInfoCaches (140ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (786ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (132ms)
-			ProcessInitializeOnLoadAttributes (394ms)
-			ProcessInitializeOnLoadMethodAttributes (90ms)
-			AfterProcessingInitializeOnLoad (10ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 2.19 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (5.3 MB). Loaded Objects now: 7042.
-Memory consumption went from 202.8 MB to 197.6 MB.
-Total: 7.995100 ms (FindLiveObjects: 0.640200 ms CreateObjectMapping: 0.335000 ms MarkObjects: 4.887700 ms  DeleteObjects: 2.131400 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.765 seconds
-Domain Reload Profiling: 1447ms
-	BeginReloadAssembly (188ms)
-		DisableScriptedObjects (13ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (31ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (56ms)
-	LoadAllAssembliesAndSetupDomain (396ms)
-		LoadAssemblies (313ms)
-		AnalyzeDomain (157ms)
-			TypeCache.Refresh (6ms)
-			BuildScriptInfoCaches (140ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (766ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (132ms)
-			ProcessInitializeOnLoadAttributes (380ms)
-			ProcessInitializeOnLoadMethodAttributes (87ms)
-			AfterProcessingInitializeOnLoad (10ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (5.6 MB). Loaded Objects now: 7045.
-Memory consumption went from 207.1 MB to 201.4 MB.
-Total: 9.832300 ms (FindLiveObjects: 0.685600 ms CreateObjectMapping: 0.812500 ms MarkObjects: 5.766600 ms  DeleteObjects: 2.566600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.09 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6096 unused Assets / (4.9 MB). Loaded Objects now: 7045.
-Memory consumption went from 211.4 MB to 206.5 MB.
-Total: 7.952200 ms (FindLiveObjects: 0.620300 ms CreateObjectMapping: 0.296700 ms MarkObjects: 5.145600 ms  DeleteObjects: 1.889100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.809 seconds
-Domain Reload Profiling: 1518ms
-	BeginReloadAssembly (184ms)
-		DisableScriptedObjects (13ms)
-		CreateAndSetChildDomain (41ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (415ms)
-		LoadAssemblies (317ms)
-		AnalyzeDomain (171ms)
-			TypeCache.Refresh (10ms)
-			BuildScriptInfoCaches (150ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (809ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (140ms)
-			ProcessInitializeOnLoadAttributes (409ms)
-			ProcessInitializeOnLoadMethodAttributes (82ms)
-			AfterProcessingInitializeOnLoad (15ms)
-		AwakeInstancesAfterBackupRestoration (18ms)
-Refreshing native plugins compatible for Editor in 2.11 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6109 unused Assets / (5.8 MB). Loaded Objects now: 7048.
-Memory consumption went from 215.6 MB to 209.8 MB.
-Total: 10.394300 ms (FindLiveObjects: 0.696500 ms CreateObjectMapping: 0.714100 ms MarkObjects: 6.423500 ms  DeleteObjects: 2.559100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 754.203667 seconds.
-  path: Assets/Prefab/Knight/KnightHeroContainer Variant.prefab
-  importAddress: Guid(55ad49d2cd3933643b6caa2f840177c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Knight/KnightHeroContainer Variant.prefab using Guid(55ad49d2cd3933643b6caa2f840177c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '4fdc9052b75639c8d66d654cada69a93') in 0.3805164 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff4f655e1910d8bf10cd7ea1dcea764c DependenciesID=e6477eb8019dd0476eea1a377d2990ea StaticDependenciesID=92c60531eae4b08e6a7f7000e37fb36d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 163
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: UI already registered
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-Editor.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor.dll not valid. Loading of assembly skipped.
-Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
-Assembly DocCodeExamples.dll at Library/ScriptAssemblies/DocCodeExamples.dll not valid. Loading of assembly skipped.
-Assembly TestNewCustomAssembly.dll at Library/ScriptAssemblies/TestNewCustomAssembly.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Animation.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Animation.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Common.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Common.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.PixelPerfect.Editor.Tests.dll at Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Psdimporter.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Psdimporter.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Sprite.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Sprite.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.SpriteShape.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.SpriteShape.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.2D.Tilemap.Package.EditorTests.dll at Library/ScriptAssemblies/Unity.2D.Tilemap.Package.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.BurstCompatibilityGen.dll at Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.DocCodeSamples.dll at Library/ScriptAssemblies/Unity.Collections.DocCodeSamples.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.PerformanceTests.dll at Library/ScriptAssemblies/Unity.Collections.PerformanceTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.dll at Library/ScriptAssemblies/Unity.Collections.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Collections.Tests.Playmode.dll at Library/ScriptAssemblies/Unity.Collections.Tests.Playmode.dll not valid. Loading of assembly skipped.
-Assembly Unity.InputSystem.IntegrationTests.dll at Library/ScriptAssemblies/Unity.InputSystem.IntegrationTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Mathematics.Tests.dll at Library/ScriptAssemblies/Unity.Mathematics.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Editor.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Multiplayer.Center.Tests.dll at Library/ScriptAssemblies/Unity.Multiplayer.Center.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Nuget.Mono-Cecil.dll at Library/ScriptAssemblies/Unity.Nuget.Mono-Cecil.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.PathTracing.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.PathTracing.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Core.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Config.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Config.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Editor.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.RenderPipelines.Universal.Runtime.Tests.dll at Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Searcher.EditorTests.dll at Library/ScriptAssemblies/Unity.Searcher.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly Unity.Settings.Tests.dll at Library/ScriptAssemblies/Unity.Settings.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.ShaderGraph.Editor.Tests.dll at Library/ScriptAssemblies/Unity.ShaderGraph.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Editor.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.TextMeshPro.Tests.dll at Library/ScriptAssemblies/Unity.TextMeshPro.Tests.dll not valid. Loading of assembly skipped.
-Assembly Unity.UnifiedRayTracing.Editor.Tests.dll at Library/ScriptAssemblies/Unity.UnifiedRayTracing.Editor.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.Common.Tests.dll at Library/ScriptAssemblies/UnityEditor.UI.Common.Tests.dll not valid. Loading of assembly skipped.
-Assembly UnityEditor.UI.EditorTests.dll at Library/ScriptAssemblies/UnityEditor.UI.EditorTests.dll not valid. Loading of assembly skipped.
-Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tests.dll not valid. Loading of assembly skipped.
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.02 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.783 seconds
-Domain Reload Profiling: 1509ms
-	BeginReloadAssembly (198ms)
-		DisableScriptedObjects (23ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (425ms)
-		LoadAssemblies (319ms)
-		AnalyzeDomain (179ms)
-			TypeCache.Refresh (6ms)
-			BuildScriptInfoCaches (162ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (784ms)
-		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (135ms)
-			ProcessInitializeOnLoadAttributes (398ms)
-			ProcessInitializeOnLoadMethodAttributes (82ms)
-			AfterProcessingInitializeOnLoad (9ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 2.62 ms, found 4 plugins.
-Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6113 unused Assets / (5.7 MB). Loaded Objects now: 7071.
-Memory consumption went from 186.9 MB to 181.2 MB.
-Total: 9.415800 ms (FindLiveObjects: 0.636700 ms CreateObjectMapping: 0.697400 ms MarkObjects: 5.765100 ms  DeleteObjects: 2.315700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 38.918556 seconds.
-  path: Assets/Prefab/Knight/KnightHeroContainer Variant Variant.prefab
-  importAddress: Guid(3d6c150084900824a8a86d72ec821703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Knight/KnightHeroContainer Variant Variant.prefab using Guid(3d6c150084900824a8a86d72ec821703) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd2222a565d42819ab5aef14750ddfc0b') in 0.3649421 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=009a1606ca5e203ead6b7a90297e4b42 DependenciesID=90af3e2687ae0ba01819cdfaaa3ba176 StaticDependenciesID=32981ac6e3694df60e683281bdc69d06 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 224
-
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

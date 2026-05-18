@@ -498,6 +498,10 @@ public class Scene10SequenceController : MonoBehaviour
                 Debug.LogWarning($"[Dialogue] Failed in Damon Disappears block: {ex.Message}");
             }
 
+            // Stop any ongoing dialogue audio immediately on both sources
+            if (voiceSource != null) voiceSource.Stop();
+            if (dialogueUI != null && dialogueUI.audioSource != null) dialogueUI.audioSource.Stop();
+
             // Play voice if present
             if (line.voiceClip != null && voiceSource != null)
             {

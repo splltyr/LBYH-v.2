@@ -11,6 +11,11 @@ public class Scene5SequenceController : MonoBehaviour
     [SerializeField] private GameObject fadeOverlay;
     [SerializeField] private string nextSceneName = "Scene 6";
 
+    [Header("BGM Setup")]
+    [SerializeField] private AudioClip bgmClip;
+    [SerializeField] [Range(0f, 1f)] private float bgmVolume = 0.3f;
+    private AudioSource bgmSource;
+
     [Header("Character References")]
     [SerializeField] private KnightHero player;
 
@@ -22,47 +27,47 @@ public class Scene5SequenceController : MonoBehaviour
     [SerializeField] private GameObject bullyBoss; // The actual boss in the arena
 
     [Header("Dialogue Content")]
-    private LBYH_Line[] introLines = {
+    [SerializeField] private LBYH_Line[] introLines = {
         new LBYH_Line { name = "Yves", text = "Ugh why is this floor so creepy.. And dang it stinks. . ." },
         new LBYH_Line { name = "Tala", text = "Jeez.. The smell makes me wanna disappear." },
         new LBYH_Line { name = "Yves", text = "Aren’t you a spirit?" },
         new LBYH_Line { name = "Tala", text = "Oh.." }
     };
 
-    private LBYH_Line[] ambushLines = {
+    [SerializeField] private LBYH_Line[] ambushLines = {
         new LBYH_Line { name = "Tala", text = "YVES! THE CEILING! WATCH OU-" },
         new LBYH_Line { name = "Yves", text = "Huh..?" }
     };
 
-    private LBYH_Line[] postAmbushLines = {
+    [SerializeField] private LBYH_Line[] postAmbushLines = {
         new LBYH_Line { name = "Yves", text = "So this is what Sir Rome is talking about? What is it called… Ah, Sneaks. " },
         new LBYH_Line { name = "Tala", text = "Good job, Yves!" },
         new LBYH_Line { name = "Tala", text = "Look, there! That's the Lab." }
     };
 
-    private LBYH_Line[] doorLockedLines = {
+    [SerializeField] private LBYH_Line[] doorLockedLines = {
         new LBYH_Line { name = "Yves", text = "Yeah.. I don’t think there’s a key for this floor." }
     };
 
-    private LBYH_Line[] noteLines = {
+    [SerializeField] private LBYH_Line[] noteLines = {
         new LBYH_Line { name = "Narrative", text = "“Beware of the gate… If you solve this Pathfinding Maze you may seek the floor you go to but there will be a Guardian…”" },
         new LBYH_Line { name = "Tala", text = "There’s a Guardian now?!" },
         new LBYH_Line { name = "Yves", text = "I thought you knew everything about this place?" },
         new LBYH_Line { name = "Tala", text = "Uh.. No, I didn't.. " }
     };
 
-    private LBYH_Line[] postNoteLines = {
+    [SerializeField] private LBYH_Line[] postNoteLines = {
         new LBYH_Line { name = "Tala", text = "Yves, take a look!" },
         new LBYH_Line { name = "Yves", text = "No other options, I must go forward to it." }
     };
 
-    private LBYH_Line[] postPuzzleLines = {
+    [SerializeField] private LBYH_Line[] postPuzzleLines = {
         new LBYH_Line { name = "Tala", text = "Do you know that you’re bad at this?" },
         new LBYH_Line { name = "Yves", text = "I’m no expert, I did my best! That took me about 30 minutes! " },
         new LBYH_Line { name = "Tala", text = "Now let’s see what’s in here." }
     };
 
-    private LBYH_Line[] bullyIntroLines = {
+    [SerializeField] private LBYH_Line[] bullyIntroLines = {
         new LBYH_Line { name = "Yves", text = "What the…" },
         new LBYH_Line { name = "Tala", text = "That doesn’t look good.." },
         new LBYH_Line { name = "Tala", text = "Yves! On your left!" },
@@ -70,18 +75,18 @@ public class Scene5SequenceController : MonoBehaviour
         new LBYH_Line { name = "Yves", text = "A…Bully?" }
     };
 
-    private LBYH_Line[] bullyMidFightLines = {
+    [SerializeField] private LBYH_Line[] bullyMidFightLines = {
         new LBYH_Line { name = "School Bully", text = "Clever, Brat. But you won’t be going up and saving the others of how many My corrupted digitals are forming when I kill you!" },
         new LBYH_Line { name = "Yves", text = "I won’t let you HURT THEM!" },
         new LBYH_Line { name = "Tala", text = "Yeah! Yves will protect them, so get defeated!" }
     };
 
-    private LBYH_Line[] bullyMidFight2Lines = {
+    [SerializeField] private LBYH_Line[] bullyMidFight2Lines = {
         new LBYH_Line { name = "School Bully", text = "Stop acting like a brat!" },
         new LBYH_Line { name = "Tala", text = "Is he.. talking to a mirror or something..?" }
     };
 
-    private LBYH_Line[] victoryLines = {
+    [SerializeField] private LBYH_Line[] victoryLines = {
         new LBYH_Line { name = "Yves", text = "Who’s a brat now?" },
         new LBYH_Line { name = "Tala", text = "If only our guidance counselors were here.. They will never let this idiot in." },
         new LBYH_Line { name = "Yves", text = "Hey, that’s not nice." },
@@ -97,6 +102,18 @@ public class Scene5SequenceController : MonoBehaviour
 
     IEnumerator Start()
     {
+        // Setup and play BGM automatically
+        if (bgmClip != null)
+        {
+            GameObject bgmGO = new GameObject("SceneBGM");
+            bgmGO.transform.SetParent(transform);
+            bgmSource = bgmGO.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.volume = bgmVolume;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
+
         if (player == null) player = FindAnyObjectByType<KnightHero>();
         if (dialogue == null) dialogue = FindAnyObjectByType<LBYH_Dialogue>();
         if (puzzle == null) puzzle = FindAnyObjectByType<LBYH_CircuitPuzzle>();

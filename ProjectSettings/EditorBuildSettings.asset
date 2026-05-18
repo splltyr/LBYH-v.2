@@ -45,13 +45,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene 5/Scene 5.unity
     guid: 163f8fd7cc617e14b97feb4721d71a57
   - enabled: 1
-    path: Assets/Scenes/Scene 6/Scene 6.unity
+    path: Assets/Scenes/Scene 6/asdad.unity
     guid: 58caeffdbe2170e4490695e6dbca62ce
   - enabled: 1
     path: Assets/Scenes/Scene 8/Scene 8.unity
     guid: df7e42fb39e857d4cae5bfccc2478f77
   - enabled: 1
-    path: Assets/Scenes/ControlsScene/ControlsScene.unity
+    path: Assets/Scenes/Scene 10/Scene 10.unity
+    guid: 9e1de33e6d91dcc439a57eb05b67ba40
+  - enabled: 1
+    path: Assets/Scenes/Scene 6/Scene 6.unity
+    guid: 26e0354a9ef933f429f04132e1ed3606
+  - enabled: 1
+    path: Assets/Scenes/Scene 1/ControlsScene/ControlsScene.unity
     guid: 535dd22572c29b14b84aa1ca9043d28d
   - enabled: 1
     path: Assets/Scenes/Scene 11/Scene 11.unity

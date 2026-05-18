@@ -10,6 +10,11 @@ public class Scene7SequenceController : MonoBehaviour
     [SerializeField] private LBYH_Dialogue dialogue;
     [SerializeField] private string nextSceneName = "Scene 8";
 
+    [Header("BGM Setup")]
+    [SerializeField] private AudioClip bgmClip;
+    [SerializeField] [Range(0f, 1f)] private float bgmVolume = 0.3f;
+    private AudioSource bgmSource;
+
     // --- DIALOGUE DATA (Serialized so you can assign AudioClips in Inspector) ---
     [Header("Dialogue Blocks")]
     [SerializeField] private LBYH_Line[] introLines;
@@ -106,6 +111,18 @@ public class Scene7SequenceController : MonoBehaviour
 
     void Start()
     {
+        // Setup and play BGM automatically
+        if (bgmClip != null)
+        {
+            GameObject bgmGO = new GameObject("SceneBGM");
+            bgmGO.transform.SetParent(transform);
+            bgmSource = bgmGO.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.volume = bgmVolume;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
+
         if (dialogue == null) dialogue = FindAnyObjectByType<LBYH_Dialogue>();
         Debug.Log($"Scene 7 initialized at phase: {currentPhase}");
         

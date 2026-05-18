@@ -24,7 +24,7 @@ public class Scene9 : MonoBehaviour
     [SerializeField] private AudioClip bossBGM;
 
     [Header("Dialogue Content")]
-    private LBYH_Line[] introLines = {
+    public LBYH_Line[] introLines = {
         new LBYH_Line { name = "Tala", text = "I’M TIRED!" },
         new LBYH_Line { name = "Yves", text = "Just one more floor.." },
         new LBYH_Line { name = "Yves", text = "By the way, these floating books are awesome." },
@@ -33,7 +33,7 @@ public class Scene9 : MonoBehaviour
         new LBYH_Line { name = "Tala", text = "Don’t worry, I’ll be here when you don’t understand things. I am sure you can do it, have some faith." }
     };
 
-    private LBYH_Line[] postPuzzleLines = {
+    public LBYH_Line[] postPuzzleLines = {
         new LBYH_Line { name = "Yves", text = "I think I found it!" },
         new LBYH_Line { name = "Tala", text = "Oooh~ Great job, Yves! You found the source code keycard!" },
         new LBYH_Line { name = "Yves", text = "Good thing I have keen eyes, hehe." },
@@ -43,7 +43,7 @@ public class Scene9 : MonoBehaviour
         new LBYH_Line { name = "Tala", text = "HEHEHE, Goodluck!" }
     };
 
-    private LBYH_Line[] victoryLines = {
+    public LBYH_Line[] victoryLines = {
         new LBYH_Line { name = "Yves", text = "If only I could boil you, Tala." },
         new LBYH_Line { name = "Tala", text = "Guess what? You can’t, for as I am a spirit." },
         new LBYH_Line { name = "Yves", text = "…" }

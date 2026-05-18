@@ -24,6 +24,11 @@ public class Scene6SequenceController : MonoBehaviour
     [SerializeField] private AudioSource ambientAudio;
     [SerializeField] private UnityEngine.Rendering.Universal.Light2D globalLight; // Optional for flickering
 
+    [Header("BGM Setup")]
+    [SerializeField] private AudioClip bgmClip;
+    [SerializeField] [Range(0f, 1f)] private float bgmVolume = 0.3f;
+    private AudioSource bgmSource;
+
     // --- DIALOGUE DATA (Serialized so you can assign AudioClips in Inspector) ---
     [Header("Dialogue Blocks")]
     [SerializeField] private LBYH_Line[] introLines;
@@ -103,6 +108,18 @@ public class Scene6SequenceController : MonoBehaviour
 
     void Start()
     {
+        // Setup and play BGM automatically
+        if (bgmClip != null)
+        {
+            GameObject bgmGO = new GameObject("SceneBGM");
+            bgmGO.transform.SetParent(transform);
+            bgmSource = bgmGO.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.volume = bgmVolume;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
+
         if (dialogueUI == null) dialogueUI = FindAnyObjectByType<LBYH_Dialogue>();
         
         // Initial setup: hide enemies/boss

@@ -42,6 +42,8 @@ public class ClinicDialogueManager : MonoBehaviour
 
     private int index = 0;
     private bool isWakingUp = true; 
+    private bool isTyping = false;
+    private Coroutine typingCoroutine;
 
     [Header("Dialogue Sequence")]
     public LBYH_Line[] fullClinicDialogue = new LBYH_Line[] {
@@ -102,7 +104,9 @@ public class ClinicDialogueManager : MonoBehaviour
         // Setup and play BGM
         if (bgmClip != null)
         {
-            bgmSource = gameObject.AddComponent<AudioSource>();
+            GameObject bgmGO = new GameObject("ClinicBGM");
+            bgmGO.transform.SetParent(transform);
+            bgmSource = bgmGO.AddComponent<AudioSource>();
             bgmSource.clip = bgmClip;
             bgmSource.volume = bgmVolume;
             bgmSource.loop = true;
@@ -168,26 +172,21 @@ public class ClinicDialogueManager : MonoBehaviour
             // Since their ClinicDialogueManager DOES NOT have a nameDisplay reference, I will prepend the name!
             string fullText = currentLine.name + ": " + currentLine.text;
 
+            // Stop any ongoing voice audio immediately
+            if (voiceAudioSource != null) voiceAudioSource.Stop();
+
             // Play Audio Clip if assigned
             if (currentLine.voiceClip != null)
             {
                 if (voiceAudioSource == null) 
                 {
-                    // Grab the existing Audio Source if it's already there!
-                    voiceAudioSource = gameObject.GetComponent<AudioSource>();
-                    if (voiceAudioSource == null) 
-                    {
-                        voiceAudioSource = gameObject.AddComponent<AudioSource>();
-                        voiceAudioSource.playOnAwake = false;
-                    }
+                    GameObject voiceGO = new GameObject("ClinicVoice");
+                    voiceGO.transform.SetParent(transform);
+                    voiceAudioSource = voiceGO.AddComponent<AudioSource>();
+                    voiceAudioSource.playOnAwake = false;
                     
-                    if (gameObject.GetComponent<AutoVolumeNormalizer>() == null)
-                    {
-                        gameObject.AddComponent<AutoVolumeNormalizer>();
-                    }
+                    voiceGO.AddComponent<AutoVolumeNormalizer>();
                 }
-                
-                voiceAudioSource.Stop();
                 
                 // BULLETPROOF VOLUME BOOST HACK
                 // Since Unity caps AudioSource.volume at 1.0, we just play the clip multiple times 
@@ -201,11 +200,25 @@ public class ClinicDialogueManager : MonoBehaviour
                 }
             }
 
-            yield return StartCoroutine(TypeLine(fullText));
+            isTyping = true;
+            typingCoroutine = StartCoroutine(TypeLine(fullText));
+            
+            while (isTyping)
+            {
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
+                {
+                    StopCoroutine(typingCoroutine);
+                    dialogueText.text = fullText;
+                    isTyping = false;
+                    yield return null; // Prevent double trigger on the same frame
+                    break;
+                }
+                yield return null;
+            }
             
             if (pressSpacePrompt != null) pressSpacePrompt.SetActive(true);
             
-            // Wait for input to advance (Spammable to skip? Let's just do standard advance for now)
+            // Wait for input to advance
             while (!Input.GetKeyDown(KeyCode.Space) && !Input.GetKeyDown(KeyCode.E) && !Input.GetMouseButtonDown(0)) yield return null;
             
             if (pressSpacePrompt != null) pressSpacePrompt.SetActive(false);
@@ -238,6 +251,7 @@ public class ClinicDialogueManager : MonoBehaviour
             dialogueText.text += c;
             yield return new WaitForSeconds(0.03f);
         }
+        isTyping = false;
     }
 
     IEnumerator SpotlightWakeUp()
@@ -255,7 +269,24 @@ public class ClinicDialogueManager : MonoBehaviour
     IEnumerator TriggerEarthquake(bool playParticles)
     {
         if (earthquakeSound != null) earthquakeSound.Play();
-        if (playParticles && ceilingDebris != null) ceilingDebris.Play();
+        
+        if (playParticles && ceilingDebris != null)
+        {
+            try
+            {
+                // Safely probe a property of the ParticleSystem to ensure the underlying C++ native object is valid.
+                // If it is a missing/destroyed serialized reference in a built player, accessing gameObject
+                // will throw a catchable managed exception, preventing the native crash in Play().
+                if (ceilingDebris.gameObject != null)
+                {
+                    ceilingDebris.Play();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[ClinicDialogueManager] ceilingDebris reference is invalid or missing in the built game. Skipping play. Error: {ex.Message}");
+            }
+        }
 
         Vector3 originalPos = Camera.main.transform.localPosition;
         float elapsed = 0.0f;

@@ -35,8 +35,12 @@ public class LBYH_Dialogue : MonoBehaviour
 
     readonly Queue<LBYH_Line> lines = new Queue<LBYH_Line>();
 
+    public static LBYH_Dialogue Instance { get; private set; }
+
     void Awake()
     {
+        Instance = this;
+
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
 
@@ -47,6 +51,11 @@ public class LBYH_Dialogue : MonoBehaviour
         // Auto-find puzzle if not assigned
         if (circuitPuzzle == null)
             circuitPuzzle = FindAnyObjectByType<LBYH_CircuitPuzzle>(FindObjectsInactive.Include);
+    }
+
+    void OnDestroy()
+    {
+        if (Instance == this) Instance = null;
     }
 
     GameObject PanelRoot
@@ -97,17 +106,20 @@ public class LBYH_Dialogue : MonoBehaviour
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
         typingCoroutine = StartCoroutine(TypeText(fullText));
 
-        if (audioSource != null && line.voiceClip != null)
+        if (audioSource != null)
         {
             audioSource.Stop();
             
-            // BULLETPROOF VOLUME BOOST HACK (Global)
-            int playCount = Mathf.Max(1, Mathf.CeilToInt(line.volume));
-            float volumePerClip = line.volume / playCount;
-
-            for (int i = 0; i < playCount; i++)
+            if (line.voiceClip != null)
             {
-                audioSource.PlayOneShot(line.voiceClip, volumePerClip);
+                // BULLETPROOF VOLUME BOOST HACK (Global)
+                int playCount = Mathf.Max(1, Mathf.CeilToInt(line.volume));
+                float volumePerClip = line.volume / playCount;
+
+                for (int i = 0; i < playCount; i++)
+                {
+                    audioSource.PlayOneShot(line.voiceClip, volumePerClip);
+                }
             }
         }
     }

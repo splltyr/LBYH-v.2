@@ -46,6 +46,8 @@ public class KnightHero : MonoBehaviour
     public AudioClip runSound;
     public AudioClip dashSound;
     public AudioClip[] attackSounds;
+    public AudioClip hitSomeoneSound;
+    public AudioClip takeDamageSound;
     public float runPitch = 1f;
     public float attackPitchVariance = 0.1f;
 
@@ -166,10 +168,33 @@ public class KnightHero : MonoBehaviour
 
     private void PreCacheSounds() {
         GetSilenceOffset(runSound); GetSilenceOffset(dashSound);
+        GetSilenceOffset(hitSomeoneSound); GetSilenceOffset(takeDamageSound);
         if (attackSounds != null) foreach (var clip in attackSounds) GetSilenceOffset(clip);
     }
 
+    void OnDisable() {
+        StopRunSound();
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+        ChangeAnimationState("KnightIdle");
+    }
+
     void Update() {
+        // --- GLOBAL DIALOGUE BLOCKER ---
+        // If a dialogue panel is active in the scene, completely freeze the player, stop run sounds, and force Idle state!
+        if (LBYH_Dialogue.Instance != null && LBYH_Dialogue.Instance.IsVisible)
+        {
+            moveInput = 0f;
+            verticalInput = 0f;
+            isClimbing = false;
+            StopRunSound();
+            ChangeAnimationState("KnightIdle");
+            if (rb != null)
+            {
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            }
+            return;
+        }
+
         if (isDashing) return;
 
         // --- INPUT HANDLING ---
@@ -274,6 +299,14 @@ public class KnightHero : MonoBehaviour
     }
 
     void FixedUpdate() {
+        // --- GLOBAL DIALOGUE BLOCKER ---
+        if (LBYH_Dialogue.Instance != null && LBYH_Dialogue.Instance.IsVisible)
+        {
+            rb.gravityScale = 3f;
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            return;
+        }
+
         if (isDashing || isAttacking || isStunned) return; 
         if (isClimbing) {
             rb.gravityScale = 0f;
@@ -307,6 +340,10 @@ public class KnightHero : MonoBehaviour
         
         Debug.Log($"<color=white>Knight Attack: Detected {hitEnemies.Length} objects on Enemy Layer.</color>");
 
+        if (hitEnemies.Length > 0 && hitSomeoneSound != null) {
+            PlayTrimmedSFX(hitSomeoneSound);
+        }
+
         foreach (Collider2D enemy in hitEnemies) {
             Debug.Log($"<color=yellow>Knight Hit: {enemy.name}</color>");
             EnemyHealth health = enemy.GetComponent<EnemyHealth>() ?? enemy.GetComponentInParent<EnemyHealth>();
@@ -321,7 +358,11 @@ public class KnightHero : MonoBehaviour
 
     IEnumerator PerformDash() {
         isDashing = true;
-        ChangeAnimationState("KnightSlide");
+        if (anim != null && anim.HasState(0, Animator.StringToHash("KnightDash"))) {
+            ChangeAnimationState("KnightDash");
+        } else {
+            ChangeAnimationState("KnightSlide");
+        }
         PlayTrimmedSFX(dashSound);
         float oldGrav = rb.gravityScale;
         rb.gravityScale = 0f;
@@ -351,6 +392,7 @@ public class KnightHero : MonoBehaviour
         if (playerUI != null) playerUI.UpdateHealth(currentHealth);
         StartCoroutine(HitFlashEffect());
         ChangeAnimationState("KnightHit"); 
+        if (takeDamageSound != null) PlayTrimmedSFX(takeDamageSound);
         if (currentHealth <= 0) Die();
     }
 

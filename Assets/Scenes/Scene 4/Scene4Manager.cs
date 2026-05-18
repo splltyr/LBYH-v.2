@@ -27,6 +27,11 @@ public class Scene4Manager : MonoBehaviour
     [SerializeField] private string nextSceneName = "Scene 5";
     [SerializeField] private Image fadeOverlay;
 
+    [Header("BGM Setup")]
+    [SerializeField] private AudioClip bgmClip;
+    [SerializeField] [Range(0f, 1f)] private float bgmVolume = 0.3f;
+    private AudioSource bgmSource;
+
     [Header("Dialogue System")]
     [SerializeField] private GameObject dialogueUIObject;
     private LBYH_Dialogue dialogueUI;
@@ -110,6 +115,18 @@ public class Scene4Manager : MonoBehaviour
 
     IEnumerator Start()
     {
+        // Setup and play BGM automatically
+        if (bgmClip != null)
+        {
+            GameObject bgmGO = new GameObject("SceneBGM");
+            bgmGO.transform.SetParent(transform);
+            bgmSource = bgmGO.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.volume = bgmVolume;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
+
         if (playerObject != null && !playerObject.Equals(null)) 
             playerComponent = playerObject.GetComponent<KnightHero>();
 

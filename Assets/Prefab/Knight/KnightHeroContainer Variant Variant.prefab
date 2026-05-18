@@ -60,6 +60,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 541468439480058092, guid: 927156db2da2d5c4cbfcee3acb038cf9, type: 3}
     - target: {fileID: 368535948436312457, guid: 55ad49d2cd3933643b6caa2f840177c8, type: 3}
+      propertyPath: hitSomeoneSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d586317611175f84397c1a0db042cd2b, type: 3}
+    - target: {fileID: 368535948436312457, guid: 55ad49d2cd3933643b6caa2f840177c8, type: 3}
+      propertyPath: takeDamageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d5f20866c8e23e4408cb48c8d6554dde, type: 3}
+    - target: {fileID: 368535948436312457, guid: 55ad49d2cd3933643b6caa2f840177c8, type: 3}
       propertyPath: enemyLayers.m_Bits
       value: 256
       objectReference: {fileID: 0}

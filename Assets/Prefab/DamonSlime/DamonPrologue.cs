@@ -61,7 +61,23 @@ public class DamonPrologue : MonoBehaviour
         if (dialogueUI != null) dialogueUI.SetActive(false);
         
         if (scarySource != null) scarySource.Play();
-        if (bloodRain != null) bloodRain.Play();
+        if (bloodRain != null)
+        {
+            try
+            {
+                // Safely probe a property of the ParticleSystem to ensure the underlying C++ native object is valid.
+                // If it is a missing/destroyed serialized reference in a built player, accessing gameObject
+                // will throw a catchable managed exception, preventing the native crash in Play().
+                if (bloodRain.gameObject != null)
+                {
+                    bloodRain.Play();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[DamonPrologue] bloodRain reference is invalid or missing in the built game. Skipping play. Error: {ex.Message}");
+            }
+        }
 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null) { rb.gravityScale = 0; rb.bodyType = RigidbodyType2D.Kinematic; }
@@ -129,10 +145,17 @@ public class DamonPrologue : MonoBehaviour
         if (playerObject != null) {
             Behaviour[] allScripts = playerObject.GetComponentsInChildren<Behaviour>();
             foreach (var s in allScripts) {
-                if (s != null && s.gameObject != this.gameObject && !(s is Animator)) s.enabled = false;
+                if (s != null && s.gameObject != this.gameObject && !(s is Animator) && !(s is Collider2D)) s.enabled = false;
             }
             Rigidbody2D prb = playerObject.GetComponent<Rigidbody2D>();
-            if (prb != null) { prb.linearVelocity = Vector2.zero; prb.bodyType = RigidbodyType2D.Static; }
+            if (prb != null) { prb.linearVelocity = new Vector2(0f, prb.linearVelocity.y); }
+
+            // Reset player animator parameters and play KnightIdle animation so they don't keep running
+            Animator playerAnim = playerObject.GetComponentInChildren<Animator>();
+            if (playerAnim != null) {
+                playerAnim.SetBool("isWalking", false);
+                playerAnim.Play("KnightIdle");
+            }
         }
         if (anim != null) { anim.SetBool("isWalking", false); anim.Play("DamonIdle"); }
         yield return new WaitForSeconds(0.5f);
@@ -149,7 +172,8 @@ public class DamonPrologue : MonoBehaviour
                     voiceAudioSource.playOnAwake = false;
                     voiceObj.AddComponent<AutoVolumeNormalizer>();
                 }
-                voiceAudioSource.PlayOneShot(damonVoice);
+                voiceAudioSource.clip = damonVoice;
+                voiceAudioSource.Play();
             }
 
             var typewriter = dialogueUI.GetComponentInChildren<TypewriterEffect>();
@@ -157,6 +181,10 @@ public class DamonPrologue : MonoBehaviour
                 typewriter.StartTyping();
                 yield return new WaitUntil(() => typewriter.isFinished);
                 yield return new WaitForSeconds(1.5f);
+            }
+
+            if (voiceAudioSource != null && voiceAudioSource.isPlaying) {
+                yield return new WaitWhile(() => voiceAudioSource.isPlaying);
             }
             dialogueUI.SetActive(false);
         }

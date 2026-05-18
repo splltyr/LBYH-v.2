@@ -9,6 +9,11 @@ public class Scene3Manager : MonoBehaviour
     public GameObject postBossArrow;
     public string nextSceneName = "";
 
+    [Header("BGM Setup")]
+    [SerializeField] private AudioClip bgmClip;
+    [SerializeField] [Range(0f, 1f)] private float bgmVolume = 0.3f;
+    private AudioSource bgmSource;
+
     [Header("Dialogue System")]
     public LBYH_Dialogue dialogueUI;
     
@@ -112,6 +117,18 @@ public class Scene3Manager : MonoBehaviour
         if (dialogueUI == null) dialogueUI = FindAnyObjectByType<LBYH_Dialogue>(FindObjectsInactive.Include);
         if(corruptedCooker != null) corruptedCooker.SetActive(false);
         if(postBossArrow != null) postBossArrow.SetActive(false);
+
+        // Setup and play BGM automatically
+        if (bgmClip != null)
+        {
+            GameObject bgmGO = new GameObject("SceneBGM");
+            bgmGO.transform.SetParent(transform);
+            bgmSource = bgmGO.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.volume = bgmVolume;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
 
         // Auto-start intro
         StartCoroutine(PlayIntroChat());

@@ -1670,7 +1670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476.4, y: -229}
+  m_AnchoredPosition: {x: -316, y: -127.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609761679
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   moveSpeed: 3.5
   chaseRange: 10
   attackRange: 2.2
-  attackDamage: 30
+  attackDamage: 15
   attackCooldown: 3
   skeletonPrefab: {fileID: 2150597537993912879, guid: 061d7c62b7cb04a4d924d8b3a1de96ab, type: 3}
   spawnPoints:
@@ -22622,17 +22622,17 @@ RectTransform:
   m_GameObject: {fileID: 841880568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3612499, y: 1.3612499, z: 1.3612499}
+  m_LocalScale: {x: 1.3997428, y: 1.3997428, z: 1.3997428}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 253224629}
   - {fileID: 1237317397}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1979530027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 544.5, y: 306.5}
-  m_SizeDelta: {x: 800, y: 450.32138}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0.0000076293945}
+  m_SizeDelta: {x: 800, y: 449.9358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &898730782
 PrefabInstance:
@@ -23756,6 +23756,8 @@ MonoBehaviour:
   corruptedCooker: {fileID: 819135768}
   postBossArrow: {fileID: 485910323}
   nextSceneName: Scene 4 Mezzanine
+  bgmClip: {fileID: 8300000, guid: 121e3a546b262ad49be541b894a68767, type: 3}
+  bgmVolume: 0.074
   dialogueUI: {fileID: 1668224388}
   bossDefeated: 0
   hasRescuedReya: 0
@@ -23790,19 +23792,19 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: Let.. her.. GO!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: bc731c405a212cb4a86f9c22732e9134, type: 3}
     volume: 1
   - name: Yves
     text: "You\u2019ve done enough damage for one semester!"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 8f73842bc7905954a9a1eb26302c7845, type: 3}
     volume: 1
   - name: Cook Reya
     text: Thank you, young man! Phew, that scared me to death!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d5114b6bc51177b4fa689067f1be8cad, type: 3}
     volume: 1
   - name: Yves
     text: "Are you okay, Ma\u2019am? What happened?"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 88189a8dd63c9f347810f8d0ecb72acc, type: 3}
     volume: 1
   - name: ???
     text: That is one gushy armor, that would look awesome on you, Yves!
@@ -23810,7 +23812,7 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: "That\u2019s disgusting.."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 899476f593041404aa0f61eeeb80a702, type: 3}
     volume: 1
   - name: ???
     text: What did you just say..?
@@ -23818,7 +23820,7 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: "*Confused* Didn\u2019t you hear her say that?"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 06b82d786688ba745a21efd766549089, type: 3}
     volume: 1
   - name: ???
     text: "Yves, it\u2019s only you who can see me.."
@@ -23826,17 +23828,17 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: "Oh.. Must\u2019ve been the wind.. Are you okay, Ma\u2019am?"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 53fd4750e7e05164c9921912a9a88be6, type: 3}
     volume: 1
   - name: Cook Reya
     text: "Yes, I am. Thank you! I\u2019m Ms. Reya, a cafeteria worker here at STI.
       I was doing inventory and these hoards of pixels just blocked my distribution
       route! They took most of the stuff I was carrying!"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: bb1db7adc34674744905334f8fe93c82, type: 3}
     volume: 1
   - name: Yves
     text: Were you carrying anything important?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: bf3285b01a702e74e9e7870373ba7de6, type: 3}
     volume: 1
   - name: ???
     text: Obviously..
@@ -23845,11 +23847,11 @@ MonoBehaviour:
   - name: Cook Reya
     text: "The food rations we had for the month, and some keycards for the building.
       We can\u2019t navigate through STI without it."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 1e68e8a360fa3764f80f3552ea460123, type: 3}
     volume: 1
   - name: Yves
     text: "Navigate through STI\u2026 Where did the pixels go?"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 999bb52594ffc1c45aa628a65c7dcbb8, type: 3}
     volume: 1
   - name: ???
     text: "I know where they are, I\u2019ll take you there!"
@@ -23858,19 +23860,19 @@ MonoBehaviour:
   - name: Cook Reya
     text: "I saw them camp near the end of the Gazebo! Why? Don\u2019t tell me you're
       gonna try and fight them?!"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 91a0c683aa36c404e9848f761fa3a33a, type: 3}
     volume: 1
   - name: Yves
     text: "It\u2019s.. worth a try."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 179d7651f4d16784389716b4fbbe5576, type: 3}
     volume: 1
   - name: Cook Reya
     text: Please be careful!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5a2fa79268db7954392bc27d31e2c606, type: 3}
     volume: 1
   - name: Yves
     text: "Say, you haven\u2019t told me your name yet glowy bubble."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ddb29f8d6ebe55a41ba9732f78afd14e, type: 3}
     volume: 1
   - name: ???
     text: FINALLY! I am Ta- wait.. What did you just call me?
@@ -23878,7 +23880,7 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: Glowy bubble.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5462dc774e910d847bcac509e613591b, type: 3}
     volume: 1
   - name: ???
     text: "You.. OH! Look, we\u2019ve arrived."
@@ -23898,7 +23900,7 @@ MonoBehaviour:
   - name: Corrupted Cooker
     text: THESE RATIONS CAN LAST ME ONLY A FEW DAYS, I NEED TO STEAL MORE HAHA! THIS
       IS FUN!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: e979a1d62443e2a4eafde6062285295d, type: 3}
     volume: 1
   - name: ???
     text: "Someone\u2019s Crazy.."
@@ -23906,7 +23908,7 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: Hey!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d725c5e69c07f844397cb5b10a8f03f7, type: 3}
     volume: 1
   - name: ???
     text: "You\u2019re crazier.. Do you know that?"
@@ -23918,15 +23920,15 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: I think you have something that I need.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a580c471b418216428d29e7a01b902af, type: 3}
     volume: 1
   - name: Corrupted Cooker
     text: HA! WHAT A BRAVE YOUNGSTER! TRYING TO STEAL FROM ME? WHAT A JOKE!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 3582b7fbe2ca49d4fbb99ee00c85880d, type: 3}
     volume: 1
   - name: Corrupted Cooker
     text: "HA! YOU\u2019RE ALL BARK NO BITE!"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: fd98d5fcd05ae9f499c31290392447d5, type: 3}
     volume: 1
   - name: ???
     text: There Yves! You almost got him
@@ -23934,7 +23936,7 @@ MonoBehaviour:
     volume: 1
   - name: Corrupted Cooker
     text: "I THINK I\u2019LL COOK YOU FOR BREAKFAST INSTEAD!"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ecbb4ecad91addd419f701a3df9ac61c, type: 3}
     volume: 1
   cookerDefeatedLines:
   - name: ???
@@ -23943,7 +23945,7 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: Thanks, you were.. Awesome too.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 2bb0726805ed35144a62e5aba2eea073, type: 3}
     volume: 1
   - name: ???
     text: Aaawwww
@@ -23951,7 +23953,7 @@ MonoBehaviour:
     volume: 1
   - name: Yves
     text: I take it back.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 05ffc2faa4db48d45a973a646fe017e8, type: 3}
     volume: 1
   - name: ???
     text: HEY! No fair.
@@ -23960,46 +23962,46 @@ MonoBehaviour:
   fullQuestCompleteLines:
   - name: Cook Reya
     text: "Thank God you\u2019re back! Are you alright?"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d1a623c9e1be28e4b9d7f6e3d783ea1e, type: 3}
     volume: 1
   - name: Yves
     text: "Yes Ma\u2019am, I am. Here\u2019s what I got after defeating the virus.
       I believe that these are yours."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c5a839ddf11a2bb4b91a277bac4afd5e, type: 3}
     volume: 1
   - name: Cook Reya
     text: Thanks for your help! As a token of my appreciation, here's the keycard
       for the faculty area! You can find a friend of mine that can help you!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f4c46570a23196a4284cac4268a40307, type: 3}
     volume: 1
   - name: Yves
     text: "There are more people on this campus? Isn\u2019t it dangerous?"
-    voiceClip: {fileID: 0}
-    volume: 1
+    voiceClip: {fileID: 8300000, guid: a58d93a6dc43fd74b862388b519594b4, type: 3}
+    volume: 1.8
   - name: Cook Reya
     text: "Yup! But most of them are staying on the ground floor.. The building\u2019s
       corrupted. Some floors are safe.. I think."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: af0020d9132347d4d9eb931ca37a77d5, type: 3}
     volume: 1
   - name: Cook Reya
     text: "What do you mean? We can\u2019t really leave this place\u2026 at least
       not yet\u2026 [REDACTED] trapped all of us here- Anyways. My friend is also
       a staff member here. Tell them I sent you and they\u2019ll offer some help."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f17deef6046adad41b44615d15515bd5, type: 3}
     volume: 1
   - name: Yves
     text: Okay, Thank you Ms. Reya.
-    voiceClip: {fileID: 0}
-    volume: 1
+    voiceClip: {fileID: 8300000, guid: 4adf53b762634694082e3ae6f6dc3fc6, type: 3}
+    volume: 1.5
   - name: Cook Reya
     text: "No problem kid. I hope you achieve whatever you need to do. This place
       isn\u2019t exactly the safest. I just wish none of this ever happened."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 08479dbb85edb8f4289f0d089b5024cc, type: 3}
     volume: 1
   - name: Yves
     text: Who is this [REDACTED]? Wow, I can't even pronounce its name properly.
-    voiceClip: {fileID: 0}
-    volume: 1
+    voiceClip: {fileID: 8300000, guid: 3cffbd96b44f4964c8eb0d901df30046, type: 3}
+    volume: 2
   - name: ???
     text: "You\u2019ll meet him.. Eventually."
     voiceClip: {fileID: 0}
@@ -24920,7 +24922,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -6.985367, y: 0, z: -30.560867, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -25013,7 +25015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -25270,6 +25272,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!224 &1979530027 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7758980333375589719, guid: 3d6c150084900824a8a86d72ec821703, type: 3}
+  m_PrefabInstance: {fileID: 5523526952005802425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2055099257
 GameObject:
   m_ObjectHideFlags: 0
@@ -25599,7 +25606,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7758980333375589719, guid: 3d6c150084900824a8a86d72ec821703, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 841880571}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d6c150084900824a8a86d72ec821703, type: 3}
 --- !u!1001 &6548190520727278913
@@ -25692,4 +25702,3 @@ SceneRoots:
   - {fileID: 1251739315}
   - {fileID: 1717009274}
   - {fileID: 485910325}
-  - {fileID: 841880571}

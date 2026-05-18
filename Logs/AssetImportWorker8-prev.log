@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.3f1 (39d1a88d4dd1) revision 3789224'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron" at "2026-05-18T00:56:11.9209017Z"
-OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 16310 MB
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'en' Physical Memory: 32629 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dieha" at "2026-05-18T18:28:54.4069262Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-05-18T00:56:11Z
+Date: 2026-05-18T18:28:54Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
@@ -15,24 +15,24 @@ C:\Program Files\Unity\Hub\Editor\6000.4.3f1\Editor\Unity.exe
 -name
 AssetImportWorker8
 -projectPath
-C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2
 -logFile
 Logs/AssetImportWorker8.log
 -srvPort
-51358
+49696
 -licensingIpc
-LicenseClient-tyron
+LicenseClient-dieha
 -force-d3d12
 -job-worker-count
-7
+5
 -background-job-worker-count
 8
 -gc-helper-count
 1
 -name
 AssetImport
-Successfully changed project path to: C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
-C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
+Successfully changed project path to: C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2
+C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
@@ -68,13 +68,13 @@ C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [51364]  Target information:
+Player connection [23496]  Target information:
 
-Player connection [51364]  * "[IP] 192.168.254.104 [Port] 0 [Flags] 2 [Guid] 1975755362 [EditorId] 1975755362 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-2216JCP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [23496]  * "[IP] 192.168.1.23 [Port] 0 [Flags] 2 [Guid] 1721854562 [EditorId] 1721854562 [Version] 1048832 [Id] WindowsEditor(7,Eznovir) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [51364] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [51364] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 7
+Player connection [23496] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [23496] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -86,76 +86,80 @@ Default GameObject BitMask: UI already registered
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.85 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.20 ms, found 4 plugins.
 Initialize engine version: 6000.4.3f1 (39d1a88d4dd1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/tyron/Documents/Games/LBYHFINAL/lbyhfinal/Assets
+[Subsystems] Discovering subsystems at path C:/Users/dieha/Desktop/EXPOLBYH/LBYH-v.2/Assets
 Forcing GfxDevice: Direct3D 12
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 d3d12: failed to query info queue interface (0x80004002).
 Direct3D:
     Version:         Direct3D 12 [level 12.2]
-    Renderer:        NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Renderer:        NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f14)
     Vendor:          NVIDIA
-    VRAM:            12115 MB
-    App VRAM Budget: 11347 MB
-    Driver:          32.0.15.8157
+    VRAM:            8006 MB
+    App VRAM Budget: 7238 MB
+    Driver:          32.0.15.9621
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56316
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003577 seconds.
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-tyron"
-[Licensing::IpcConnector] LicenseClient-tyron channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron-6000.4.3" at "2026-05-18T00:56:12.8517578Z"
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.4.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001731 seconds.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-dieha"
+[Licensing::IpcConnector] LicenseClient-dieha channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dieha-6000.4.3" at "2026-05-18T18:28:55.9010659Z"
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.348 seconds
-Domain Reload Profiling: 738ms
-	BeginReloadAssembly (113ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (168ms)
-		LoadAssemblies (109ms)
-		AnalyzeDomain (161ms)
-			TypeCache.Refresh (160ms)
-				TypeCache.ScanAssembly (147ms)
-	FinalizeReload (349ms)
+- Finished resetting the current domain, in  0.515 seconds
+Domain Reload Profiling: 1233ms
+	BeginReloadAssembly (166ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (113ms)
+	LoadAllAssembliesAndSetupDomain (367ms)
+		LoadAssemblies (162ms)
+		AnalyzeDomain (352ms)
+			TypeCache.Refresh (349ms)
+				TypeCache.ScanAssembly (319ms)
+	FinalizeReload (517ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (37ms)
-			BeforeProcessingInitializeOnLoad (74ms)
-			ProcessInitializeOnLoadAttributes (99ms)
-			ProcessInitializeOnLoadMethodAttributes (72ms)
+			InitializePlatformSupportModulesInManaged (59ms)
+			BeforeProcessingInitializeOnLoad (117ms)
+			ProcessInitializeOnLoadAttributes (127ms)
+			ProcessInitializeOnLoadMethodAttributes (98ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              5d8ab43342514af3b4a6b6be96bb7cfe
-  Correlation Id:          0d3503ca2c4c27021434ace4f4f1e41b
-  External correlation Id: 1782821882570621340
-  Machine Id:              8s6LdPVFeVL+JPPIymwroRPXaRk=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-tyron-6000.4.3" (connect: 0.00s, validation: 0.00s, handshake: 0.81s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-tyron-6000.4.3-notifications" at "2026-05-18T00:56:13.6649772Z"
-[Licensing::Module] Licensing Background thread has ended after 1.74s
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              bea90aaec65a466cbe2ecbede5442d0c
+  Correlation Id:          9e76ce96fa26c6fc0bf3f98fd7e8c813
+  External correlation Id: 8702405602592415128
+  Machine Id:              O19g9Wk7vKxKpoGXjBvlHQeKaQE=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-dieha-6000.4.3" (connect: 0.00s, validation: 0.00s, handshake: 1.30s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-dieha-6000.4.3-notifications" at "2026-05-18T18:28:57.1986811Z"
+[Licensing::Module] Licensing Background thread has ended after 2.79s
+[Licensing::Module] Licensing is initialized (took 0.31s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
   Id: 18968330311373-UnityPersXXXX
@@ -203,8 +207,9 @@ Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tes
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 2.05 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.77 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -215,38 +220,79 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 2.10 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.61 ms, found 4 plugins.
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.810 seconds
-Domain Reload Profiling: 1672ms
-	BeginReloadAssembly (161ms)
-		DisableScriptedObjects (7ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (70ms)
-	LoadAllAssembliesAndSetupDomain (587ms)
-		LoadAssemblies (370ms)
-		AnalyzeDomain (299ms)
-			TypeCache.Refresh (225ms)
-				TypeCache.ScanAssembly (208ms)
-			BuildScriptInfoCaches (62ms)
-			ResolveRequiredComponents (10ms)
-	FinalizeReload (811ms)
+- Finished resetting the current domain, in  0.939 seconds
+Domain Reload Profiling: 2214ms
+	BeginReloadAssembly (512ms)
+		DisableScriptedObjects (6ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (618ms)
+		LoadAssemblies (423ms)
+		AnalyzeDomain (304ms)
+			TypeCache.Refresh (213ms)
+				TypeCache.ScanAssembly (194ms)
+			BuildScriptInfoCaches (75ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (940ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (133ms)
-			ProcessInitializeOnLoadAttributes (414ms)
-			ProcessInitializeOnLoadMethodAttributes (112ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (186ms)
+			ProcessInitializeOnLoadAttributes (406ms)
+			ProcessInitializeOnLoadMethodAttributes (148ms)
 			AfterProcessingInitializeOnLoad (8ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
 Default GameObject BitMask: UI already registered
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 2.30 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.47 ms, found 4 plugins.
 Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6111 unused Assets / (5.5 MB). Loaded Objects now: 6989.
-Memory consumption went from 183.9 MB to 178.4 MB.
-Total: 7.815400 ms (FindLiveObjects: 0.599600 ms CreateObjectMapping: 0.622300 ms MarkObjects: 4.839400 ms  DeleteObjects: 1.752600 ms)
+Unloading 6111 unused Assets / (5.3 MB). Loaded Objects now: 6966.
+Memory consumption went from 163.8 MB to 158.5 MB.
+Total: 10.578000 ms (FindLiveObjects: 0.859300 ms CreateObjectMapping: 1.105600 ms MarkObjects: 5.586900 ms  DeleteObjects: 3.024100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 15943.346703 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3
+  importAddress: Guid(abb0fd65587099a4fbb9cbf02875e535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3 using Guid(abb0fd65587099a4fbb9cbf02875e535) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '40adab7406436aa124ab9afd8a79ba65') in 0.0073399 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=265aff6fd71c30ad03cec98207bba608 DependenciesID=41ab6fb53be0a85233d5b2462055b540 StaticDependenciesID=327022d12a7a4ecb7b70a45e3a52c6b7 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/1 Reya.mp3
+  importAddress: Guid(d5114b6bc51177b4fa689067f1be8cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/1 Reya.mp3 using Guid(d5114b6bc51177b4fa689067f1be8cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '8acfafd7c658cffc257938856413be47') in 0.1578206 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c33fbbcf39b93294f4dab165d564ae8f DependenciesID=f2945c5733cf850c99e7073c889fd340 StaticDependenciesID=4d35f4e1bd990aca76118501c9576e0d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/4 Reya.mp3
+  importAddress: Guid(91a0c683aa36c404e9848f761fa3a33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/4 Reya.mp3 using Guid(91a0c683aa36c404e9848f761fa3a33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '8d83a2b3bf9b7da4a77609c3123c3cac') in 0.0361831 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e2464443c1c8695f0ecc0a91de50182 DependenciesID=9185f1660ab452182421e9b3b75c8021 StaticDependenciesID=aa52d550047a3f7773f82e75ab8bbb8b 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/3 Reya.mp3
+  importAddress: Guid(1e68e8a360fa3764f80f3552ea460123) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/3 Reya.mp3 using Guid(1e68e8a360fa3764f80f3552ea460123) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c56b7c6fcfb4f92b3e7961dab110505c') in 0.0210903 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a93979cf221d1729a86ce8727d3e8760 DependenciesID=68a747436250ee2e98ba62335952a3b2 StaticDependenciesID=a141f20e5a9086b17d8f591759e2fae4 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/10 Reya.mp3
+  importAddress: Guid(08479dbb85edb8f4289f0d089b5024cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Voice Overs LBYH/All Scenes Daniela (Cook Reya)/Scene 3/10 Reya.mp3 using Guid(08479dbb85edb8f4289f0d089b5024cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c4804b24671b1043c97336aef3c9949e') in 0.0179623 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=41930d62201100ce8a0c9f89d0e25ef0 DependenciesID=af4f8b3ae900757ad4bff5e946cb0c31 StaticDependenciesID=0ab64fbc846da5e8221a159ff96f84a8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server

@@ -48,7 +48,7 @@ public class RomeNPC : MonoBehaviour
     {
         if (isTalking && !isTyping)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0))
             {
                 NextSentence();
             }
