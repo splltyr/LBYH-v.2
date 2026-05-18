@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: 71e8f528a25a94945bb90af3e1710e3e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 65291125647274550
+    second: School girl_0
+  - first:
+      213: -6450440745629071021
+    second: School girl_1
+  - first:
+      213: -3117052048657685703
+    second: School girl_2
+  - first:
+      213: 5645242205936910275
+    second: School girl_3
+  - first:
+      213: 3701677608726101673
+    second: School girl_4
+  - first:
+      213: 1915276320992417210
+    second: School girl_5
+  - first:
+      213: 6428822378846722715
+    second: School girl_6
+  - first:
+      213: -2015811113092503242
+    second: School girl_7
+  - first:
+      213: 7451552942807485170
+    second: School girl_8
+  - first:
+      213: 7264426504898684677
+    second: School girl_9
+  - first:
+      213: -2096895478082765616
+    second: School girl_10
+  - first:
+      213: -4883973284051094410
+    second: School girl_11
+  - first:
+      213: -658539731975773918
+    second: School girl_12
+  - first:
+      213: 8369035517475718889
+    second: School girl_13
+  - first:
+      213: -9027376418785751155
+    second: School girl_14
+  - first:
+      213: 2572404830665453257
+    second: School girl_15
+  - first:
+      213: 598365994661177173
+    second: School girl_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: School girl_4
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 996
+        width: 52
+        height: 144
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aef22d3c200f5330800000000000000
+      internalID: 3701677608726101673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 757
+        width: 72
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5072b69ea6d60d460800000000000000
+      internalID: 7264426504898684677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_10
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 757
+        width: 59
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dcf0c92ca456e2e0800000000000000
+      internalID: -2096895478082765616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 757
+        width: 51
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674f2afac24a83cb0800000000000000
+      internalID: -4883973284051094410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_12
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 757
+        width: 49
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2216a155a956cd6f0800000000000000
+      internalID: -658539731975773918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_13
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 757
+        width: 53
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e684cb4679c42470800000000000000
+      internalID: 8369035517475718889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_14
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 757
+        width: 58
+        height: 146
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f8988e9f058b280800000000000000
+      internalID: -9027376418785751155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_15
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 758
+        width: 71
+        height: 145
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce2056709403b320800000000000000
+      internalID: 2572404830665453257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: School girl_16
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 757
+        width: 58
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557e37da3b2dd4800800000000000000
+      internalID: 598365994661177173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1dab7eb3d5d3f7e498c169dda9fcddbe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      School girl_0: 65291125647274550
+      School girl_1: -6450440745629071021
+      School girl_10: -2096895478082765616
+      School girl_11: -4883973284051094410
+      School girl_12: -658539731975773918
+      School girl_13: 8369035517475718889
+      School girl_14: -9027376418785751155
+      School girl_15: 2572404830665453257
+      School girl_16: 598365994661177173
+      School girl_2: -3117052048657685703
+      School girl_3: 5645242205936910275
+      School girl_4: 3701677608726101673
+      School girl_5: 1915276320992417210
+      School girl_6: 6428822378846722715
+      School girl_7: -2015811113092503242
+      School girl_8: 7451552942807485170
+      School girl_9: 7264426504898684677
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

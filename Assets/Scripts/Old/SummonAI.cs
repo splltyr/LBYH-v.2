@@ -92,14 +92,26 @@ public class SummonAI : MonoBehaviour
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
 
-        // Apply knockback to Tyrone
+        // Apply damage to Knight
         if (target != null)
         {
-            PlayerMovement pMove = target.GetComponent<PlayerMovement>();
-            if (pMove != null)
+            KnightHero knight = target.GetComponent<KnightHero>();
+            if (knight != null)
             {
+                knight.TakeDamage(10f); // Orbs deal 10 damage
                 Vector2 knockbackDir = (target.position - transform.position).normalized;
-                pMove.ApplyKnockback(knockbackDir * 18f); // Stronger pop
+                knight.ApplyKnockback(knockbackDir * 18f);
+            }
+            else
+            {
+                // Fallback for legacy
+                PlayerMovement pMove = target.GetComponent<PlayerMovement>();
+                if (pMove != null)
+                {
+                    pMove.TakeDamage(10f);
+                    Vector2 knockbackDir = (target.position - transform.position).normalized;
+                    pMove.ApplyKnockback(knockbackDir * 18f);
+                }
             }
         }
 

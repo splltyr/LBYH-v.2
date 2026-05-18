@@ -192,8 +192,29 @@ public class SneaksAI : MonoBehaviour
     public void ExecuteDamage()
     {
         if (targetPlayer == null || health == null || health.currentHealth <= 0f) return;
-        KnightHero p = targetPlayer.GetComponent<KnightHero>();
-        if (p != null) Debug.Log("Sneak hit Yves!"); 
+        
+        float distance = Vector2.Distance(transform.position, targetPlayer.position);
+        Debug.Log($"<color=yellow>Sneak is swinging! Distance: {distance}</color>");
+
+        // Try KnightHero
+        KnightHero knight = targetPlayer.GetComponent<KnightHero>();
+        if (knight != null && distance <= attackRange + 1.5f)
+        {
+            Debug.Log("<color=red>Sneak HIT KnightHero!</color>");
+            knight.TakeDamage(10f); // Fast enemy, lower damage
+            Vector2 knockbackDir = (targetPlayer.position - transform.position).normalized;
+            knight.ApplyKnockback(new Vector2(knockbackDir.x * 10f, 5f));
+            return;
+        }
+
+        // Try Legacy PlayerMovement
+        PlayerMovement pMove = targetPlayer.GetComponent<PlayerMovement>();
+        if (pMove != null)
+        {
+            pMove.TakeDamage(10f);
+            Vector2 knockbackDir = (targetPlayer.position - transform.position).normalized;
+            pMove.ApplyKnockback(new Vector2(knockbackDir.x * 10f, 5f));
+        }
     }
 
     // Call this via Animation Event at the 'End' of the attack clip (optional; Invoke also clears lock)

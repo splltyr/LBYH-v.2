@@ -17,31 +17,34 @@ public class SpawnCutscene : MonoBehaviour
         
         if (player != null)
         {
-            // Change 'PlayerMovement' to match your movement script's name exactly
-            movementScript = player.GetComponent<PlayerMovement>(); 
+            // Now supports both KnightHero and legacy PlayerMovement
+            movementScript = player.GetComponent<KnightHero>();
+            if (movementScript == null) movementScript = player.GetComponent<MonoBehaviour>(); // Fallback
+            
             anim = player.GetComponent<Animator>();
 
             if (movementScript != null && anim != null)
             {
-                StartCoroutine(ExecutePortalCutscene());
+                StartCoroutine(ExecutePortalCutscene(player));
             }
         }
     }
 
-    IEnumerator ExecutePortalCutscene()
+    IEnumerator ExecutePortalCutscene(GameObject player)
     {
         // 2. Kill the movement script so 'Update' doesn't run
-        movementScript.enabled = false;
+        if (movementScript != null) movementScript.enabled = false;
+        
+        // Zero out physical velocity so they don't slide!
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        if (rb != null) rb.linearVelocity = Vector2.zero;
 
         // 3. CLEAN RESET: Force 'isWalking' to false immediately
-        // This prevents the player from "remembering" they were walking in the last scene
-        anim.SetBool("isWalking", false); 
-        
-        // If your script uses a float called 'Speed' or similar, reset it here too:
-        // anim.SetFloat("Speed", 0f);
-
-        // 4. FORCE the Animator to play the Portal state
-        anim.Play(portalStateName); 
+        if (anim != null) 
+        {
+            anim.SetBool("isWalking", false); 
+            anim.Play("KnightIdle"); // Force idle animation
+        }
 
         Debug.Log("Spawn Cutscene Started: Player Frozen.");
 

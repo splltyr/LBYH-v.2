@@ -39,7 +39,7 @@ public class CorruptedCooker : MonoBehaviour
     private bool isDead = false;
     private bool isAttacking = false;
     private bool isTalking = false;
-    private bool isTyping = false;
+    // private bool isTyping = false;
     private bool hasStartedDialogue = false; 
     private int dialogueIndex = 0;
 
@@ -60,9 +60,8 @@ public class CorruptedCooker : MonoBehaviour
         if (!hasStartedDialogue)
         {
             float distToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-            Scene3Manager manager = FindAnyObjectByType<Scene3Manager>();
             
-            if (distToPlayer <= activationRange && manager != null && manager.currentState == Scene3Manager.SceneState.HuntCooker)
+            if (distToPlayer <= activationRange)
             {
                 hasStartedDialogue = true;
                 StartCoroutine(StartBossIntro());
@@ -98,19 +97,19 @@ public class CorruptedCooker : MonoBehaviour
     IEnumerator StartBossIntro()
     {
         isTalking = true;
-        if (playerTransform != null) playerTransform.GetComponent<KnightHero>().enabled = false;
-        dialogueBox.SetActive(true);
         
-        while (dialogueIndex < introDialogue.Length)
+        if (Scene3Manager.Instance != null)
         {
-            yield return StartCoroutine(TypeSentence(introDialogue[dialogueIndex]));
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
-            yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.E));
-            dialogueIndex++;
+            Scene3Manager.Instance.TriggerCookerIntro();
+            yield return new WaitForSeconds(0.5f); // Wait for dialogue to pop up
+            
+            // Wait until dialogue is finished
+            while (Scene3Manager.Instance.dialogueUI != null && Scene3Manager.Instance.dialogueUI.IsVisible)
+            {
+                yield return null;
+            }
         }
 
-        dialogueBox.SetActive(false);
-        if (playerTransform != null) playerTransform.GetComponent<KnightHero>().enabled = true;
         isTalking = false; 
     }
 
@@ -172,6 +171,23 @@ public class CorruptedCooker : MonoBehaviour
         if (anim != null) anim.SetTrigger("attack");
     }
 
+    public void ExecuteSpatulaSlam()
+    {
+        if (playerTransform == null) return;
+
+        float distance = Vector2.Distance(transform.position, playerTransform.position);
+        
+        if (distance <= attackRange)
+        {
+            KnightHero hero = playerTransform.GetComponent<KnightHero>();
+            if (hero != null)
+            {
+                Debug.Log($"<color=red>Corrupted Cooker SLAMMED KnightHero for {attackDamage} damage!</color>");
+                hero.TakeDamage(attackDamage);
+            }
+        }
+    }
+
     public void ResetAttack() { isAttacking = false; }
 
     void Die()
@@ -182,6 +198,12 @@ public class CorruptedCooker : MonoBehaviour
         if (anim != null) anim.SetTrigger("isDead");
         GetComponent<Collider2D>().enabled = false;
         rb.simulated = false;
+        
+        if (Scene3Manager.Instance != null)
+        {
+            Scene3Manager.Instance.EnemyDefeated("CorruptedCooker");
+        }
+        
         StartCoroutine(DeathFlicker());
     }
 

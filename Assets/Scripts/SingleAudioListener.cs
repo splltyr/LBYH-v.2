@@ -5,7 +5,7 @@ public class SingleAudioListener : MonoBehaviour
     void Awake()
     {
         // Find all AudioListeners in the scene
-        AudioListener[] listeners = Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
+        AudioListener[] listeners = Object.FindObjectsByType<AudioListener>(FindObjectsInactive.Include);
         
         if (listeners.Length > 1)
         {

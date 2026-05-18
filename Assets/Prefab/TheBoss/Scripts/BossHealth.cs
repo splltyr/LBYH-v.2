@@ -21,7 +21,7 @@ public class BossHealth : MonoBehaviour
 	void Awake()
 	{
 		// Ensure only one AudioListener exists in the scene
-		AudioListener[] listeners = Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
+		AudioListener[] listeners = Object.FindObjectsByType<AudioListener>(FindObjectsInactive.Include);
 		if (listeners.Length > 1)
 		{
 			bool keptOne = false;

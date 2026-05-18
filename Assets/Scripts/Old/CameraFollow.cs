@@ -15,6 +15,13 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+        {
+            GameObject pObj = GameObject.FindGameObjectWithTag("Player");
+            if (pObj != null) target = pObj.transform;
+            if (target == null) return;
+        }
+
         // 1. Calculate the desired position based on target
         float targetX = target.position.x;
         float targetY = target.position.y + yOffset;

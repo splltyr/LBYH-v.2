@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(EnemyHealth))]
 public class SkeletonEnemy : MonoBehaviour
 {
     [Header("Targeting")]
@@ -12,13 +13,16 @@ public class SkeletonEnemy : MonoBehaviour
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float stopBuffer = 0.3f;
 
-    [Header("Combat Timing")]
+    [Header("Combat Stats")]
+    [SerializeField] private float damageAmount = 5;
+    [SerializeField] private float knockbackForce = 15f;
     [SerializeField] private float attackCooldown = 4f;
     private float nextAttackTime = 0f;
 
     private Animator anim;
     private Rigidbody2D rb;
     private bool isDead = false;
+    public bool IsDead => isDead;
     private bool isAttacking = false;
 
     void Start()
@@ -87,19 +91,29 @@ public class SkeletonEnemy : MonoBehaviour
         if (targetPlayer == null || isDead) return;
 
         float distance = Vector2.Distance(transform.position, targetPlayer.position);
+        Debug.Log($"<color=yellow>{gameObject.name} is swinging! Distance: {distance}</color>");
         
         // Only deal damage if the player is actually within the hitting zone
-        if (distance <= attackRange + 0.5f)
+        if (distance <= attackRange + 1.5f)
         {
-            // Specifically gets the component from our assigned targetPlayer slot
+            // Try KnightHero (New Standard)
+            KnightHero knight = targetPlayer.GetComponent<KnightHero>();
+            if (knight != null)
+            {
+                Debug.Log($"<color=red>Skeleton HIT KnightHero for {damageAmount} damage!</color>");
+                knight.TakeDamage(damageAmount);
+                Vector2 knockbackDir = (targetPlayer.position - transform.position).normalized;
+                knight.ApplyKnockback(new Vector2(knockbackDir.x * knockbackForce, 8f));
+                return;
+            }
+
+            // Try PlayerMovement (Legacy)
             PlayerMovement pMove = targetPlayer.GetComponent<PlayerMovement>();
             if (pMove != null)
             {
-                pMove.TakeDamage(15f);
-                
-                // Directional knockback away from this enemy
+                pMove.TakeDamage(damageAmount);
                 Vector2 knockbackDir = (targetPlayer.position - transform.position).normalized;
-                pMove.ApplyKnockback(new Vector2(knockbackDir.x * 15f, 8f));
+                pMove.ApplyKnockback(new Vector2(knockbackDir.x * knockbackForce, 8f));
             }
         }
     }
@@ -116,6 +130,10 @@ public class SkeletonEnemy : MonoBehaviour
         StopMoving();
         isAttacking = true;
         anim.SetTrigger("Attack");
+        
+        // Safety Fallback: Reset if animation event fails
+        CancelInvoke(nameof(ResetAttack));
+        Invoke(nameof(ResetAttack), 1.5f);
     }
 
     void MoveTowardsPlayer()

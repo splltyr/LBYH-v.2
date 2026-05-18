@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: b0ef869fb9e057b4e8443af621201ca7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2220152906866072886
+    second: yves-Sword-idle (1)_0
+  - first:
+      213: -272990503896303791
+    second: yves-Sword-idle (1)_1
+  - first:
+      213: -8291752075596786262
+    second: yves-Sword-idle (1)_2
+  - first:
+      213: 621962584286218800
+    second: yves-Sword-idle (1)_3
+  - first:
+      213: -1497903525907341457
+    second: yves-Sword-idle (1)_4
+  - first:
+      213: 2383246817446774825
+    second: yves-Sword-idle (1)_5
+  - first:
+      213: 8044341396662010034
+    second: yves-Sword-idle (1)_6
+  - first:
+      213: -3718840919482821441
+    second: yves-Sword-idle (1)_7
+  - first:
+      213: 8765979977774761761
+    second: yves-Sword-idle (1)_8
+  - first:
+      213: -57045241630089354
+    second: yves-Sword-idle (1)_9
+  - first:
+      213: -1187375102024116070
+    second: yves-Sword-idle (1)_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 18
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d9dc05e419fce10800000000000000
+      internalID: 2220152906866072886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 18
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157b4344594263cf0800000000000000
+      internalID: -272990503896303791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 18
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa512783b67cdec80800000000000000
+      internalID: -8291752075596786262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 18
+        width: 30
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ac6f3dca7a1a800800000000000000
+      internalID: 621962584286218800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 18
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fdc7eeda0663be0800000000000000
+      internalID: -1497903525907341457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 18
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928cefd7a5ef21120800000000000000
+      internalID: 2383246817446774825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_6
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 18
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0420821ed33af60800000000000000
+      internalID: 8044341396662010034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_7
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 18
+        width: 30
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb41a0213e5046cc0800000000000000
+      internalID: -3718840919482821441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 18
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127837b785407a970800000000000000
+      internalID: 8765979977774761761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 18
+        width: 31
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f138ca7a5553ff0800000000000000
+      internalID: -57045241630089354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yves-Sword-idle (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 18
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9895bcb2a8958fe0800000000000000
+      internalID: -1187375102024116070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7ab4db5c88142c843bca40b44c3ffb26
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      yves-Sword-idle (1)_0: 2220152906866072886
+      yves-Sword-idle (1)_1: -272990503896303791
+      yves-Sword-idle (1)_10: -1187375102024116070
+      yves-Sword-idle (1)_2: -8291752075596786262
+      yves-Sword-idle (1)_3: 621962584286218800
+      yves-Sword-idle (1)_4: -1497903525907341457
+      yves-Sword-idle (1)_5: 2383246817446774825
+      yves-Sword-idle (1)_6: 8044341396662010034
+      yves-Sword-idle (1)_7: -3718840919482821441
+      yves-Sword-idle (1)_8: 8765979977774761761
+      yves-Sword-idle (1)_9: -57045241630089354
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,7 +21,15 @@ public class TypewriterEffect : MonoBehaviour
         textComponent.maxVisibleCharacters = 0;
     }
 
-    // This allows us to trigger the typewriter manually from other scripts
+    // This allows us to trigger the typewriter manually from other scripts with NEW text
+    public void ShowText(string newText)
+    {
+        fullText = newText;
+        if (textComponent != null) textComponent.text = fullText;
+        StopAllCoroutines();
+        StartCoroutine(TypeText());
+    }
+
     public void StartTyping()
     {
         StopAllCoroutines();
@@ -45,7 +53,7 @@ public class TypewriterEffect : MonoBehaviour
             textComponent.maxVisibleCharacters = counter;
             counter++;
 
-            yield return new WaitForSeconds(timeBetweenChars);
+            yield return new WaitForSecondsRealtime(timeBetweenChars);
         }
 
         isFinished = true;

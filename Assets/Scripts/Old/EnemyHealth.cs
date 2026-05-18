@@ -1,117 +1,57 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [Header("Stats")]
-    [SerializeField] private float maxHealth = 100f;
+    public float maxHealth = 100f;
     public float currentHealth;
+    public Slider healthBar; 
+    public bool autoDestroy = true; // Set this to false for enemies with custom death animations!
 
-    [Header("Knockback")]
-    [SerializeField] private float knockbackForce = 12f;
-    [SerializeField] private float knockbackDuration = 0.15f;
-
-    [Header("UI")]
-    [SerializeField] private Slider healthBar;
-    [SerializeField] private GameObject healthBarCanvas;
-
-    [Header("Death Effects")]
-    [SerializeField] private string deathTrigger = "isDead"; // HARD-CODED TO YOUR TRIGGER
-    [SerializeField] private SpriteRenderer spriteRenderer; 
-    private Color originalColor;
-    private bool isDead = false;
-
-    private Rigidbody2D rb;
-    private Animator anim;
+    private DamonFinale finaleScript;
 
     void Start()
     {
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
-        if (spriteRenderer == null)
-            spriteRenderer = GetComponent<SpriteRenderer>() ?? GetComponentInChildren<SpriteRenderer>();
-        if (spriteRenderer != null) originalColor = spriteRenderer.color;
+        finaleScript = GetComponent<DamonFinale>();
+        
         if (healthBar != null)
         {
             healthBar.maxValue = maxHealth;
-            healthBar.value = maxHealth;
+            healthBar.value = currentHealth;
         }
     }
 
-    public void TakeDamage(float damage, Vector2 knockbackDirection)
+    public void TakeDamage(float damage)
     {
-        if (isDead) return;
+        ProcessDamage(damage);
+    }
+
+    public void TakeDamage(float damage, Vector2 direction)
+    {
+        ProcessDamage(damage);
+    }
+
+    private void ProcessDamage(float damage)
+    {
+        if (currentHealth <= 0) return;
+
         currentHealth -= damage;
-        UpdateHealthBar(); 
-        StartCoroutine(HitFlash());
         
-        if (knockbackDirection != Vector2.zero) StartCoroutine(ApplyKnockback(knockbackDirection));
-
-        if (currentHealth <= 0) Die();
-    }
-
-    public void UpdateHealthBar()
-    {
+        // Update the slider!
         if (healthBar != null) healthBar.value = currentHealth;
-    }
-
-    private IEnumerator HitFlash()
-    {
-        if (spriteRenderer == null) yield break;
-        spriteRenderer.color = Color.white; 
-        yield return new WaitForSeconds(0.1f);
-        spriteRenderer.color = originalColor;
-    }
-
-    private IEnumerator ApplyKnockback(Vector2 direction)
-    {
-        if (rb != null)
-        {
-            rb.linearVelocity = direction.normalized * knockbackForce;
-            yield return new WaitForSeconds(knockbackDuration);
-            if (!isDead) rb.linearVelocity = Vector2.zero;
-        }
-    }
-
-    private void Die()
-    {
-        if (isDead) return;
-        isDead = true;
-
-        if (anim != null) anim.SetTrigger(deathTrigger);
         
-        // --- MISSION PROGRESSION ---
-        Scene3Manager manager = FindAnyObjectByType<Scene3Manager>();
-        if (manager != null)
+        if (finaleScript != null)
         {
-            // Check if this is the boss or a skeleton
-            if (GetComponent<CorruptedCooker>() != null) {
-                manager.EnemyDefeated("CorruptedCooker");
-            } else {
-                manager.EnemyDefeated("Skeleton");
-            }
+            finaleScript.TakeDamage(damage);
         }
-
-        StartCoroutine(DeathEffect());
-        GetComponent<Collider2D>().enabled = false;
-        if (rb != null) rb.simulated = false;
-        if (healthBarCanvas != null) healthBarCanvas.SetActive(false);
-
-        Destroy(gameObject, 2f); 
-    }
-
-    private IEnumerator DeathEffect()
-    {
-        if (spriteRenderer == null) yield break;
-        float elapsed = 0f;
-        float duration = 1.5f;
-        while (elapsed < duration)
+        
+        if (currentHealth <= 0)
         {
-            elapsed += Time.deltaTime;
-            spriteRenderer.color = (elapsed % 0.2f > 0.1f) ? Color.white : new Color(1, 1, 1, 0);
-            yield return null;
+            SendMessage("Die", SendMessageOptions.DontRequireReceiver);
+            if (finaleScript == null && autoDestroy) Destroy(gameObject, 0.2f);
         }
+        
+        Debug.Log(gameObject.name + " took " + damage + " damage! HP: " + currentHealth);
     }
 }

@@ -31,55 +31,84 @@ public class ClinicDialogueManager : MonoBehaviour
     private GameObject spawnedTala;
 
     [Header("Player Control")]
-    public PlayerMovement playerScript; 
+    public KnightHero playerScript; 
     public float normalSpeed = 10f;
 
     [Header("Audio")]
     public AudioSource earthquakeSound;
+    public AudioClip bgmClip;
+    [Range(0f, 1f)] public float bgmVolume = 0.3f;
+    private AudioSource bgmSource;
 
     private int index = 0;
     private bool isWakingUp = true; 
 
-    private string[] dialogueLines = {
-        "Yves: TALA!",
-        "???: Easy there, you’ve been out for almost a few hours. What were you doing out there? Are you trying to get killed?",
-        "Yves: What… Where am I?",
-        "???: Clinic. Isn’t it quite obvious? Did you hit your head or something?",
-        "???: Hey kid, are you aware of what’s going o- … You know what, nevermind. I’m Loren, the head Nurse here at STI.",
-        "Nurse Loren: The outskirts of the school. Good thing I was out for supplies, you know? You were all bloody and everything. What happened? Did you… encounter him?",
-        "Yves: Him…",
-        "Yves: Agh.. My head.. I.. need to go.",
-        "Nurse Loren: Oh thank Tala, it’s not like I can ask you to stay but, I think I can help you. Here, have this. (Bandage-1)",
-        "Yves: What do you mean? And who’s Tala?",
-        "Nurse Loren: I was out for supplies earlier today, remember? I found these tools abandoned. And I thought you knew who Tala is?",
-        "Yves: Thank you but I.. I don’t remember.. But It feels like.. She’s here.",
-        "Nurse Loren: Tala doesn’t exist kid, but a few believed that She’s.. some kind of God or something.",
-        "Nurse Loren: But for me, I think she’s just a guide who wants to help people in need. Enough of this. Go ahead and pick.",
-        "Yves: That’s.. Quite a story. Why are you helping me?",
-        "Nurse Loren: Well, you.. remind me of someone.",
-        "[EARTHQUAKE_START]", 
-        "Nurse Loren: QUICK! Pick your weapon, Yves!",
-        "Yves: Wait, how did you know my na-",
-        "[CEILING_CRASH]", 
-        "Yves: Are you okay?!",
-        "Nurse Loren: I’m alright, just go! It’s dangerous!",
-        "Yves: I can’t just leave you there!",
-        "Nurse Loren: Don’t worry about me, as long as you keep moving on, you’ll find the exit! Good luck, kid!",
-        "[NURSE_EXIT_RIGHT]",
-        "Yves: She’s right.. I have to keep moving.",
-        "Yves: Good thing there’s proper electricity here, it’s so dark..",
-        "???: Hehe, you’re funny, Yves.",
-        "Yves: AAHH! A G-GHOST!",
-        "[TALA_CHASE_START]"
+    [Header("Dialogue Sequence")]
+    public LBYH_Line[] fullClinicDialogue = new LBYH_Line[] {
+        new LBYH_Line { name = "Yves", text = "TALA!" },
+        new LBYH_Line { name = "???", text = "Easy there, you’ve been out for almost a few hours. What were you doing out there? Are you trying to get killed?" },
+        new LBYH_Line { name = "Yves", text = "What… Where am I?" },
+        new LBYH_Line { name = "???", text = "Clinic. Isn’t it quite obvious? Did you hit your head or something?" },
+        new LBYH_Line { name = "Yves", text = "I… I don’t know. Who are you?" },
+        new LBYH_Line { name = "???", text = "Hey kid, are you aware of what’s going o- … You know what, nevermind. I’m Loren, the head Nurse here at STI." },
+        new LBYH_Line { name = "Yves", text = "Nurse Loren? Where did you find me?" },
+        new LBYH_Line { name = "Nurse Loren", text = "The outskirts of the school. Good thing I was out for supplies, you know? You were all bloody and everything. What happened? Did you… encounter him?" },
+        new LBYH_Line { name = "Yves", text = "Him…" },
+        new LBYH_Line { name = "Yves", text = "Agh.. My head.. I.. need to go." },
+        new LBYH_Line { name = "Nurse Loren", text = "Oh thank Tala, it’s not like I can ask you to stay but, I think I can help you. Here, have this. (Bandage-1)" },
+        new LBYH_Line { name = "Yves", text = "What do you mean? And who’s Tala?" },
+        new LBYH_Line { name = "Nurse Loren", text = "I was out for supplies earlier today, remember? I found these tools abandoned. And I thought you knew who Tala is? Judging from you screaming Her name earlier." },
+        new LBYH_Line { name = "Yves", text = "Thank you but I.. I don’t remember.. But It feels like.. She’s here." },
+        new LBYH_Line { name = "Nurse Loren", text = "Tala doesn’t exist kid, but a few believed that She’s.. some kind of God or something. But for me, I think she’s just a guide who wants to help people in need." },
+        new LBYH_Line { name = "Nurse Loren", text = "Enough of this. Go ahead and pick. You can always come back for more. I’m glad to be able to help you." },
+        new LBYH_Line { name = "Yves", text = "That’s.. Quite a story. Why are you helping me?" },
+        new LBYH_Line { name = "Nurse Loren", text = "Well, you.. remind me of someone." },
+        new LBYH_Line { name = "Yves", text = "Someone?" },
+        new LBYH_Line { name = "ACTION", text = "[EARTHQUAKE_START]" }, 
+        new LBYH_Line { name = "Nurse Loren", text = "QUICK! Pick your weapon, Yves!" },
+        new LBYH_Line { name = "Yves", text = "Wait, how did you know my na-" },
+        new LBYH_Line { name = "ACTION", text = "[CEILING_CRASH]" }, 
+        new LBYH_Line { name = "Yves", text = "Are you okay?!" },
+        new LBYH_Line { name = "Nurse Loren", text = "I’m alright, just go! It’s dangerous!" },
+        new LBYH_Line { name = "Yves", text = "I can’t just leave you there!" },
+        new LBYH_Line { name = "Nurse Loren", text = "Don’t worry about me, as long as you keep moving on, you’ll find the exit! I know you’ll be great. Good luck, kid!" },
+        new LBYH_Line { name = "ACTION", text = "[NURSE_EXIT_RIGHT]" },
+        new LBYH_Line { name = "Yves", text = "She’s right.. I have to keep moving." },
+        new LBYH_Line { name = "Yves", text = "Good thing there’s proper electricity here, it’s so dark.." },
+        new LBYH_Line { name = "???", text = "Hehe, you’re funny, Yves." },
+        new LBYH_Line { name = "Yves", text = "AAHH! A G-GHOST!" },
+        new LBYH_Line { name = "Tala", text = "Yves, wait! We’ve been through this 6-7 times!" },
+        new LBYH_Line { name = "ACTION", text = "[TALA_CHASE_START]" }
     };
+
+    private AudioSource voiceAudioSource;
 
     void Start()
     {
         if (dialogueBox != null) dialogueBox.SetActive(false);
         if (pressSpacePrompt != null) pressSpacePrompt.SetActive(false);
         if (screenFade != null) screenFade.alpha = 0;
-        if (playerScript != null) playerScript.SetSpeed(0f);
         
+        if (playerScript != null) 
+        {
+            playerScript.enabled = false;
+            Rigidbody2D rb = playerScript.GetComponent<Rigidbody2D>();
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+            
+            Animator anim = playerScript.GetComponent<Animator>();
+            if (anim != null) anim.Play("KnightIdle");
+        }
+        
+        // Setup and play BGM
+        if (bgmClip != null)
+        {
+            bgmSource = gameObject.AddComponent<AudioSource>();
+            bgmSource.clip = bgmClip;
+            bgmSource.volume = bgmVolume;
+            bgmSource.loop = true;
+            bgmSource.Play();
+        }
+
         // Ensure arrow is hidden at the start
         if (exitArrow != null) exitArrow.SetActive(false); 
 
@@ -103,20 +132,20 @@ public class ClinicDialogueManager : MonoBehaviour
             yield return StartCoroutine(MoveNurse(NurseStopPoint.position)); 
         }
 
-        while (index < dialogueLines.Length)
+        while (index < fullClinicDialogue.Length)
         {
-            string currentLine = dialogueLines[index];
+            LBYH_Line currentLine = fullClinicDialogue[index];
 
             // Logic Triggers (Non-dialogue)
-            if (currentLine == "[EARTHQUAKE_START]") {
+            if (currentLine.text == "[EARTHQUAKE_START]") {
                 StartCoroutine(TriggerEarthquake(false));
                 index++; continue;
             }
-            if (currentLine == "[CEILING_CRASH]") {
+            if (currentLine.text == "[CEILING_CRASH]") {
                 StartCoroutine(TriggerEarthquake(true));
                 index++; continue;
             }
-            if (currentLine == "[NURSE_EXIT_RIGHT]") {
+            if (currentLine.text == "[NURSE_EXIT_RIGHT]") {
                 yield return StartCoroutine(MoveNurse(ExitPoint.position, true)); 
                 
                 // ACTIVATE ARROW HERE
@@ -124,17 +153,61 @@ public class ClinicDialogueManager : MonoBehaviour
                 
                 index++; continue;
             }
-            if (currentLine == "[TALA_CHASE_START]") {
+            if (currentLine.text == "[TALA_CHASE_START]") {
                 yield return StartCoroutine(TalaAppearance()); 
                 break;
             }
 
             // Show Dialogue
             if (dialogueBox != null) dialogueBox.SetActive(true);
-            yield return StartCoroutine(TypeLine(currentLine));
+
+            // Update Name Plate (Assuming nameDisplay is added. Wait, Clinic uses ??? in text string)
+            // The original script didn't use a separate name display, it just typed "Yves: TALA!"
+            // I'll format it back together or rely on the UI. The user's original array included the name in the text!
+            // Wait, their original text was "Yves: TALA!". My LBYH_Line split it to name="Yves" and text="TALA!".
+            // Since their ClinicDialogueManager DOES NOT have a nameDisplay reference, I will prepend the name!
+            string fullText = currentLine.name + ": " + currentLine.text;
+
+            // Play Audio Clip if assigned
+            if (currentLine.voiceClip != null)
+            {
+                if (voiceAudioSource == null) 
+                {
+                    // Grab the existing Audio Source if it's already there!
+                    voiceAudioSource = gameObject.GetComponent<AudioSource>();
+                    if (voiceAudioSource == null) 
+                    {
+                        voiceAudioSource = gameObject.AddComponent<AudioSource>();
+                        voiceAudioSource.playOnAwake = false;
+                    }
+                    
+                    if (gameObject.GetComponent<AutoVolumeNormalizer>() == null)
+                    {
+                        gameObject.AddComponent<AutoVolumeNormalizer>();
+                    }
+                }
+                
+                voiceAudioSource.Stop();
+                
+                // BULLETPROOF VOLUME BOOST HACK
+                // Since Unity caps AudioSource.volume at 1.0, we just play the clip multiple times 
+                // simultaneously on the exact same frame to physically multiply the sound wave amplitude!
+                int playCount = Mathf.Max(1, Mathf.CeilToInt(currentLine.volume));
+                float volumePerClip = currentLine.volume / playCount;
+
+                for (int i = 0; i < playCount; i++)
+                {
+                    voiceAudioSource.PlayOneShot(currentLine.voiceClip, volumePerClip);
+                }
+            }
+
+            yield return StartCoroutine(TypeLine(fullText));
             
             if (pressSpacePrompt != null) pressSpacePrompt.SetActive(true);
-            while (!Input.GetKeyDown(KeyCode.Space)) yield return null;
+            
+            // Wait for input to advance (Spammable to skip? Let's just do standard advance for now)
+            while (!Input.GetKeyDown(KeyCode.Space) && !Input.GetKeyDown(KeyCode.E) && !Input.GetMouseButtonDown(0)) yield return null;
+            
             if (pressSpacePrompt != null) pressSpacePrompt.SetActive(false);
             index++;
         }
@@ -209,7 +282,11 @@ public class ClinicDialogueManager : MonoBehaviour
             if (follow != null) follow.playerTransform = playerScript.transform;
         }
 
-        if (playerScript != null) playerScript.SetSpeed(normalSpeed * 1.8f); 
+        if (playerScript != null) 
+        {
+            playerScript.enabled = true;
+            playerScript.moveSpeed = normalSpeed * 1.8f; 
+        }
         
         yield return new WaitForSeconds(2.0f);
         yield return StartCoroutine(FinalFadeOut());

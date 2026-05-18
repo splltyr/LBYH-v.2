@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +9,10 @@ public class MenuButton : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] AnimatorFunctions animatorFunctions;
     [SerializeField] int thisIndex;
+
+    [Header("Scene Settings")]
+    [Tooltip("Type the exact name of the scene you want to load (Only for Start Button)")]
+    public string sceneToLoad = "Prologue Damon 2";
 
     [Header("Hover Settings")]
     public float shakeSpeed = 5f;
@@ -53,7 +57,14 @@ public class MenuButton : MonoBehaviour
     {
         if (thisIndex == 0) // Start Button
         {
-            SceneManager.LoadScene("Prologue Damon 2");
+            if (!string.IsNullOrEmpty(sceneToLoad))
+            {
+                SceneManager.LoadScene(sceneToLoad);
+            }
+            else
+            {
+                Debug.LogError("MenuButton: You forgot to type a scene name in the Scene To Load slot!");
+            }
         }
         else if (thisIndex == 2) // Exit Button
         {

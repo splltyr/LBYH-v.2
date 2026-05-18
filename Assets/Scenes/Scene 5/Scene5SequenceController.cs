@@ -1,269 +1,290 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Scene5SequenceController : MonoBehaviour
 {
-    [Header("Dialogue UI")]
+    [Header("UI & Systems")]
     [SerializeField] private LBYH_Dialogue dialogue;
-    [SerializeField] private GameObject dialogueObject;
+    [SerializeField] private LBYH_CircuitPuzzle puzzle;
+    [SerializeField] private GameObject fadeOverlay;
+    [SerializeField] private string nextSceneName = "Scene 6";
 
-    [Header("1 — Opening")]
-    [SerializeField] private LBYH_DialogueData openingDialogueData;
-    [SerializeField] private LBYH_Line[] openingLines;
-    [SerializeField] private int spawnSneaksAtLineIndex = 4;
+    [Header("Character References")]
+    [SerializeField] private KnightHero player;
 
-    [Header("2 — Sneaks")]
-    [SerializeField] private GameObject sneaksTemplate;
-    [SerializeField] private Transform sneaksSpawnPoint;
+    [Header("World References")]
+    [SerializeField] private GameObject sneaksGroup;
+    [SerializeField] private GameObject puzzleTabletTrigger;
+    [SerializeField] private GameObject doorTeleportTrigger;
+    [SerializeField] private Transform bullyArenaTeleportPoint;
+    [SerializeField] private GameObject bullyBoss; // The actual boss in the arena
 
-    [Header("3 — After Sneaks dies")]
-    [SerializeField] private LBYH_DialogueData afterSneaksDialogueData;
-
-    [SerializeField] private LBYH_Line[] dialogueAfterSneaksDeath = new LBYH_Line[]
-    {
-        /* 0  */ new LBYH_Line { name = "Yves",        text = "Ugh why is this floor so creepy.. And dang it stinks. . ." },
-        /* 1  */ new LBYH_Line { name = "Tala",        text = "Jeez.. The smell makes me wanna disappear." },
-        /* 2  */ new LBYH_Line { name = "Yves",        text = "Aren't you a spirit?" },
-        /* 3  */ new LBYH_Line { name = "Tala",        text = "Oh.." },
-        /* 4  */ new LBYH_Line { name = "Tala",        text = "Look, there! That's the Lab." },
-        /* 5  */ new LBYH_Line { name = "Narrative",   text = "[Yves walks to the double door but is locked. Yves smashed the door with his weapon.]" },
-        /* 6  */ new LBYH_Line { name = "Yves",        text = "Yeah.. I don't think there's a key for this floor." },
-        /* 7  */ new LBYH_Line { name = "Narrative",   text = "[Yves looked and wandered around the abandoned laboratory, then saw a circuit board with multiple color wires and a Note.]" },
-        /* 8  */ new LBYH_Line { name = "Yves & Tala", text = "\"Beware of the gate... If you solve this Pathfinding Maze you may seek the floor you go to but there will be a Guardian...\"" },
-        /* 9  */ new LBYH_Line { name = "Tala",        text = "There's a Guardian now?!" },
-        /* 10 */ new LBYH_Line { name = "Yves",        text = "I thought you knew everything about this place?" },
-        /* 11 */ new LBYH_Line { name = "Tala",        text = "Uh.. No, I didn't.." },
-        /* 12 */ new LBYH_Line { name = "Narrative",   text = "[After Yves and Tala finish the note, Tala then looks at the circuit board.]" },
-        /* 13 */ new LBYH_Line { name = "Tala",        text = "Yves, take a look!" },
-        /* 14 */ new LBYH_Line { name = "Yves",        text = "No other options, I must go forward to it." },
-        /* 15 */ new LBYH_Line { name = "Tala",        text = "Do you know that you're bad at this?" },
-        /* 16 */ new LBYH_Line { name = "Yves",        text = "I'm no expert, I did my best! That took me about 30 minutes!" },
-        /* 17 */ new LBYH_Line { name = "Tala",        text = "Now let's see what's in here." },
-        /* 18 */ new LBYH_Line { name = "Tala",        text = "...Whoa. Let's go, Yves." },
+    [Header("Dialogue Content")]
+    private LBYH_Line[] introLines = {
+        new LBYH_Line { name = "Yves", text = "Ugh why is this floor so creepy.. And dang it stinks. . ." },
+        new LBYH_Line { name = "Tala", text = "Jeez.. The smell makes me wanna disappear." },
+        new LBYH_Line { name = "Yves", text = "Aren’t you a spirit?" },
+        new LBYH_Line { name = "Tala", text = "Oh.." }
     };
 
-    [Tooltip("The puzzle will trigger at index 10 ('I thought you knew...')")]
-    [SerializeField] private int triggerMazeAtLineIndex = 10;
-    
-    [SerializeField] private LBYH_CircuitPuzzle mazePuzzle;
-    [SerializeField] private int spawnBullyAtLineIndex = 99;
-    [SerializeField] private GameObject bullyTemplate;
-    [SerializeField] private Transform bullySpawnPoint;
+    private LBYH_Line[] ambushLines = {
+        new LBYH_Line { name = "Tala", text = "YVES! THE CEILING! WATCH OU-" },
+        new LBYH_Line { name = "Yves", text = "Huh..?" }
+    };
 
-    [Header("4 — Door & Teleport")]
-    public Scene5DoorZone doorZone;
-    public Transform bullyArenaTeleportPoint;
-    public UnityEvent onPartOneComplete;
+    private LBYH_Line[] postAmbushLines = {
+        new LBYH_Line { name = "Yves", text = "So this is what Sir Rome is talking about? What is it called… Ah, Sneaks. " },
+        new LBYH_Line { name = "Tala", text = "Good job, Yves!" },
+        new LBYH_Line { name = "Tala", text = "Look, there! That's the Lab." }
+    };
 
-    enum Phase { Boot, Opening, SneaksFight, PostSneaks, WaitingDoor, Done }
-    Phase phase = Phase.Boot;
-    GameObject spawnedSneaks;
-    Component[] sneaksHealths; // Changed to Component to support multiple health types
-    GameObject spawnedBully;
+    private LBYH_Line[] doorLockedLines = {
+        new LBYH_Line { name = "Yves", text = "Yeah.. I don’t think there’s a key for this floor." }
+    };
 
-    // Forces index to 10 in Unity Editor
-    void OnValidate() { triggerMazeAtLineIndex = 10; }
+    private LBYH_Line[] noteLines = {
+        new LBYH_Line { name = "Narrative", text = "“Beware of the gate… If you solve this Pathfinding Maze you may seek the floor you go to but there will be a Guardian…”" },
+        new LBYH_Line { name = "Tala", text = "There’s a Guardian now?!" },
+        new LBYH_Line { name = "Yves", text = "I thought you knew everything about this place?" },
+        new LBYH_Line { name = "Tala", text = "Uh.. No, I didn't.. " }
+    };
 
-    void Awake()
+    private LBYH_Line[] postNoteLines = {
+        new LBYH_Line { name = "Tala", text = "Yves, take a look!" },
+        new LBYH_Line { name = "Yves", text = "No other options, I must go forward to it." }
+    };
+
+    private LBYH_Line[] postPuzzleLines = {
+        new LBYH_Line { name = "Tala", text = "Do you know that you’re bad at this?" },
+        new LBYH_Line { name = "Yves", text = "I’m no expert, I did my best! That took me about 30 minutes! " },
+        new LBYH_Line { name = "Tala", text = "Now let’s see what’s in here." }
+    };
+
+    private LBYH_Line[] bullyIntroLines = {
+        new LBYH_Line { name = "Yves", text = "What the…" },
+        new LBYH_Line { name = "Tala", text = "That doesn’t look good.." },
+        new LBYH_Line { name = "Tala", text = "Yves! On your left!" },
+        new LBYH_Line { name = "Yves", text = "So you're the one who keeps the corrupted in bay." },
+        new LBYH_Line { name = "Yves", text = "A…Bully?" }
+    };
+
+    private LBYH_Line[] bullyMidFightLines = {
+        new LBYH_Line { name = "School Bully", text = "Clever, Brat. But you won’t be going up and saving the others of how many My corrupted digitals are forming when I kill you!" },
+        new LBYH_Line { name = "Yves", text = "I won’t let you HURT THEM!" },
+        new LBYH_Line { name = "Tala", text = "Yeah! Yves will protect them, so get defeated!" }
+    };
+
+    private LBYH_Line[] bullyMidFight2Lines = {
+        new LBYH_Line { name = "School Bully", text = "Stop acting like a brat!" },
+        new LBYH_Line { name = "Tala", text = "Is he.. talking to a mirror or something..?" }
+    };
+
+    private LBYH_Line[] victoryLines = {
+        new LBYH_Line { name = "Yves", text = "Who’s a brat now?" },
+        new LBYH_Line { name = "Tala", text = "If only our guidance counselors were here.. They will never let this idiot in." },
+        new LBYH_Line { name = "Yves", text = "Hey, that’s not nice." },
+        new LBYH_Line { name = "Tala", text = "Hmph! You look terrible." },
+        new LBYH_Line { name = "Yves", text = "I’ll wipe it off. Look, there’s an elevator." }
+    };
+
+    private bool puzzleCompleted = false;
+    private bool nearPuzzleTablet = false;
+    private bool nearDoor = false;
+    private bool midFight1Triggered = false;
+    private bool midFight2Triggered = false;
+
+    IEnumerator Start()
     {
-        if (dialogue == null && dialogueObject != null)
-            dialogue = dialogueObject.GetComponent<LBYH_Dialogue>();
-        if (dialogue == null)
-            dialogue = FindAnyObjectByType<LBYH_Dialogue>(FindObjectsInactive.Include);
+        if (player == null) player = FindAnyObjectByType<KnightHero>();
+        if (dialogue == null) dialogue = FindAnyObjectByType<LBYH_Dialogue>();
+        if (puzzle == null) puzzle = FindAnyObjectByType<LBYH_CircuitPuzzle>();
 
-        if (mazePuzzle == null)
-            mazePuzzle = FindAnyObjectByType<LBYH_CircuitPuzzle>(FindObjectsInactive.Include);
-    }
-
-    void Start()
-    {
-        if (doorZone != null) doorZone.Initialize(this);
-        if (mazePuzzle != null && mazePuzzle.puzzleRoot != null)
-            mazePuzzle.puzzleRoot.SetActive(false);
-
-        phase = Phase.Opening;
-        StartCoroutine(RunOpeningThenFight());
-    }
-
-    IEnumerator RunOpeningThenFight()
-    {
-        LBYH_Line[] openLines = ResolveLines(openingDialogueData, openingLines);
-        if (openLines == null || openLines.Length == 0)
+        if (sneaksGroup != null) sneaksGroup.SetActive(false);
+        
+        // Keep the door visible but disable its interaction/collider at the start
+        if (doorTeleportTrigger != null) 
         {
-            phase = Phase.SneaksFight;
-            yield return RunSneaksFight();
-            yield break;
+            Scene5DoorZone dz = doorTeleportTrigger.GetComponent<Scene5DoorZone>();
+            if (dz != null) dz.SetEnabled(false);
+            else
+            {
+                Collider2D col = doorTeleportTrigger.GetComponent<Collider2D>();
+                if (col != null) col.enabled = false;
+            }
         }
+        if (bullyBoss != null) bullyBoss.SetActive(false);
 
-        for (int i = 0; i < openLines.Length; i++)
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(SceneSequence());
+    }
+
+    IEnumerator SceneSequence()
+    {
+        // 1. Intro
+        Debug.Log("<color=cyan>Scene5 Phase: Intro Dialogue</color>");
+        SetPlayerControl(false);
+        yield return PlayDialogue(introLines);
+
+        // 2. Ambush Trigger
+        Debug.Log("<color=cyan>Scene5 Phase: Ambush Starting</color>");
+        yield return PlayDialogue(ambushLines);
+        if (sneaksGroup != null) sneaksGroup.SetActive(true);
+        SetPlayerControl(true);
+
+        // 3. Wait for Sneaks Death
+        Debug.Log("<color=cyan>Scene5 Phase: Waiting for all Sneaks to die...</color>");
+        yield return new WaitUntil(() => IsDead(sneaksGroup));
+        
+        // 4. Post-Sneaks
+        Debug.Log("<color=cyan>Scene5 Phase: Post-Ambush Dialogue</color>");
+        SetPlayerControl(false);
+        yield return PlayDialogue(postAmbushLines);
+        
+        // 5. Enable Teleport Immediately
+        puzzleCompleted = true; // Mark as completed to bypass trigger locks
+        nearDoor = false; 
+        if (doorTeleportTrigger != null) 
         {
-            dialogue.PresentLine(openLines[i]);
-            if (i == spawnSneaksAtLineIndex) SpawnSneaksIfNeeded();
+            Scene5DoorZone dz = doorTeleportTrigger.GetComponent<Scene5DoorZone>();
+            if (dz != null) dz.SetEnabled(true);
+            else
+            {
+                Collider2D col = doorTeleportTrigger.GetComponent<Collider2D>();
+                if (col != null) col.enabled = true;
+            }
+        }
+        SetPlayerControl(true);
+        Debug.Log("<color=green>Scene5: Gate is unlocked immediately after ambush! Player can go to the door.</color>");
+
+        // 6. Wait for Teleport to Boss Arena (Player walks into the door trigger)
+        yield return new WaitUntil(() => nearDoor);
+        
+        // Directly perform the teleportation!
+        if (player != null && bullyArenaTeleportPoint != null)
+        {
+            player.transform.position = bullyArenaTeleportPoint.position;
+            Debug.Log("<color=green>Scene5: Teleported player to Bully Arena!</color>");
+        }
+        
+        SetPlayerControl(false);
+        if (bullyBoss != null) 
+        {
+            // The boss is placed at X = 102.4 in the editor, while the teleport point is at X = 57.13 (45 units away!)
+            // We dynamically reposition the boss 8 units to the right of the player so he actually shows up on-screen!
+            float bossY = bullyArenaTeleportPoint.position.y + 0.96f; // Maintain original vertical offset
+            bullyBoss.transform.position = new Vector3(bullyArenaTeleportPoint.position.x + 8f, bossY, 0f);
+            bullyBoss.SetActive(true);
+        }
+        yield return PlayDialogue(bullyIntroLines);
+        SetPlayerControl(true);
+
+        // 11. Boss Fight Loops
+        StartCoroutine(HandleBossDialogueTriggers());
+        yield return new WaitUntil(() => IsDead(bullyBoss));
+
+        // 12. Victory
+        SetPlayerControl(false);
+        yield return PlayDialogue(victoryLines);
+
+        // 13. End Scene
+        if (fadeOverlay != null) fadeOverlay.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(nextSceneName); // Customizable scene transition!
+    }
+
+    IEnumerator HandleBossDialogueTriggers()
+    {
+        if (bullyBoss == null) yield break;
+        EnemyHealth health = bullyBoss.GetComponent<EnemyHealth>();
+        if (health == null) yield break;
+
+        while (health.currentHealth > 0)
+        {
+            if (!midFight1Triggered && health.currentHealth < health.maxHealth * 0.7f)
+            {
+                midFight1Triggered = true;
+                yield return PlayDialogue(bullyMidFightLines);
+            }
+
+            if (!midFight2Triggered && health.currentHealth < health.maxHealth * 0.3f)
+            {
+                midFight2Triggered = true;
+                yield return PlayDialogue(bullyMidFight2Lines);
+            }
+            yield return null;
+        }
+    }
+
+    IEnumerator PlayDialogue(LBYH_Line[] lines)
+    {
+        if (lines == null || lines.Length == 0) yield break;
+        for (int i = 0; i < lines.Length; i++)
+        {
+            LBYH_Line line = lines[i];
+            if (line.name != "Narrative" && !string.IsNullOrEmpty(line.name))
+                line.text = line.name + ": " + line.text;
+
+            dialogue.PresentLine(line);
             while (dialogue.IsTyping) yield return null;
-            yield return WaitForDialogueAdvance();
+            yield return WaitForInput();
         }
-
         dialogue.HideDialoguePanel();
-        phase = Phase.SneaksFight;
-        yield return RunSneaksFight();
     }
 
-    IEnumerator RunSneaksFight()
+    IEnumerator WaitForInput()
     {
-        if (sneaksHealths == null || sneaksHealths.Length == 0) SpawnSneaksIfNeeded();
-        if (sneaksHealths != null && sneaksHealths.Length > 0)
-        {
-            yield return new WaitUntil(() => AllHealthsDead(sneaksHealths));
-        }
-        phase = Phase.PostSneaks;
-        yield return RunPostSneaksDialogue();
+        yield return null;
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0));
     }
 
-    bool AllHealthsDead(Component[] healths)
+    void SetPlayerControl(bool state)
     {
-        if (healths == null || healths.Length == 0) return true;
-        foreach (var h in healths)
+        if (player != null)
         {
-            if (h == null) continue;
-
-            if (h is EnemyHealth eh && eh.currentHealth > 0f) return false;
-            if (h is BossHealth bh && bh.health > 0) return false;
+            player.enabled = state;
+            Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+            Animator anim = player.GetComponentInChildren<Animator>();
+            if (!state && anim != null) anim.Play("KnightIdle");
         }
+    }
+
+    bool IsDead(GameObject obj)
+    {
+        if (obj == null) return true;
+        if (!obj.activeInHierarchy) return true;
+        
+        EnemyHealth eh = obj.GetComponent<EnemyHealth>();
+        if (eh != null) return eh.currentHealth <= 0;
+        
+        // If it's a group, check children
+        EnemyHealth[] children = obj.GetComponentsInChildren<EnemyHealth>();
+        foreach (var c in children) if (c.currentHealth > 0) return false;
+        
         return true;
     }
 
-    IEnumerator RunPostSneaksDialogue()
-    {
-        LBYH_Line[] postLines = ResolveLines(afterSneaksDialogueData, dialogueAfterSneaksDeath);
-        
-        if (afterSneaksDialogueData != null)
-            Debug.LogWarning("USING ASSET FOR DIALOGUE: Check the asset indexes if the puzzle doesn't trigger!");
+    // Trigger Hooks for Unity
+    public void SetNearTablet(bool state) { nearPuzzleTablet = state; }
+    public void SetNearDoor(bool state) { nearDoor = state; }
+    
+    // OLD COMPATIBILITY: Fixes the compiler error in Scene5DoorZone
+    public void NotifyPlayerReachedDoor() { nearDoor = true; }
 
-        if (postLines == null || postLines.Length == 0)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject == puzzleTabletTrigger) nearPuzzleTablet = true;
+        if (collision.gameObject == doorTeleportTrigger && !puzzleCompleted) Debug.Log("Door is locked until puzzle is solved.");
+        if (collision.gameObject == doorTeleportTrigger && puzzleCompleted)
         {
-            EnterWaitingDoor();
-            yield break;
+             player.transform.position = bullyArenaTeleportPoint.position;
         }
-
-        for (int i = 0; i < postLines.Length; i++)
-        {
-            Debug.Log($"<color=white>Dialogue Step: {i} - Speaker: {postLines[i].name}</color>");
-            bool linePresented = false;
-
-            if (i == triggerMazeAtLineIndex)
-            {
-                Debug.Log("<color=magenta>PUZZLE TRIGGER REACHED AT INDEX " + i + "!</color>");
-                if (mazePuzzle == null) mazePuzzle = FindAnyObjectByType<LBYH_CircuitPuzzle>();
-                
-                dialogue.PresentLine(postLines[i]);
-                linePresented = true;
-                while (dialogue.IsTyping) yield return null;
-                yield return WaitForDialogueAdvance();
-
-                dialogue.HideDialoguePanel();
-                if (mazePuzzle != null)
-                {
-                    mazePuzzle.OpenPuzzle();
-                    yield return new WaitUntil(() => mazePuzzle.isSolved);
-                    Debug.Log("<color=green>PUZZLE SOLVED - CONTINUING DIALOGUE</color>");
-                }
-                else
-                {
-                    Debug.LogError("MAZE PUZZLE SCRIPT NOT FOUND!");
-                }
-            }
-
-            if (i == spawnBullyAtLineIndex) SpawnBullyIfNeeded();
-
-            if (!linePresented)
-            {
-                dialogue.PresentLine(postLines[i]);
-                while (dialogue.IsTyping) yield return null;
-                yield return WaitForDialogueAdvance();
-            }
-        }
-
-        dialogue.HideDialoguePanel();
-        EnterWaitingDoor();
     }
 
-    void EnterWaitingDoor()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        phase = Phase.WaitingDoor;
-        if (doorZone != null) doorZone.SetEnabled(true);
-        else onPartOneComplete?.Invoke();
-    }
-
-    public void NotifyPlayerReachedDoor()
-    {
-        if (phase != Phase.WaitingDoor) return;
-
-        if (bullyArenaTeleportPoint != null)
-        {
-            GameObject player = GameObject.FindWithTag("Player");
-            if (player == null) player = FindAnyObjectByType<KnightHero>()?.gameObject;
-
-            if (player != null)
-            {
-                player.transform.position = bullyArenaTeleportPoint.position;
-                LBYH_Line[] postLines = ResolveLines(afterSneaksDialogueData, dialogueAfterSneaksDeath);
-                if (postLines != null && postLines.Length > 18)
-                {
-                    dialogue.PresentLine(postLines[18]);
-                    StartCoroutine(HideDialogueAfterAdvance());
-                }
-            }
-        }
-
-        phase = Phase.Done;
-        if (doorZone != null) doorZone.SetEnabled(false);
-        onPartOneComplete?.Invoke();
-    }
-
-    IEnumerator HideDialogueAfterAdvance()
-    {
-        while (dialogue.IsTyping) yield return null;
-        yield return WaitForDialogueAdvance();
-        dialogue.HideDialoguePanel();
-    }
-
-    void SpawnSneaksIfNeeded()
-    {
-        if (spawnedSneaks != null || sneaksTemplate == null || sneaksSpawnPoint == null) return;
-        if (!sneaksTemplate.scene.IsValid()) spawnedSneaks = Instantiate(sneaksTemplate, sneaksSpawnPoint.position, sneaksSpawnPoint.rotation);
-        else { sneaksTemplate.transform.SetPositionAndRotation(sneaksSpawnPoint.position, sneaksSpawnPoint.rotation); sneaksTemplate.SetActive(true); spawnedSneaks = sneaksTemplate; }
-        
-        // Find all health components (both regular and boss)
-        var eHealths = spawnedSneaks.GetComponentsInChildren<EnemyHealth>(true);
-        var bHealths = spawnedSneaks.GetComponentsInChildren<BossHealth>(true);
-        
-        List<Component> combined = new List<Component>();
-        combined.AddRange(eHealths);
-        combined.AddRange(bHealths);
-        sneaksHealths = combined.ToArray();
-
-        Debug.Log($"<color=cyan>Scene5: Found {sneaksHealths.Length} enemies in the spawned group.</color>");
-    }
-
-    void SpawnBullyIfNeeded()
-    {
-        if (spawnedBully != null || bullyTemplate == null || bullySpawnPoint == null) return;
-        spawnedBully = Instantiate(bullyTemplate, bullySpawnPoint.position, bullySpawnPoint.rotation);
-    }
-
-    static LBYH_Line[] ResolveLines(LBYH_DialogueData data, LBYH_Line[] inline)
-    {
-        if (data != null && data.lines != null && data.lines.Length > 0) return data.lines;
-        return inline;
-    }
-
-    static IEnumerator WaitForDialogueAdvance()
-    {
-        yield return null;
-        yield return new WaitUntil(() =>
-            Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) ||
-            Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0));
+        if (collision.gameObject == puzzleTabletTrigger) nearPuzzleTablet = false;
     }
 }

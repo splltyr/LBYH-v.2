@@ -19,8 +19,16 @@ public class LBYH_Dialogue : MonoBehaviour
     public float typeSpeed = 0.03f;
 
     [Header("Puzzle Integration")]
-    [Tooltip("Assign the LBYH_CircuitPuzzle in the scene. While the puzzle is open, dialogue input is blocked so tile clicks don't get eaten by the dialogue system.")]
     public LBYH_CircuitPuzzle circuitPuzzle;
+
+    public bool IsVisible 
+    { 
+        get 
+        { 
+            var root = PanelRoot; 
+            return root != null && root.activeInHierarchy; 
+        } 
+    }
 
     public bool IsTyping => typingCoroutine != null;
     private Coroutine typingCoroutine;
@@ -31,6 +39,10 @@ public class LBYH_Dialogue : MonoBehaviour
     {
         if (audioSource == null) audioSource = GetComponent<AudioSource>();
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
+
+        if (audioSource != null) audioSource.playOnAwake = false;
+
+        if (GetComponent<AutoVolumeNormalizer>() == null) gameObject.AddComponent<AutoVolumeNormalizer>();
 
         // Auto-find puzzle if not assigned
         if (circuitPuzzle == null)
@@ -88,8 +100,15 @@ public class LBYH_Dialogue : MonoBehaviour
         if (audioSource != null && line.voiceClip != null)
         {
             audioSource.Stop();
-            audioSource.clip = line.voiceClip;
-            audioSource.Play();
+            
+            // BULLETPROOF VOLUME BOOST HACK (Global)
+            int playCount = Mathf.Max(1, Mathf.CeilToInt(line.volume));
+            float volumePerClip = line.volume / playCount;
+
+            for (int i = 0; i < playCount; i++)
+            {
+                audioSource.PlayOneShot(line.voiceClip, volumePerClip);
+            }
         }
     }
 

@@ -112,12 +112,12 @@ TextureImporter:
       name: GlitchIdle_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 1
-        width: 34
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 30
+        y: 2
+        width: 32
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: GlitchIdle_1
       rect:
         serializedVersion: 2
-        x: 122
-        y: 1
-        width: 33
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 123
+        y: 2
+        width: 31
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -156,12 +156,12 @@ TextureImporter:
       name: GlitchIdle_2
       rect:
         serializedVersion: 2
-        x: 213
-        y: 2
-        width: 34
-        height: 83
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 214
+        y: 3
+        width: 32
+        height: 81
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,12 +178,12 @@ TextureImporter:
       name: GlitchIdle_3
       rect:
         serializedVersion: 2
-        x: 305
-        y: 2
-        width: 34
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 306
+        y: 3
+        width: 32
+        height: 80
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: da424442ec4101344bce7976d305215d
     internalID: 0
     vertices: []
     indices: 
@@ -208,7 +208,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       GlitchIdle_0: -6263386811262992280
       GlitchIdle_1: -7515813455518236189

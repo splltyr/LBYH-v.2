@@ -127,8 +127,8 @@ TextureImporter:
         serializedVersion: 2
         x: 109
         y: 1
-        width: 65
-        height: 87
+        width: 68
+        height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,72 +139,6 @@ TextureImporter:
       bones: []
       spriteID: 65f5ed9b5aa103920800000000000000
       internalID: 2967901453527441238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walk_2_1
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 88
-        width: 6
-        height: 5
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6be1d7a099274280800000000000000
-      internalID: -9059226424164881553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walk_2_2
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 88
-        width: 8
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1e3b4cb79e44b9c0800000000000000
-      internalID: -3912415762672042465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: demon_walk_2_3
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 71
-        width: 25
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f8520d7309f1c250800000000000000
-      internalID: 5963321174992771312
       vertices: []
       indices: 
       edges: []

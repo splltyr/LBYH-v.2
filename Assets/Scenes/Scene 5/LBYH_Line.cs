@@ -8,4 +8,8 @@ public class LBYH_Line
     [TextArea(3, 10)]
     public string text;
     public AudioClip voiceClip;
+
+    [Tooltip("Control the volume! 1 is normal, 5 is 5x Louder!")]
+    [Range(0f, 20f)]
+    public float volume = 1f;
 }

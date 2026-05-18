@@ -26,6 +26,11 @@ public class DamonPrologue : MonoBehaviour
     public float typingSpeed = 0.08f; 
     public float waitAfterTala = 3.5f; 
 
+    [Header("Voice Clips")]
+    public AudioClip damonVoice;
+    public AudioClip talaVoice;
+    private AudioSource voiceAudioSource;
+
     [Header("Ghost Trail (Hard Offset)")]
     public float ghostDelay = 0.07f;
     public Color ghostColor = new Color(1f, 0f, 1f, 0.4f);
@@ -41,6 +46,11 @@ public class DamonPrologue : MonoBehaviour
 
     void Start()
     {
+        // DESTROY any rogue teleport triggers so only Damon handles the teleport!
+        foreach (var t in FindObjectsByType<SceneTransitionTrigger>(FindObjectsSortMode.None)) Destroy(t.gameObject);
+        foreach (var t in FindObjectsByType<LevelLoader>(FindObjectsSortMode.None)) Destroy(t.gameObject);
+        foreach (var t in FindObjectsByType<UniversalScenePortal>(FindObjectsSortMode.None)) Destroy(t.gameObject);
+
         startY = transform.position.y;
         currentSpeed = baseSpeed; // Initialize at starting speed
         anim = GetComponentInChildren<Animator>();
@@ -128,6 +138,20 @@ public class DamonPrologue : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (dialogueUI != null) {
             dialogueUI.SetActive(true);
+
+            if (damonVoice != null) 
+            {
+                if (voiceAudioSource == null) 
+                {
+                    GameObject voiceObj = new GameObject("DamonVoiceSource");
+                    voiceObj.transform.SetParent(this.transform);
+                    voiceAudioSource = voiceObj.AddComponent<AudioSource>();
+                    voiceAudioSource.playOnAwake = false;
+                    voiceObj.AddComponent<AutoVolumeNormalizer>();
+                }
+                voiceAudioSource.PlayOneShot(damonVoice);
+            }
+
             var typewriter = dialogueUI.GetComponentInChildren<TypewriterEffect>();
             if (typewriter != null) {
                 typewriter.StartTyping();
@@ -147,6 +171,20 @@ public class DamonPrologue : MonoBehaviour
             if (img != null) img.enabled = false;
             dialogueText.color = Color.yellow; 
             dialogueUI.SetActive(true); 
+
+            if (talaVoice != null) 
+            {
+                if (voiceAudioSource == null) 
+                {
+                    GameObject voiceObj = new GameObject("DamonVoiceSource");
+                    voiceObj.transform.SetParent(this.transform);
+                    voiceAudioSource = voiceObj.AddComponent<AudioSource>();
+                    voiceAudioSource.playOnAwake = false;
+                    voiceObj.AddComponent<AutoVolumeNormalizer>();
+                }
+                voiceAudioSource.PlayOneShot(talaVoice);
+            }
+
             yield return StartCoroutine(ManualType("???: Yves..? Yves! Can you hear me? You can still try again!"));
             yield return new WaitForSeconds(waitAfterTala);
         }

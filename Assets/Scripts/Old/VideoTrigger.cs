@@ -79,8 +79,21 @@ public class VideoTrigger : MonoBehaviour
             hasPlayed = true;
             
             // Disable player movement script while video plays
-            var movement = player.GetComponent<MonoBehaviour>();
-            if (movement != null) movement.enabled = false;
+            var knight = player.GetComponent<KnightHero>();
+            if (knight != null) 
+            {
+                knight.enabled = false;
+                var rb = player.GetComponent<Rigidbody2D>();
+                if (rb != null) rb.linearVelocity = Vector2.zero;
+                
+                var anim = player.GetComponent<Animator>();
+                if (anim != null) anim.Play("KnightIdle");
+            }
+            else 
+            {
+                var movement = player.GetComponent<MonoBehaviour>();
+                if (movement != null) movement.enabled = false;
+            }
 
             videoPlayer.Play();
         }
