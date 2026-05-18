@@ -26,6 +26,8 @@ public class LBYH_Credits : MonoBehaviour
 
     void Start()
     {
+        allowSkip = false; // Force allowSkip to false so credits are never skippable
+
         if (creditsTextTransform == null)
         {
             Debug.LogError("[Credits] WARNING: 'creditsTextTransform' is NOT assigned in the Inspector! Please drag your Text object into the slot.");

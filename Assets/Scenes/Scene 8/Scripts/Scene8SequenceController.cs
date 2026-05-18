@@ -299,10 +299,11 @@ public class Scene8SequenceController : MonoBehaviour
 
         for (float t = 0; t < duration; t += Time.deltaTime)
         {
+            if (screenOverlay == null) yield break;
             screenOverlay.color = Color.Lerp(screenOverlay.color, targetColor, t / duration);
             yield return null;
         }
-        screenOverlay.color = targetColor;
+        if (screenOverlay != null) screenOverlay.color = targetColor;
     }
 
     IEnumerator FadeToBlack(bool active)
@@ -314,10 +315,11 @@ public class Scene8SequenceController : MonoBehaviour
 
         for (float t = 0; t < duration; t += Time.deltaTime)
         {
+            if (screenOverlay == null) yield break;
             screenOverlay.color = Color.Lerp(screenOverlay.color, targetColor, t / duration);
             yield return null;
         }
-        screenOverlay.color = targetColor;
+        if (screenOverlay != null) screenOverlay.color = targetColor;
     }
 
     IEnumerator WaitForInput()
@@ -342,11 +344,13 @@ public class Scene8SequenceController : MonoBehaviour
         
         while (elapsed < duration)
         {
+            if (entity == null) yield break;
             entity.position = Vector3.Lerp(startPos, targetPos, elapsed / duration);
             elapsed += Time.deltaTime;
             yield return null;
         }
         
+        if (entity == null) yield break;
         entity.position = targetPos;
         
         SafePlayAnim(anim, endAnimName);

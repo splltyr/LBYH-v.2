@@ -14,6 +14,18 @@ public class SceneTransitionTrigger : MonoBehaviour
 
     private bool isTransitioning = false;
 
+    private void Start()
+    {
+        // Safety: Disable any stray transition triggers in Scene 10 (the final boss scene) to avoid rogue teleportation
+        if (SceneManager.GetActiveScene().name.Contains("Scene 10") || SceneManager.GetActiveScene().name.Contains("Scene10"))
+        {
+            this.enabled = false;
+            Collider2D col = GetComponent<Collider2D>();
+            if (col != null) col.enabled = false;
+            return;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isTransitioning) return;
